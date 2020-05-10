@@ -14,6 +14,11 @@ const NavOption = styled.div`
   padding: 32px;
 `;
 
+const NavLogo = styled.div`
+  padding: 32px;
+  margin-right: auto;
+`;
+
 export const TopNavBar = () => {
   const history = useHistory();
 
@@ -23,6 +28,9 @@ export const TopNavBar = () => {
   };
   return (
     <Wrapper>
+      <NavLogo>
+        <Link to="/">LX</Link>
+      </NavLogo>
       <NavOption>
         <Link to="/">Home</Link>
       </NavOption>
