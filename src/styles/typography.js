@@ -5,8 +5,9 @@ import styled from "styled-components";
 import fonts from "./fonts";
 import colors from "./colors";
 const extralargeText = "72px";
-const largeText = "48px";
+const largeText = "40px";
 const subtitleText = "18px";
+const medText = "14px";
 
 const ExtraLargeTitle = styled.p`
   font-size: ${extralargeText};
@@ -35,7 +36,7 @@ const SubTitle = styled.span`
   text-align: left;
 `;
 
-const SubTitleUnderline = styled.span`
+const SubTitleUnderline = styled.a`
   margin: 0px;
   font-family: ${fonts.openSansBold};
   font-size: ${subtitleText};
@@ -44,9 +45,28 @@ const SubTitleUnderline = styled.span`
   border-bottom: 3px solid ${colors.white};
 `;
 
+const AllCapsSubtitle = styled.p`
+  margin: 0px;
+  font-family: ${fonts.openSansBold};
+  font-size: ${medText};
+  word-wrap: normal;
+  text-align: left;
+  text-transform: uppercase;
+`;
+
+const Body = styled.span`
+  margin: 0px;
+  font-family: ${fonts.openSansRegular};
+  font-size: ${medText};
+  word-wrap: normal;
+  text-align: left;
+`;
+
 export const typography = {
   ExtraLargeTitle: ExtraLargeTitle,
   LargeTitle: LargeTitle,
   SubTitle: SubTitle,
-  SubTitleUnderline: SubTitleUnderline
+  SubTitleUnderline: SubTitleUnderline,
+  AllCapsSubtitle: AllCapsSubtitle,
+  Body: Body
 };
