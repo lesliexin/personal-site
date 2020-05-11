@@ -3,17 +3,20 @@ import styled from "styled-components";
 import colors from "./styles/colors";
 import { HomePageCard } from "./components";
 import { typography, padding } from "./styles";
+import blobs from "./assets/both-blobs-med.svg";
 
 const TitleContainer = styled.div`
+  height: calc(100vh - 100px);
   width: 100%;
-  height: 100vh;
   background-color: ${colors.lightBlue};
+  background-image: url(${blobs});
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: auto;
 `;
 
 const TitleTextContainer = styled.div`
   padding: 120px 0px 0px 220px;
-  width: 1000px;
-  background-color: ${colors.lightBlue};
 `;
 
 const CardsContainer = styled.div`
