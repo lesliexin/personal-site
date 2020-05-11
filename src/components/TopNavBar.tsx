@@ -1,8 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import fonts from "../styles/fonts";
-import colors from "../styles/colors";
+import { fonts, colors, typography } from "../styles";
 
 const Wrapper = styled.div`
   display: flex;
@@ -33,19 +32,21 @@ export const TopNavBar = () => {
           history.push("/");
         }}
       >
-        LX
+        <typography.LargeTitle>lx.</typography.LargeTitle>
       </NavLogo>
       <NavOption
         onClick={() => {
           history.push("/");
         }}
-      ></NavOption>
+      >
+        HOME
+      </NavOption>
       <NavOption
         onClick={() => {
           history.push("/about");
         }}
       >
-        About
+        ABOUT
       </NavOption>
     </Wrapper>
   );
