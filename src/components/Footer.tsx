@@ -6,7 +6,7 @@ import colors from "../styles/colors";
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: ${colors.lightBlue};
   justify-content: flex-end;
 `;
@@ -17,29 +17,18 @@ const NavOption = styled.div`
   font-family: ${fonts.openSansBold};
 `;
 
-const NavLogo = styled.div`
-  padding: 32px;
-  margin-right: auto;
-  cursor: pointer;
-`;
-
-export const TopNavBar = () => {
+export const Footer = () => {
   const history = useHistory();
 
   return (
     <Wrapper>
-      <NavLogo
-        onClick={() => {
-          history.push("/");
-        }}
-      >
-        LX
-      </NavLogo>
       <NavOption
         onClick={() => {
           history.push("/");
         }}
-      ></NavOption>
+      >
+        Home
+      </NavOption>
       <NavOption
         onClick={() => {
           history.push("/about");
