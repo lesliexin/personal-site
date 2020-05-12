@@ -43,6 +43,9 @@ const SubTitleUnderline = styled.a`
   word-wrap: normal;
   text-align: left;
   border-bottom: 3px solid ${colors.white};
+  cursor: pointer;
+  text-decoration: none;
+  color: ${colors.black};
 `;
 
 const AllCapsSubtitle = styled.p`

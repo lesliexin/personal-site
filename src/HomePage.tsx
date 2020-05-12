@@ -37,14 +37,22 @@ export const LandingPage = () => {
           <typography.SubTitle>
             Just finished — designing and developing products at&nbsp;
           </typography.SubTitle>
-          <typography.SubTitleUnderline>Cognite</typography.SubTitleUnderline>
+          <typography.SubTitleUnderline
+            href="https://www.cognite.com/en/"
+            target="_blank"
+          >
+            Cognite
+          </typography.SubTitleUnderline>
 
           <typography.SubTitle> &nbsp;in Oslo, Norway.</typography.SubTitle>
           <padding.Top24>
             <typography.SubTitle>
               Currently — studying&nbsp;
             </typography.SubTitle>
-            <typography.SubTitleUnderline>
+            <typography.SubTitleUnderline
+              href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
+              target="_blank"
+            >
               Systems Design Engineering
             </typography.SubTitleUnderline>
             <typography.SubTitle>
