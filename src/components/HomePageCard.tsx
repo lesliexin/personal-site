@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, typography, padding } from "../styles";
+import air from "../assets/AIR.svg";
 
 const CardContainer = styled.div`
   height: 332px;
@@ -15,6 +16,11 @@ const CardImage = styled.div`
   background-color: ${colors.white};
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  background-color: ${colors.lightBlue};
+  background-image: url(${air});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
 `;
 
 const CardText = styled.div`
