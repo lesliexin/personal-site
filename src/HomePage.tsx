@@ -53,7 +53,7 @@ export const LandingPage = () => {
       <TitleContainer>
         <TitleTextContainer>
           <typography.ExtraLargeTitle>
-            Hi, I'm Leslie!
+            Hey, I'm Leslie!
           </typography.ExtraLargeTitle>
           <typography.SubTitle>
             Just finished — designing and developing products at&nbsp;
