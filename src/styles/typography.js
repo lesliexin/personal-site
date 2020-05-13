@@ -68,7 +68,7 @@ const Body = styled.span`
 const NewTitle = styled.p`
   margin: 0px;
   font-size: 36px;
-  padding-bottom: 28px;
+  padding-bottom: 6px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   text-align: left;
@@ -77,7 +77,7 @@ const NewTitle = styled.p`
 
 const NewHeading = styled.p`
   font-size: 12px;
-  margin-bottom: 10px;
+  margin: 24px 0px 10px 0px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.darkGrey};
@@ -87,7 +87,7 @@ const NewHeading = styled.p`
 
 const NewLinks = styled.p`
   font-size: 12px;
-  margin: 8px 0px;
+  margin: 10px 0px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.accentBlue};
@@ -97,7 +97,7 @@ const NewLinks = styled.p`
 
 const NewBody = styled.span`
   font-size: 16px;
-  margin: 0px;
+  margin-bottom: 4px;
   font-family: ${fonts.openSansSemibold};
   word-wrap: normal;
   color: ${colors.navy};
@@ -106,7 +106,7 @@ const NewBody = styled.span`
 
 const NewBodyUnderline = styled.a`
   font-size: 16px;
-  margin: 0px;
+  margin-bottom: 4px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.navy};
