@@ -7,7 +7,7 @@ const CardContainer = styled.div`
   height: 332px;
   background-color: ${colors.white};
   display: flex;
-  margin: 200px 148px;
+  padding: 200px 148px;
   justify-content: center;
 `;
 

@@ -6,7 +6,7 @@ import fonts from "./fonts";
 import colors from "./colors";
 const extralargeText = "72px";
 const largeText = "40px";
-const subtitleText = "18px";
+const subtitleText = "20px";
 const medText = "14px";
 
 const ExtraLargeTitle = styled.p`

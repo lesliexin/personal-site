@@ -4,9 +4,11 @@ import colors from "./styles/colors";
 import { HomePageCard } from "./components";
 import { typography, padding } from "./styles";
 import blobs from "./assets/both-blobs-med.svg";
+import { animateScroll as scroll } from "react-scroll";
+import { ReactComponent as Chevron } from "./assets/chev-dark.svg";
 
 const TitleContainer = styled.div`
-  height: calc(100vh - 100px);
+  height: calc(100vh - 220px);
   width: 100%;
   background-color: ${colors.lightBlue};
   background-image: url(${blobs});
@@ -16,7 +18,17 @@ const TitleContainer = styled.div`
 `;
 
 const TitleTextContainer = styled.div`
-  padding: 120px 0px 0px 220px;
+  padding: 90px 0px 0px 220px;
+`;
+
+const ChevronContainer = styled.div`
+  height: 120px;
+  width 100%;
+  background-color: ${colors.lightBlue};
+  position: absolute;
+  bottom: 0 ;
+  display: flex;
+  justify-content: center;
 `;
 
 const CardsContainer = styled.div`
@@ -25,6 +37,15 @@ const CardsContainer = styled.div`
   display: flex
   flex-direction: column;
 `;
+
+const StyledChevron = styled(Chevron)`
+  padding-top: 20px;
+  cursor: pointer;
+`;
+
+const scrollTo = (location: number) => {
+  scroll.scrollTo(location);
+};
 
 export const LandingPage = () => {
   return (
@@ -60,6 +81,9 @@ export const LandingPage = () => {
             </typography.SubTitle>
           </padding.Top24>
         </TitleTextContainer>
+        <ChevronContainer onClick={() => scrollTo(window.innerHeight)}>
+          <StyledChevron />
+        </ChevronContainer>
       </TitleContainer>
 
       <CardsContainer>
