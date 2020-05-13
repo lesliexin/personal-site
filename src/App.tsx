@@ -6,15 +6,17 @@ import { Router, Route } from "react-router-dom";
 import history from "./history";
 import { AboutPage } from "./AboutPage";
 import { TopNavBar, Footer } from "./components";
+import { NewHomePage } from "./NewHomePage";
 
 function App() {
   return (
     <Router history={history}>
       <div>
-        <TopNavBar />
+        <NewHomePage />
+        {/* <TopNavBar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={AboutPage} />
-        <Footer />
+        <Footer /> */}
       </div>
     </Router>
   );

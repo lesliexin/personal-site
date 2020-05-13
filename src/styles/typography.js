@@ -65,11 +65,79 @@ const Body = styled.span`
   text-align: left;
 `;
 
+const NewTitle = styled.p`
+  margin: 0px;
+  font-size: 36px;
+  padding-bottom: 28px;
+  font-family: ${fonts.openSansBold};
+  word-wrap: normal;
+  text-align: left;
+  color: ${colors.navy};
+`;
+
+const NewHeading = styled.p`
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-family: ${fonts.openSansBold};
+  word-wrap: normal;
+  color: ${colors.darkGrey};
+  text-transform: uppercase;
+  letter-spacing: 3px;
+`;
+
+const NewLinks = styled.p`
+  font-size: 12px;
+  margin: 8px 0px;
+  font-family: ${fonts.openSansBold};
+  word-wrap: normal;
+  color: ${colors.accentBlue};
+  text-align: right;
+  letter-spacing: 0.5px;
+`;
+
+const NewBody = styled.span`
+  font-size: 16px;
+  margin: 0px;
+  font-family: ${fonts.openSansSemibold};
+  word-wrap: normal;
+  color: ${colors.navy};
+  letter-spacing: 0.5px;
+`;
+
+const NewBodyUnderline = styled.a`
+  font-size: 16px;
+  margin: 0px;
+  font-family: ${fonts.openSansBold};
+  word-wrap: normal;
+  color: ${colors.navy};
+  border-bottom: 3px solid ${colors.accentBlue};
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+`;
+
+const NewDetail = styled.p`
+  font-size: 10px;
+  margin-right: 12px;
+  font-family: ${fonts.openSansBold};
+  word-wrap: normal;
+  color: ${colors.darkGrey};
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: right;
+`;
+
 export const typography = {
   ExtraLargeTitle: ExtraLargeTitle,
   LargeTitle: LargeTitle,
   SubTitle: SubTitle,
   SubTitleUnderline: SubTitleUnderline,
   AllCapsSubtitle: AllCapsSubtitle,
-  Body: Body
+  Body: Body,
+  NewTitle: NewTitle,
+  NewLinks: NewLinks,
+  NewHeading: NewHeading,
+  NewBody: NewBody,
+  NewDetail: NewDetail,
+  NewBodyUnderline: NewBodyUnderline
 };
