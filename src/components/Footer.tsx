@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import fonts from "../styles/fonts";
-import colors from "../styles/colors";
+import { fonts, colors } from "../styles";
+import { animateScroll as scroll } from "react-scroll";
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,6 +16,10 @@ const NavOption = styled.div`
   cursor: pointer;
   font-family: ${fonts.openSansBold};
 `;
+
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
 
 export const Footer = () => {
   const history = useHistory();
@@ -36,6 +40,7 @@ export const Footer = () => {
       >
         About
       </NavOption>
+      <NavOption onClick={scrollToTop}>Scroll To Top</NavOption>
     </Wrapper>
   );
 };
