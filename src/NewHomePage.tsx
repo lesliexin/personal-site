@@ -185,15 +185,32 @@ export const NewHomePage = () => {
             </StyledTable>
           </TitleTextContainer>
           <LinksContainer>
-            <typography.NewLinks>code</typography.NewLinks>
+            <typography.NewLinks
+              href="https://github.com/lesliexin/"
+              target="_blank"
+            >
+              code
+            </typography.NewLinks>
             <br />
-            <typography.NewLinks>resume</typography.NewLinks>
+            <typography.NewLinks>résumé</typography.NewLinks>
             <br />
-            <typography.NewLinks>email</typography.NewLinks>
+            <typography.NewLinks href="mailto:l6xin@uwaterloo.ca">
+              email
+            </typography.NewLinks>
             <br />
-            <typography.NewLinks>linkedin</typography.NewLinks>
+            <typography.NewLinks
+              href="https://www.linkedin.com/in/lesliexin/"
+              target="_blank"
+            >
+              linkedin
+            </typography.NewLinks>
             <br />
-            <typography.NewLinks>fun</typography.NewLinks>
+            <typography.NewLinks
+              href="https://www.youtube.com/watch?v=IyV5c_sd_4k"
+              target="_blank"
+            >
+              fun
+            </typography.NewLinks>
           </LinksContainer>
         </ContentContainer>
       </Container>
