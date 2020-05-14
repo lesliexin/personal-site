@@ -68,12 +68,9 @@ export const NewHomePage = () => {
                 <StyledData></StyledData>
                 <StyledData>
                   <typography.NewBody>Studying&nbsp;</typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
-                    target="_blank"
-                  >
+                  <typography.NewBodyBold>
                     Systems Design Engineering
-                  </typography.NewBodyUnderline>
+                  </typography.NewBodyBold>
                   <typography.NewBody>
                     &nbsp;at the University of Waterloo
                   </typography.NewBody>

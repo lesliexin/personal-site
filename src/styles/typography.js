@@ -99,6 +99,9 @@ const NewLinks = styled.a`
   text-decoration: none;
   line-height: 12px;
   font-weight: 700;
+  &:hover {
+    color: ${colors.darkGrey};
+  }
 `;
 
 const NewBody = styled.span`
@@ -109,6 +112,16 @@ const NewBody = styled.span`
   color: ${colors.navy};
   letter-spacing: 0.5px;
   font-weight: 600;
+`;
+
+const NewBodyBold = styled.span`
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.navy};
+  letter-spacing: 0.5px;
+  font-weight: 700;
 `;
 
 const NewBodyUnderline = styled.a`
@@ -122,6 +135,9 @@ const NewBodyUnderline = styled.a`
   text-decoration: none;
   letter-spacing: 0.5px;
   font-weight: 700;
+  &:hover {
+    border-bottom: 2.5px solid ${colors.darkGrey};
+  }
 `;
 
 const NewDetail = styled.p`
@@ -148,5 +164,6 @@ export const typography = {
   NewHeading: NewHeading,
   NewBody: NewBody,
   NewDetail: NewDetail,
-  NewBodyUnderline: NewBodyUnderline
+  NewBodyUnderline: NewBodyUnderline,
+  NewBodyBold: NewBodyBold
 };
