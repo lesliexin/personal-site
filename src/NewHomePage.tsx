@@ -13,8 +13,8 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-top: 166px;
-  width: 76%;
+  padding-top: 140px;
+  width: 78%;
 `;
 
 const TitleTextContainer = styled.div`
@@ -24,18 +24,23 @@ const TitleTextContainer = styled.div`
 const LinksContainer = styled.div`
   width: 15%;
   margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 36px 0px 0px;
 `;
 
-const StyledTable = styled.table`
-  border: none;
+const StyledTable = styled.div`
+  border-spacing: 0px;
+  display: table;
 `;
 
-const StyledRow = styled.tr`
-  border: none;
+const StyledRow = styled.div`
+  display: table-row;
 `;
 
-const StyledData = styled.td`
-  border: none;
+const StyledData = styled.div`
+  height: 38px;
+  display: table-cell;
 `;
 
 export const NewHomePage = () => {
@@ -51,10 +56,17 @@ export const NewHomePage = () => {
                   <typography.NewTitle>Hi, I'm Leslie!</typography.NewTitle>
                 </StyledData>
               </StyledRow>
+
               <StyledRow>
                 <StyledData></StyledData>
                 <StyledData>
                   <typography.NewHeading>Currently</typography.NewHeading>
+                </StyledData>
+              </StyledRow>
+
+              <StyledRow>
+                <StyledData></StyledData>
+                <StyledData>
                   <typography.NewBody>Studying&nbsp;</typography.NewBody>
                   <typography.NewBodyUnderline
                     href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
@@ -76,6 +88,7 @@ export const NewHomePage = () => {
               </StyledRow>
 
               {/* Cognite */}
+
               <StyledRow>
                 <StyledData>
                   <typography.NewDetail>2020</typography.NewDetail>
@@ -173,9 +186,13 @@ export const NewHomePage = () => {
           </TitleTextContainer>
           <LinksContainer>
             <typography.NewLinks>code</typography.NewLinks>
+            <br />
             <typography.NewLinks>resume</typography.NewLinks>
+            <br />
             <typography.NewLinks>email</typography.NewLinks>
+            <br />
             <typography.NewLinks>linkedin</typography.NewLinks>
+            <br />
             <typography.NewLinks>fun</typography.NewLinks>
           </LinksContainer>
         </ContentContainer>

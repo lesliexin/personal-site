@@ -67,7 +67,7 @@ const Body = styled.span`
 
 const NewTitle = styled.p`
   margin: 0px;
-  font-size: 36px;
+  font-size: 42px;
   padding-bottom: 6px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
@@ -77,22 +77,25 @@ const NewTitle = styled.p`
 
 const NewHeading = styled.p`
   font-size: 12px;
-  margin: 24px 0px 10px 0px;
+  margin: 34px 0px 10px 0px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.darkGrey};
   text-transform: uppercase;
   letter-spacing: 3px;
+  line-height: 14px;
 `;
 
-const NewLinks = styled.p`
+const NewLinks = styled.a`
   font-size: 12px;
-  margin: 10px 0px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.accentBlue};
   text-align: right;
   letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 12px;
 `;
 
 const NewBody = styled.span`
@@ -110,7 +113,7 @@ const NewBodyUnderline = styled.a`
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.navy};
-  border-bottom: 3px solid ${colors.accentBlue};
+  border-bottom: 2.5px solid ${colors.accentBlue};
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.5px;
@@ -118,7 +121,7 @@ const NewBodyUnderline = styled.a`
 
 const NewDetail = styled.p`
   font-size: 10px;
-  margin-right: 12px;
+  margin: 0px 12px 0px 0px;
   font-family: ${fonts.openSansBold};
   word-wrap: normal;
   color: ${colors.darkGrey};
