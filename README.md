@@ -52,3 +52,5 @@ Setting up universal styles: https://medium.com/@kelleyannerose/configuring-a-ne
 ## Tutorials
 
 ## Hosting
+
+This app is hosted with Heroku using a custom domain. https://www.namecheap.com/support/knowledgebase/article.aspx/9737/2208/pointing-a-domain-to-the-heroku-app

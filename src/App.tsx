@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-// import { LandingPage } from "./HomePage";
 import "./index.css";
 import { Router } from "react-router-dom";
 // import { Route } from "react-router-dom";
@@ -8,6 +7,7 @@ import history from "./history";
 // import { AboutPage } from "./AboutPage";
 // import { TopNavBar, Footer } from "./components";
 import { NewHomePage } from "./NewHomePage";
+// import { LandingPage } from "./HomePage";
 
 function App() {
   return (
