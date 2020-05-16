@@ -1,5 +1,4 @@
 import React from "react";
-import ReactGA from "react-ga";
 import "./App.css";
 import "./index.css";
 import { Router } from "react-router-dom";
@@ -9,11 +8,6 @@ import history from "./history";
 // import { TopNavBar, Footer } from "./components";
 import { NewHomePage } from "./NewHomePage";
 // import { LandingPage } from "./HomePage";
-
-function initializeReactGA() {
-  ReactGA.initialize("UA-150454598-3");
-  ReactGA.pageview("/");
-}
 
 function App() {
   return (
