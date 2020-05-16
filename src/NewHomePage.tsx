@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { typography } from "./styles";
+import { ReactComponent as Wave } from "./assets/wave.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -43,7 +44,12 @@ const StyledData = styled.div`
   display: table-cell;
 `;
 
+const StyledWave = styled(Wave)`
+  height: 38px;
+`;
+
 export const NewHomePage = () => {
+  const [isTitleHover, setIsTitleHover] = useState(false);
   return (
     <>
       <Container>
@@ -51,9 +57,18 @@ export const NewHomePage = () => {
           <TitleTextContainer>
             <StyledTable>
               <StyledRow>
-                <StyledData></StyledData>
+                <StyledData>{isTitleHover ? <StyledWave /> : null}</StyledData>
                 <StyledData>
-                  <typography.NewTitle>Hi, I'm Leslie!</typography.NewTitle>
+                  <typography.NewTitle
+                    onMouseEnter={() => {
+                      setIsTitleHover(!isTitleHover);
+                    }}
+                    onMouseLeave={() => {
+                      setIsTitleHover(!isTitleHover);
+                    }}
+                  >
+                    Hi, I'm Leslie!
+                  </typography.NewTitle>
                 </StyledData>
               </StyledRow>
 
