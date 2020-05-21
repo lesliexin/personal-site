@@ -56,3 +56,7 @@ This app is hosted with Heroku using a custom domain. https://www.namecheap.com/
 ## Analytics
 
 https://medium.com/google-cloud/tracking-site-visits-on-react-app-hosted-in-google-cloud-using-google-analytics-f49c2411d398
+
+## References / Sources
+
+Emojis: https://openmoji.org/
