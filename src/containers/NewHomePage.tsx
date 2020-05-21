@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { typography } from "./styles";
+import { typography } from "../styles";
 import { ReactComponent as Wave } from "./assets/wave.svg";
 
 const Container = styled.div`
