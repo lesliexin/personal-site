@@ -50,6 +50,7 @@ const StyledWave = styled(Wave)`
 
 export const NewHomePage = () => {
   const [isTitleHover, setIsTitleHover] = useState(false);
+
   return (
     <>
       <Container>
@@ -204,7 +205,12 @@ export const NewHomePage = () => {
               code
             </typography.NewLinks>
             <br />
-            <typography.NewLinks>résumé</typography.NewLinks>
+            <typography.NewLinks
+              href="/LeslieXinFall2020FEDev2.pdf"
+              target="_blank"
+            >
+              résumé
+            </typography.NewLinks>
             <br />
             <typography.NewLinks href="mailto:l6xin@uwaterloo.ca">
               email
