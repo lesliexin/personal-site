@@ -205,10 +205,7 @@ export const NewHomePage = () => {
               code
             </typography.NewLinks>
             <br />
-            <typography.NewLinks
-              href="/LeslieXinFall2020FEDev2.pdf"
-              target="_blank"
-            >
+            <typography.NewLinks href="/XinLeslie2022.pdf" target="_blank">
               résumé
             </typography.NewLinks>
             <br />
