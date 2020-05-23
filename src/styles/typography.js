@@ -152,6 +152,22 @@ const NewDetail = styled.p`
   font-weight: 700;
 `;
 
+const StyledMark = styled.mark`
+  background-color: ${colors.accentYellow};
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.navy};
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  &:hover {
+    background-color: yellow;
+  }
+`;
+
 export const typography = {
   ExtraLargeTitle: ExtraLargeTitle,
   LargeTitle: LargeTitle,
@@ -165,5 +181,6 @@ export const typography = {
   NewBody: NewBody,
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
-  NewBodyBold: NewBodyBold
+  NewBodyBold: NewBodyBold,
+  StyledMark: StyledMark
 };
