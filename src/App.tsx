@@ -4,10 +4,9 @@ import "./index.css";
 import { Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 import history from "./history";
-import { AboutPage } from "./containers/AboutPage";
+import { AboutPage, LandingPage, ProjectsContainer } from "./containers";
 import { TopNavBar, Footer } from "./components";
 // import { NewHomePage } from "./containers/NewHomePage";
-import { LandingPage } from "./containers/HomePage";
 
 function App() {
   return (
@@ -17,6 +16,7 @@ function App() {
         <TopNavBar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/cognite" component={ProjectsContainer} />
         <Footer />
       </div>
     </Router>

@@ -9,6 +9,8 @@ const largeText = "40px";
 const subtitleText = "20px";
 const medText = "14px";
 
+// Design 1
+
 const ExtraLargeTitle = styled.p`
   font-size: ${extralargeText};
   margin: 0px;
@@ -64,6 +66,8 @@ const Body = styled.span`
   word-wrap: normal;
   text-align: left;
 `;
+
+// Design 2
 
 const NewTitle = styled.p`
   margin: 0px;
@@ -152,6 +156,43 @@ const NewDetail = styled.p`
   font-weight: 700;
 `;
 
+// Design 3
+
+const TitleText90 = styled.p`
+  font-size: 76px;
+  margin: 0px;
+  padding-bottom: 28px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  word-wrap: normal;
+  text-align: left;
+  line-height: 120px;
+`;
+
+const LargeCaps24 = styled.span`
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: 3px;
+`;
+
+const Subtitle20 = styled.span`
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+`;
+
 export const typography = {
   ExtraLargeTitle: ExtraLargeTitle,
   LargeTitle: LargeTitle,
@@ -165,5 +206,8 @@ export const typography = {
   NewBody: NewBody,
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
-  NewBodyBold: NewBodyBold
+  NewBodyBold: NewBodyBold,
+  TitleText90: TitleText90,
+  LargeCaps24: LargeCaps24,
+  Subtitle20: Subtitle20
 };
