@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { typography } from "../styles";
 import { ReactComponent as Wave } from "../assets/wave.svg";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -50,6 +51,7 @@ const StyledWave = styled(Wave)`
 
 export const NewHomePage = () => {
   const [isTitleHover, setIsTitleHover] = useState(false);
+  const history = useHistory();
 
   return (
     <>
@@ -118,7 +120,11 @@ export const NewHomePage = () => {
                   </typography.NewBodyUnderline>
                   <typography.NewBody>
                     &nbsp;in Oslo, Norway &nbsp;
-                    <typography.StyledMark>
+                    <typography.StyledMark
+                      onClick={() => {
+                        history.push("/cognite");
+                      }}
+                    >
                       &nbsp;
                       <span role="img" aria-label="case emoji">
                         💼

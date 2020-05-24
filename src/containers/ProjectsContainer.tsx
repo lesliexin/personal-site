@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Cognite, projectContent } from "../projects";
-import { typography, padding } from "../styles";
+import { typography } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import titleImage from "../assets/titleImages.svg";
 
 const TitleContainer = styled.div`
-  width: 100%;
   height: 90vh;
   padding: 0px 0px 60px 80px;
   display: flex;
@@ -71,13 +70,13 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
         break;
       }
     }
-  });
+  }, [company]);
 
   return (
     <>
       <TitleContainer>
         <TitleTextContainer>
-          <typography.NewDetailLeft style={{ paddingTop: "40px" }}>
+          <typography.NewDetailLeft style={{ paddingTop: "18px" }}>
             CASE STUDY
           </typography.NewDetailLeft>
           <typography.TitleText90>

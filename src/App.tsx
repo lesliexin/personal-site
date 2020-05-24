@@ -4,7 +4,8 @@ import "./index.css";
 import { Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 import history from "./history";
-import { AboutPage, LandingPage, ProjectsContainer } from "./containers";
+import { ProjectsContainer } from "./containers";
+// import { AboutPage, LandingPage } from "./containers";
 // import { TopNavBar, Footer } from "./components";
 import { NewHomePage } from "./containers/NewHomePage";
 
