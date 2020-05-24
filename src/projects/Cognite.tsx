@@ -2,46 +2,48 @@ import React, { useState, useEffect } from "react";
 import { typography, padding } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
+import { type } from "os";
 
 const ContentContainer = styled.div`
   width: 100%;
-  justify-content: center;
-  flex-direction: column;
   display: flex;
+  justify-content: center;
+  flex-direction: row;
 `;
 
 const BodyContainer = styled.div`
-  width: 70%;
-  padding-top: 50px;
   display: flex;
-`;
-
-const RowContainer = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const RowItem = styled.div`
-  // width: 300px;
+  flex-direction: column;
+  width: 65%;
 `;
 
 export const Cognite = () => {
   return (
     <ContentContainer>
       <BodyContainer>
-        <RowContainer>
-          <RowItem>
-            <typography.Subtitle20>What I did</typography.Subtitle20>
-          </RowItem>
-          <RowItem>
-            <typography.Subtitle20>Who I worked with</typography.Subtitle20>
-          </RowItem>
-          <RowItem>
-            <typography.Subtitle20>For how long</typography.Subtitle20>
-          </RowItem>
-        </RowContainer>
+        {/*  Background */}
+        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.LargeSubtitle>Background</typography.LargeSubtitle>
+
+        {/*  So, what's the problem? */}
+        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.LargeSubtitle>
+          So, what's the problem?
+        </typography.LargeSubtitle>
+        <typography.Subtitle20>What is Cognite?</typography.Subtitle20>
+        <typography.Subtitle20>What is AIR?</typography.Subtitle20>
+
+        {/*  Overarching Goals */}
+        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.LargeSubtitle>Overarching Goals</typography.LargeSubtitle>
+
+        {/*  Getting up to speed */}
+        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.LargeSubtitle>Getting up to speed</typography.LargeSubtitle>
+
+        {/*  Who are our users? */}
+        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.LargeSubtitle>Who are our users?</typography.LargeSubtitle>
       </BodyContainer>
     </ContentContainer>
   );

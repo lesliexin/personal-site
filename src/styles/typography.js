@@ -156,17 +156,32 @@ const NewDetail = styled.p`
   font-weight: 700;
 `;
 
+const StyledMark = styled.mark`
+  background-color: ${colors.accentYellow};
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.navy};
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  &:hover {
+    background-color: yellow;
+  }
+`;
+
 // Design 3
 
 const TitleText90 = styled.p`
-  font-size: 76px;
+  font-size: 36px;
   margin: 0px;
-  padding-bottom: 28px;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   word-wrap: normal;
   text-align: left;
-  line-height: 120px;
+  line-height: 60px;
 `;
 
 const LargeCaps24 = styled.span`
@@ -182,7 +197,7 @@ const LargeCaps24 = styled.span`
 `;
 
 const Subtitle20 = styled.span`
-  margin: 0px;
+  margin-top: 38px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   text-align: left;
@@ -191,6 +206,51 @@ const Subtitle20 = styled.span`
   font-size: 20px;
   line-height: 36px;
   letter-spacing: 1.5px;
+`;
+
+const Body2 = styled.p`
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.black};
+  letter-spacing: 1px;
+  font-weight: normal;
+`;
+
+const BodyMain = styled.p`
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.black};
+  letter-spacing: 1px;
+  font-weight: 600;
+`;
+
+const LargeSubtitle = styled.p`
+  font-family: Open Sans;
+  margin: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 3px;
+  color: ${colors.accentBlue};
+`;
+
+const NewDetailLeft = styled.p`
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.black};
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 48px;
 `;
 
 export const typography = {
@@ -209,5 +269,10 @@ export const typography = {
   NewBodyBold: NewBodyBold,
   TitleText90: TitleText90,
   LargeCaps24: LargeCaps24,
-  Subtitle20: Subtitle20
+  Subtitle20: Subtitle20,
+  StyledMark: StyledMark,
+  Body2: Body2,
+  LargeSubtitle: LargeSubtitle,
+  NewDetailLeft: NewDetailLeft,
+  BodyMain: BodyMain
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { typography } from "../styles";
-import { ReactComponent as Wave } from "./assets/wave.svg";
+import { ReactComponent as Wave } from "../assets/wave.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -50,6 +50,7 @@ const StyledWave = styled(Wave)`
 
 export const NewHomePage = () => {
   const [isTitleHover, setIsTitleHover] = useState(false);
+
   return (
     <>
       <Container>
@@ -107,8 +108,7 @@ export const NewHomePage = () => {
                 </StyledData>
                 <StyledData>
                   <typography.NewBody>
-                    Designing and developing data science tools for engineers
-                    at&nbsp;
+                    Building data science tools for engineers at&nbsp;
                   </typography.NewBody>
                   <typography.NewBodyUnderline
                     href="https://www.cognite.com/en/"
@@ -116,7 +116,16 @@ export const NewHomePage = () => {
                   >
                     Cognite
                   </typography.NewBodyUnderline>
-                  <typography.NewBody>&nbsp;in Oslo, Norway</typography.NewBody>
+                  <typography.NewBody>
+                    &nbsp;in Oslo, Norway &nbsp;
+                    <typography.StyledMark>
+                      &nbsp;
+                      <span role="img" aria-label="case emoji">
+                        💼
+                      </span>
+                      case study here!&nbsp;
+                    </typography.StyledMark>
+                  </typography.NewBody>
                 </StyledData>
               </StyledRow>
 
@@ -204,7 +213,9 @@ export const NewHomePage = () => {
               code
             </typography.NewLinks>
             <br />
-            <typography.NewLinks>résumé</typography.NewLinks>
+            <typography.NewLinks href="/XinLeslie2022.pdf" target="_blank">
+              résumé
+            </typography.NewLinks>
             <br />
             <typography.NewLinks href="mailto:l6xin@uwaterloo.ca">
               email
