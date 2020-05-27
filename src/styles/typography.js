@@ -181,7 +181,7 @@ const TitleText90 = styled.p`
   font-weight: bold;
   word-wrap: normal;
   text-align: left;
-  line-height: 60px;
+  line-height: 48px;
 `;
 
 const LargeCaps24 = styled.span`
@@ -237,7 +237,7 @@ const LargeSubtitle = styled.p`
   font-weight: bold;
   font-size: 36px;
   line-height: 48px;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
   color: ${colors.accentBlue};
 `;
 
@@ -251,6 +251,16 @@ const NewDetailLeft = styled.p`
   text-align: left;
   font-weight: 600;
   margin-top: 48px;
+`;
+
+const GreySubtile = styled.p`
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  color: ${colors.darkGrey};
+  letter-spacing: 1.5px;
 `;
 
 export const typography = {
@@ -274,5 +284,6 @@ export const typography = {
   Body2: Body2,
   LargeSubtitle: LargeSubtitle,
   NewDetailLeft: NewDetailLeft,
-  BodyMain: BodyMain
+  BodyMain: BodyMain,
+  GreySubtile: GreySubtile
 };

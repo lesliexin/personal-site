@@ -36,7 +36,7 @@ const CompanyName = styled.span`
 `;
 
 const Role = styled.p`
-  margin: 0px;
+  margin: 12px 0px 0px 0px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   text-align: left;
@@ -88,14 +88,14 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
           <Role>Role</Role>
           <typography.Body2>Front-End Engineer</typography.Body2>
           <typography.Body2>Product Designer</typography.Body2>
-          <br />
+
           <Role>Team</Role>
           <typography.Body2>Me</typography.Body2>
           <typography.Body2>Infrastructure Engineer </typography.Body2>
           <typography.Body2>Data Scientist 1</typography.Body2>
           <typography.Body2>Data Scientist 2</typography.Body2>
           <typography.Body2>Front-End Engineer (50%)</typography.Body2>
-          <br />
+
           <Role>Duration</Role>
           <typography.Body2>4 Months</typography.Body2>
         </TitleTextContainer>
