@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { typography } from "./styles";
-import { ReactComponent as Wave } from "./assets/wave.svg";
+import { typography } from "../styles";
+import { ReactComponent as Wave } from "../assets/wave.svg";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -50,6 +51,7 @@ const StyledWave = styled(Wave)`
 
 export const NewHomePage = () => {
   const [isTitleHover, setIsTitleHover] = useState(false);
+  const history = useHistory();
 
   return (
     <>
@@ -108,8 +110,7 @@ export const NewHomePage = () => {
                 </StyledData>
                 <StyledData>
                   <typography.NewBody>
-                    Designing and developing data science tools for engineers
-                    at&nbsp;
+                    Building data science tools for engineers at&nbsp;
                   </typography.NewBody>
                   <typography.NewBodyUnderline
                     href="https://www.cognite.com/en/"
@@ -117,7 +118,20 @@ export const NewHomePage = () => {
                   >
                     Cognite
                   </typography.NewBodyUnderline>
-                  <typography.NewBody>&nbsp;in Oslo, Norway</typography.NewBody>
+                  <typography.NewBody>
+                    &nbsp;in Oslo, Norway &nbsp;
+                    <typography.StyledMark
+                      onClick={() => {
+                        history.push("/cognite");
+                      }}
+                    >
+                      &nbsp;
+                      <span role="img" aria-label="case emoji">
+                        💼
+                      </span>
+                      case study here!&nbsp;
+                    </typography.StyledMark>
+                  </typography.NewBody>
                 </StyledData>
               </StyledRow>
 

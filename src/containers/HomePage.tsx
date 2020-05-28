@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "./styles/colors";
-import { HomePageCard } from "./components";
-import { typography, padding } from "./styles";
-import blobs from "./assets/both-blobs-med.svg";
+import colors from "../styles/colors";
+import { HomePageCard } from "../components";
+import { typography, padding } from "../styles";
+import blobs from "../assets/both-blobs-med.svg";
 import { animateScroll as scroll } from "react-scroll";
-import { ReactComponent as Chevron } from "./assets/chev-dark.svg";
+import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
 
 const TitleContainer = styled.div`
   height: calc(100vh - 220px);

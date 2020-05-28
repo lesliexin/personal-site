@@ -2,21 +2,23 @@ import React from "react";
 import "./App.css";
 import "./index.css";
 import { Router } from "react-router-dom";
-// import { Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import history from "./history";
-// import { AboutPage } from "./AboutPage";
+import { ProjectsContainer } from "./containers";
+// import { AboutPage, LandingPage } from "./containers";
 // import { TopNavBar, Footer } from "./components";
-import { NewHomePage } from "./NewHomePage";
-// import { LandingPage } from "./HomePage";
+import { NewHomePage } from "./containers/NewHomePage";
 
 function App() {
   return (
     <Router history={history}>
       <div>
-        <NewHomePage />
+        <Route exact path="/" component={NewHomePage} />
+        <Route path="/cognite" component={ProjectsContainer} />
         {/* <TopNavBar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={AboutPage} />
+        <Route path="/cognite" component={ProjectsContainer} />
         <Footer /> */}
       </div>
     </Router>
