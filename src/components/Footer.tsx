@@ -33,13 +33,13 @@ export const Footer = () => {
       >
         Home
       </NavOption>
-      <NavOption
+      {/* <NavOption
         onClick={() => {
           history.push("/about");
         }}
       >
         About
-      </NavOption>
+      </NavOption> */}
       <NavOption onClick={scrollToTop}>Scroll To Top</NavOption>
     </Wrapper>
   );

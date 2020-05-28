@@ -197,7 +197,7 @@ const LargeCaps24 = styled.span`
 `;
 
 const Subtitle20 = styled.span`
-  margin-top: 32px;
+  margin: 32px 0px 6px 0px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   text-align: left;
