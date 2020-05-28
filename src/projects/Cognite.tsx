@@ -197,13 +197,12 @@ export const Cognite = () => {
             How will our product serve these two user groups?
           </typography.Subtitle20>
           <typography.BodyMain>
-            We then looked at Cognite’s persona library and discussed the scope
-            of AIR with the other business application teams that served the
-            same personas. Communication across teams is super important to
-            identify how our products potentially overlap and how we can
-            differentiate. Additionally, these discussions enabled us to
-            collaborate on similar infrastructure elements and reusable frontend
-            components.
+            We looked at Cognite’s persona library and discussed the scope of
+            AIR with the other business application teams that served the same
+            personas. Communication across teams is super important to identify
+            how our products potentially overlap and how we can differentiate.
+            Additionally, these discussions enabled us to collaborate on similar
+            infrastructure elements and reusable frontend components.
           </typography.BodyMain>
           <img
             alt="AIR Diagram"
@@ -214,7 +213,7 @@ export const Cognite = () => {
             src={airDiagram}
           />
 
-          <typography.BodyMain>
+          {/* <typography.BodyMain>
             We then looked at Cognite’s persona library and discussed the scope
             of AIR with the other business application teams that served the
             same personas. Communication across teams is super important to
@@ -222,12 +221,12 @@ export const Cognite = () => {
             differentiate. Additionally, these discussions enabled us to
             collaborate on similar infrastructure elements and reusable frontend
             components.
-          </typography.BodyMain>
+          </typography.BodyMain> */}
 
-          <typography.Subtitle20>What we learned</typography.Subtitle20>
-          <typography.BodyMain>
+          {/* <typography.Subtitle20>What we learned</typography.Subtitle20> */}
+          {/* <typography.BodyMain>
             End users sit in a horseshoe with large screens
-          </typography.BodyMain>
+          </typography.BodyMain> */}
         </BodyContainer>
         <img
           alt="User Workflow Diagram"
@@ -243,6 +242,12 @@ export const Cognite = () => {
           <typography.LargeSubtitle>
             What are they frustrated with?
           </typography.LargeSubtitle>
+          <typography.BodyMain>
+            User journey maps were created for the two main paths in the first
+            line engineer workflow. These helped identify the areas with the
+            lowest user satisfaction, and therefore the areas that needed most
+            improvement.
+          </typography.BodyMain>
         </BodyContainer>
         <img
           alt="User Journey Map"
@@ -259,11 +264,11 @@ export const Cognite = () => {
             Information Architecture
           </typography.LargeSubtitle>
           <br />
-          <typography.BodyMain>
+          {/* <typography.BodyMain>
             We did a design critique of the exisiting application with our team
             plus a subject matter expert. From the critique, we decided to focus
             on the 3 following areas:
-          </typography.BodyMain>
+          </typography.BodyMain> */}
         </BodyContainer>
 
         <img
@@ -346,10 +351,11 @@ export const Cognite = () => {
 
         <BodyContainer>
           {/* Areas of Focus */}
-          <typography.NewDetailLeft>
+          {/* <typography.NewDetailLeft>
             &nbsp;Introduction
           </typography.NewDetailLeft>
-          <typography.LargeSubtitle>Areas of Focus</typography.LargeSubtitle>
+          <typography.LargeSubtitle>Areas of Focus</typography.LargeSubtitle> */}
+
           {/*  From low to medium fidelity */}
           <typography.NewDetailLeft>&nbsp;Process</typography.NewDetailLeft>
           <typography.LargeSubtitle>
@@ -365,7 +371,7 @@ export const Cognite = () => {
               In dynamic collaborative design sessions, whiteboards were used to
               help brainstorm and solutioning. As the whiteboard sketches
               started coming to life, I began sketching using my iPad to capture
-              more details
+              more details.
             </typography.BodyMain>
 
             <img
@@ -379,8 +385,9 @@ export const Cognite = () => {
 
             <typography.Subtitle20>Wireframes</typography.Subtitle20>
             <typography.BodyMain>
-              They were created using the tool Whismical and in Figma using very
-              basic blocks.
+              Wireframes were created using the tool Whismical and in Figma. In
+              both cases, I made sure I was using very basic blocks to be able
+              to rapidly prototype and not get caught up on details.
             </typography.BodyMain>
             <img
               alt="Wireframes"
@@ -408,12 +415,10 @@ export const Cognite = () => {
         </BackgroundBlue>
         <BodyContainer>
           {/*  Code code code */}
-          <typography.NewDetailLeft>
-            &nbsp;Introduction
-          </typography.NewDetailLeft>
+          <typography.NewDetailLeft>&nbsp;Process</typography.NewDetailLeft>
           <typography.LargeSubtitle>Code code code</typography.LargeSubtitle>
           <typography.Subtitle20>Architecture</typography.Subtitle20>
-          <typography.BodyMain>
+          {/* <typography.BodyMain>
             The two primary users of AIR are first line engineers and data
             scientists. To better understand these users, I ran a workshop with
             our team plus a subject matter expert to gain deeper insight...
@@ -423,7 +428,7 @@ export const Cognite = () => {
             The two primary users of AIR are first line engineers and data
             scientists. To better understand these users, I ran a workshop with
             our team plus a subject matter expert to gain deeper insight...
-          </typography.BodyMain>
+          </typography.BodyMain> */}
           <typography.GreySubtile>Re-Ducks</typography.GreySubtile>
           <img
             alt="Reducks"
@@ -432,14 +437,14 @@ export const Cognite = () => {
             }}
             src={reducks}
           />
-          <typography.Subtitle20>Data Contracts</typography.Subtitle20>
+          {/* <typography.Subtitle20>Data Contracts</typography.Subtitle20>
           <typography.BodyMain>
             The two primary users of AIR are first line engineers and data
             scientists. To better understand these users, I ran a workshop with
             our team plus a subject matter expert to gain deeper insight...
-          </typography.BodyMain>
+          </typography.BodyMain> */}
           <typography.Subtitle20>Components</typography.Subtitle20>
-          <typography.BodyMain>hooks, classless, etc</typography.BodyMain>
+          {/* <typography.BodyMain>hooks, classless, etc</typography.BodyMain> */}
         </BodyContainer>
 
         <img
@@ -449,10 +454,10 @@ export const Cognite = () => {
           }}
           src={compArc}
         />
-        <BodyContainer>
+        {/* <BodyContainer>
           <typography.Subtitle20>How we used React</typography.Subtitle20>
           <typography.BodyMain>hooks, classless, etc</typography.BodyMain>
-        </BodyContainer>
+        </BodyContainer> */}
       </ContentContainer>
       <Footer />
     </>
