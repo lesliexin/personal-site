@@ -1,5 +1,5 @@
 import React from "react";
-import { typography, colors } from "../styles";
+import { typography, colors, device } from "../styles";
 import styled from "styled-components";
 import OldIA from "../assets/oldIA.png";
 import NewIA from "../assets/newIA.png";
@@ -29,6 +29,10 @@ const BodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 55%;
+
+  @media ${device.mobileM} {
+    width: 95%;
+  }
 `;
 
 const RowContainer = styled.div`

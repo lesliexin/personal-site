@@ -1,28 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { typography } from "../styles";
+import { typography, device, containers } from "../styles";
 import { SideNav } from "../components";
-
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-`;
-
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-top: 140px;
-  width: 78%;
-`;
 
 const LinksContainer = styled.div`
   display: flex;
   margin-top: 60px;
   flex-direction: row;
   justify-content: space-between;
+
+  @media ${device.mobileM} {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const TitleTextContainer = styled.div`
@@ -36,8 +31,8 @@ const BodyContainer = styled.div`
 
 export const AboutPage = () => {
   return (
-    <Container>
-      <ContentContainer>
+    <containers.PageContainer>
+      <containers.ContentContainer>
         <TitleTextContainer>
           <typography.NewTitle>It's nice to meet you.</typography.NewTitle>
           <BodyContainer>
@@ -116,7 +111,7 @@ export const AboutPage = () => {
           </LinksContainer>
         </TitleTextContainer>
         <SideNav />
-      </ContentContainer>
-    </Container>
+      </containers.ContentContainer>
+    </containers.PageContainer>
   );
 };

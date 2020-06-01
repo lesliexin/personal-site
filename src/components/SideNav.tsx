@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { typography } from "../styles";
+import { typography, device } from "../styles";
 
 const LinksContainer = styled.div`
   width: 15%;
@@ -9,6 +9,10 @@ const LinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px 36px 0px 0px;
+
+  @media ${device.mobileM} {
+    padding: 10px 0px 0px 0px;
+  }
 `;
 
 export const SideNav = () => {

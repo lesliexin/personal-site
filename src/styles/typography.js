@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import colors from "./colors";
+import { device } from "./device";
 const extraLargeText = "42px";
 const largeText = "36px";
 const bodyText = "16px";
@@ -17,6 +18,10 @@ const NewTitle = styled.p`
   word-wrap: normal;
   text-align: left;
   color: ${colors.navy};
+
+  @media ${device.mobileM} {
+    font-size: ${largeText};
+  }
 `;
 
 // "Currently" "Previously"
@@ -55,7 +60,6 @@ const NewLinksGrey = styled.a`
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.darkGrey};
-  text-align: right;
   letter-spacing: 0.5px;
   cursor: pointer;
   text-decoration: none;
@@ -68,7 +72,8 @@ const NewLinksGrey = styled.a`
 
 // Body
 const NewBody = styled.span`
-  font-size: ${bodyText}
+font-size: ${bodyText};
+  }
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -76,6 +81,10 @@ const NewBody = styled.span`
   letter-spacing: 0.5px;
   font-weight: 600;
   line-height: 30px;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
 `;
 
 // "Systems Design Engineering"
@@ -87,6 +96,14 @@ const NewBodyBold = styled.span`
   color: ${colors.navy};
   letter-spacing: 0.5px;
   font-weight: 700;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
 // About page
@@ -105,6 +122,14 @@ const NewBodyLink = styled.a`
   &:hover {
     color: ${colors.accentBlue};
   }
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
 // Home page
@@ -122,6 +147,14 @@ const NewBodyUnderline = styled.a`
   font-weight: 700;
   &:hover {
     border-bottom: 2.5px solid ${colors.darkGrey};
+  }
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
   }
 `;
 
@@ -158,7 +191,7 @@ const StyledMark = styled.mark`
 
 // Case study
 // H1
-const TitleText90 = styled.p`
+const CaseTitle = styled.p`
   font-size: ${largeText};
   margin: 0px;
   font-family: "Open Sans", sans-serif;
@@ -166,6 +199,10 @@ const TitleText90 = styled.p`
   word-wrap: normal;
   text-align: left;
   line-height: 48px;
+
+  @media ${device.mobileM} {
+    font-size: ${largeText};
+  }
 `;
 
 // Case study
@@ -238,13 +275,21 @@ const NewDetailLeft = styled.p`
 // Case study
 // H4
 const GreySubtile = styled.p`
+  font-size: ${bodyText};
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: ${bodyText};
   line-height: 30px;
   color: ${colors.darkGrey};
   letter-spacing: 1.5px;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
 export const typography = {
@@ -255,7 +300,7 @@ export const typography = {
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
   NewBodyBold: NewBodyBold,
-  TitleText90: TitleText90,
+  CaseTitle: CaseTitle,
   Subtitle20: Subtitle20,
   StyledMark: StyledMark,
   Body2: Body2,

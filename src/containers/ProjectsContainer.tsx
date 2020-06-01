@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Cognite, projectContent } from "../projects";
 import { Footer } from "../components";
-import { typography } from "../styles";
+import { typography, device } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import titleImage from "../assets/titleImages.svg";
@@ -13,14 +13,29 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: ${colors.lightBlue};
-  background-image: url(${titleImage});
-  background-repeat: no-repeat;
-  background-position: right 80%;
-  background-size: 75%;
+
+  @media ${device.mobileM} {
+    padding: 20px;
+  }
+
+  @media ${device.tablet} {
+    background-image: url(${titleImage});
+    background-repeat: no-repeat;
+    background-position: right 80%;
+    background-size: 75%;
+  }
 `;
 
 const TitleTextContainer = styled.div`
   width: 30%;
+
+  @media ${device.mobileM} {
+    width: 95%;
+  }
+
+  @media ${device.tablet} {
+    width: 30%;
+  }
 `;
 
 const CompanyName = styled.span`
@@ -80,10 +95,10 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
           <typography.NewDetailLeft style={{ paddingTop: "18px" }}>
             CASE STUDY
           </typography.NewDetailLeft>
-          <typography.TitleText90>
+          <typography.CaseTitle>
             Enabling Engineers to use Data
             <br /> Science
-          </typography.TitleText90>
+          </typography.CaseTitle>
           <CompanyName>{currentCompany.company}&nbsp;|&nbsp;</CompanyName>
           <CompanyName>{currentCompany.location}</CompanyName>
           <Role>Role</Role>
