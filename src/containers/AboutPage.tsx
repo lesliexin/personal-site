@@ -45,7 +45,7 @@ export const AboutPage = () => {
               I'm a software engineer with an affinity for design. It all
               started when I was accidentally placed in a computer science class
               in high school. Despite my apprehension, after 2 weeks of
-              introductory, python I was hooked.
+              introductory python, I was hooked.
             </typography.NewBody>
           </BodyContainer>
 
