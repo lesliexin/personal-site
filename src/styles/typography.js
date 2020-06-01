@@ -2,7 +2,6 @@
  * @providesModule TextStyles
  */
 import styled from "styled-components";
-import fonts from "./fonts";
 import colors from "./colors";
 const extralargeText = "72px";
 const largeText = "40px";
@@ -32,7 +31,7 @@ const LargeTitle = styled.p`
 
 const SubTitle = styled.span`
   margin: 0px;
-  font-family: ${fonts.openSansSemibold};
+  font-family: "Open Sans", sans-serif;
   font-size: ${subtitleText};
   word-wrap: normal;
   text-align: left;
@@ -40,7 +39,7 @@ const SubTitle = styled.span`
 
 const SubTitleUnderline = styled.a`
   margin: 0px;
-  font-family: ${fonts.openSansBold};
+  font-family: "Open Sans", sans-serif;
   font-size: ${subtitleText};
   word-wrap: normal;
   text-align: left;
@@ -52,7 +51,7 @@ const SubTitleUnderline = styled.a`
 
 const AllCapsSubtitle = styled.p`
   margin: 0px;
-  font-family: ${fonts.openSansBold};
+  font-family: "Open Sans", sans-serif;
   font-size: ${medText};
   word-wrap: normal;
   text-align: left;
@@ -61,7 +60,7 @@ const AllCapsSubtitle = styled.p`
 
 const Body = styled.span`
   margin: 0px;
-  font-family: ${fonts.openSansRegular};
+  font-family: "Open Sans", sans-serif;
   font-size: ${medText};
   word-wrap: normal;
   text-align: left;

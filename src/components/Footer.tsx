@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { fonts, colors } from "../styles";
+import { typography, colors } from "../styles";
 import { animateScroll as scroll } from "react-scroll";
 
 const Wrapper = styled.div`
@@ -9,12 +9,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   background-color: ${colors.lightBlue};
   justify-content: flex-end;
-`;
-
-const NavOption = styled.div`
-  padding: 32px;
-  cursor: pointer;
-  font-family: ${fonts.openSansBold};
 `;
 
 const scrollToTop = () => {
@@ -26,21 +20,16 @@ export const Footer = () => {
 
   return (
     <Wrapper>
-      <NavOption
+      <typography.NewLinks
         onClick={() => {
           history.push("/");
         }}
       >
         Home
-      </NavOption>
-      {/* <NavOption
-        onClick={() => {
-          history.push("/about");
-        }}
-      >
-        About
-      </NavOption> */}
-      <NavOption onClick={scrollToTop}>Scroll To Top</NavOption>
+      </typography.NewLinks>
+      <typography.NewLinks onClick={scrollToTop}>
+        Scroll To Top
+      </typography.NewLinks>
     </Wrapper>
   );
 };

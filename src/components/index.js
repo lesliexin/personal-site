@@ -1,4 +1,5 @@
 export { Footer } from "./Footer.tsx";
-export { HomePageCard } from "./HomePageCard.tsx";
-export { TopNavBar } from "./TopNavBar.tsx";
+export { HomePageCard } from "../old/HomePageCard.tsx";
+export { TopNavBar } from "../old/TopNavBar.tsx";
 export { SideNav } from "./SideNav.tsx";
+export { ProgressBar } from "./ProgressBar.tsx";

@@ -1,7 +1,3 @@
-/**
- * @providesModule Colors
- */
-
 const colors = {
   black: "#000000",
   white: "#FFFFFF",
@@ -10,6 +6,6 @@ const colors = {
   darkGrey: "#A9A9AC",
   navy: "#17182C",
   accentBlue: "#1151F9",
-  accentYellow: "#FCEA2B"
+  accentYellow: "#FCEA2B",
 };
 export default colors;
