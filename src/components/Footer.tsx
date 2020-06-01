@@ -1,35 +1,35 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { typography, colors } from "../styles";
-import { animateScroll as scroll } from "react-scroll";
+import { useHistory } from "react-router-dom";
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  height: 20vh;
+  flex-direction: row;
   background-color: ${colors.lightBlue};
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
-const scrollToTop = () => {
-  scroll.scrollToTop();
-};
-
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 export const Footer = () => {
   const history = useHistory();
-
   return (
     <Wrapper>
-      <typography.NewLinks
-        onClick={() => {
-          history.push("/");
-        }}
-      >
-        Home
-      </typography.NewLinks>
-      <typography.NewLinks onClick={scrollToTop}>
-        Scroll To Top
-      </typography.NewLinks>
+      <ContentContainer>
+        <typography.Subtitle20>Thanks for reading!</typography.Subtitle20>
+        <typography.NewLinks
+          onClick={() => {
+            history.goBack();
+          }}
+        >
+          back to home
+        </typography.NewLinks>
+      </ContentContainer>
     </Wrapper>
   );
 };

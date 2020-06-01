@@ -1,6 +1,5 @@
 import React from "react";
 import { typography, colors } from "../styles";
-import { Footer } from "../components";
 import styled from "styled-components";
 import OldIA from "../assets/oldIA.png";
 import NewIA from "../assets/newIA.png";
@@ -104,7 +103,7 @@ export const Cognite = () => {
           alt="Old AIR Application"
           style={{
             width: "100%",
-            margin: "40px"
+            margin: "40px",
           }}
           src={POC}
         />
@@ -188,7 +187,7 @@ export const Cognite = () => {
           alt="User Personas"
           style={{
             width: "100%",
-            margin: "40px"
+            margin: "40px",
           }}
           src={users}
         />
@@ -208,7 +207,7 @@ export const Cognite = () => {
             alt="AIR Diagram"
             style={{
               width: "100%",
-              margin: "16px"
+              margin: "16px",
             }}
             src={airDiagram}
           />
@@ -232,7 +231,7 @@ export const Cognite = () => {
           alt="User Workflow Diagram"
           style={{
             width: "100%",
-            margin: "40px"
+            margin: "40px",
           }}
           src={workflow}
         />
@@ -252,7 +251,7 @@ export const Cognite = () => {
         <img
           alt="User Journey Map"
           style={{
-            width: "70%"
+            width: "70%",
           }}
           src={UJM}
         />
@@ -275,7 +274,7 @@ export const Cognite = () => {
           alt="IA Workshop"
           style={{
             width: "100%",
-            marginTop: "30px"
+            marginTop: "30px",
           }}
           src={IAWorkshop}
         />
@@ -294,7 +293,7 @@ export const Cognite = () => {
               style={{
                 margin: "40px 22px 28px 0px",
                 width: "60%",
-                float: "left"
+                float: "left",
               }}
               src={OldIA}
             />
@@ -325,7 +324,7 @@ export const Cognite = () => {
               style={{
                 margin: "60px 22px 28px 0px",
                 width: "60%",
-                float: "left"
+                float: "left",
               }}
               src={NewIA}
             />
@@ -378,7 +377,7 @@ export const Cognite = () => {
               alt="Whiteboarding and Sketches"
               style={{
                 width: "100%",
-                margin: "16px"
+                margin: "16px",
               }}
               src={sketches}
             />
@@ -393,7 +392,7 @@ export const Cognite = () => {
               alt="Wireframes"
               style={{
                 width: "100%",
-                margin: "16px"
+                margin: "16px",
               }}
               src={wireframes}
             />
@@ -407,7 +406,7 @@ export const Cognite = () => {
               alt="Drafts"
               style={{
                 width: "100%",
-                margin: "16px"
+                margin: "16px",
               }}
               src={drafts}
             />
@@ -417,23 +416,27 @@ export const Cognite = () => {
           {/*  Code code code */}
           <typography.NewDetailLeft>&nbsp;Process</typography.NewDetailLeft>
           <typography.LargeSubtitle>Code code code</typography.LargeSubtitle>
-          <typography.Subtitle20>Architecture</typography.Subtitle20>
-          {/* <typography.BodyMain>
-            The two primary users of AIR are first line engineers and data
-            scientists. To better understand these users, I ran a workshop with
-            our team plus a subject matter expert to gain deeper insight...
-          </typography.BodyMain>
-          <typography.Subtitle20>Project Structure</typography.Subtitle20>
-          <typography.BodyMain>
-            The two primary users of AIR are first line engineers and data
-            scientists. To better understand these users, I ran a workshop with
-            our team plus a subject matter expert to gain deeper insight...
-          </typography.BodyMain> */}
+          <typography.Subtitle20>Structure</typography.Subtitle20>
           <typography.GreySubtile>Re-Ducks</typography.GreySubtile>
+          <typography.BodyMain>
+            For this project, we decided to follow the Ducks method of
+            organizing our Redux files. Ducks proposes a modularized approach as
+            opposed to grouping by types. Therefore, we have separate folders in
+            our store based on the different modules in our projects. Some
+            examples of these modules include: user, dashboard, auth, etc.
+          </typography.BodyMain>
+          <br />
+          <typography.BodyMain>
+            Organizing a project this way allows for greater scalability as the
+            repository grows. The files organized by functionality are also more
+            intuitive and easier to understand for new team members being
+            onboarded onto the project in the future.
+          </typography.BodyMain>
+
           <img
             alt="Reducks"
             style={{
-              width: "100%"
+              width: "100%",
             }}
             src={reducks}
           />
@@ -445,12 +448,31 @@ export const Cognite = () => {
           </typography.BodyMain> */}
           <typography.Subtitle20>Components</typography.Subtitle20>
           {/* <typography.BodyMain>hooks, classless, etc</typography.BodyMain> */}
+          <typography.GreySubtile>
+            Functional vs. Class components?
+          </typography.GreySubtile>
+          <typography.BodyMain>
+            As we were kicking off a new project, we had the unique opportunity
+            to get started right away with React v16 and ECMAScript 2018. Most
+            notably, we got to work with Hooks! As opposed to traditional
+            stateless functional components, the introduction of Hooks enables
+            developers to add state to their functional component, therefore
+            being able to do what was once only possible with classes.
+          </typography.BodyMain>
+          <typography.GreySubtile>Styled Components!</typography.GreySubtile>
+          <typography.BodyMain>
+            To style our project, we decided to use styled components. We made
+            this decision as style components are easy to read and also scoped.
+            This makes it really easy to keep our project neat and also to
+            divide up areas of the application to work on between team members.
+            easy to read, scoped
+          </typography.BodyMain>
         </BodyContainer>
 
         <img
           alt="Component Architecture"
           style={{
-            width: "100%"
+            width: "100%",
           }}
           src={compArc}
         />
@@ -459,7 +481,6 @@ export const Cognite = () => {
           <typography.BodyMain>hooks, classless, etc</typography.BodyMain>
         </BodyContainer> */}
       </ContentContainer>
-      <Footer />
     </>
   );
 };

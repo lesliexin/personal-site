@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Cognite, projectContent } from "../projects";
+import { Footer } from "../components";
 import { typography } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
@@ -101,6 +102,7 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
         </TitleTextContainer>
       </TitleContainer>
       <Cognite />
+      <Footer />
     </>
   );
 };

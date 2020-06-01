@@ -10,7 +10,7 @@ const StyledBar = styled.div`
     transparent 0
   );
   width: 100%;
-  height: 4px;
+  height: 3px;
   z-index: 3;
 `;
 

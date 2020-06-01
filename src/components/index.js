@@ -3,3 +3,4 @@ export { HomePageCard } from "../old/HomePageCard.tsx";
 export { TopNavBar } from "../old/TopNavBar.tsx";
 export { SideNav } from "./SideNav.tsx";
 export { ProgressBar } from "./ProgressBar.tsx";
+export { BackButton } from "../old/BackButton.tsx";
