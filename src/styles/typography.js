@@ -108,6 +108,38 @@ const NewLinks = styled.a`
   }
 `;
 
+const NewLinksGrey = styled.a`
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.darkGrey};
+  text-align: right;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 12px;
+  font-weight: 700;
+  &:hover {
+    color: ${colors.accentBlue};
+  }
+`;
+
+const SideNav = styled.a`
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.black};
+  text-align: right;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 12px;
+  font-weight: 700;
+  &:hover {
+    color: ${colors.accentBlue};
+  }
+`;
+
 const NewBody = styled.span`
   font-size: 16px;
   margin-bottom: 4px;
@@ -116,6 +148,7 @@ const NewBody = styled.span`
   color: ${colors.navy};
   letter-spacing: 0.5px;
   font-weight: 600;
+  line-height: 30px;
 `;
 
 const NewBodyBold = styled.span`
@@ -126,6 +159,22 @@ const NewBodyBold = styled.span`
   color: ${colors.navy};
   letter-spacing: 0.5px;
   font-weight: 700;
+`;
+
+const NewBodyLink = styled.a`
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-family: "Open Sans", sans-serif;
+  word-wrap: normal;
+  color: ${colors.navy};
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  line-height: 30px;
+  &:hover {
+    color: ${colors.accentBlue};
+  }
 `;
 
 const NewBodyUnderline = styled.a`
@@ -285,5 +334,8 @@ export const typography = {
   LargeSubtitle: LargeSubtitle,
   NewDetailLeft: NewDetailLeft,
   BodyMain: BodyMain,
-  GreySubtile: GreySubtile
+  GreySubtile: GreySubtile,
+  SideNav: SideNav,
+  NewLinksGrey: NewLinksGrey,
+  NewBodyLink: NewBodyLink,
 };

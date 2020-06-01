@@ -5,7 +5,7 @@ import { Router } from "react-router-dom";
 import { Route } from "react-router-dom";
 import history from "./history";
 import { ProjectsContainer } from "./containers";
-// import { AboutPage, LandingPage } from "./containers";
+import { AboutPage } from "./containers";
 // import { TopNavBar, Footer } from "./components";
 import { NewHomePage } from "./containers/NewHomePage";
 
@@ -15,6 +15,7 @@ function App() {
       <div>
         <Route exact path="/" component={NewHomePage} />
         <Route path="/cognite" component={ProjectsContainer} />
+        <Route path="/about" component={AboutPage} />
         {/* <TopNavBar />
         <Route exact path="/" component={LandingPage} />
         <Route path="/about" component={AboutPage} />

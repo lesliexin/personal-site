@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { typography } from "../styles";
 import { ReactComponent as Wave } from "../assets/wave.svg";
 import { useHistory } from "react-router-dom";
+import { SideNav } from "../components";
 
 const Container = styled.div`
   width: 100%;
@@ -21,14 +22,6 @@ const ContentContainer = styled.div`
 
 const TitleTextContainer = styled.div`
   width: 85%;
-`;
-
-const LinksContainer = styled.div`
-  width: 15%;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 36px 0px 0px;
 `;
 
 const StyledTable = styled.div`
@@ -211,36 +204,7 @@ export const NewHomePage = () => {
               </StyledRow>
             </StyledTable>
           </TitleTextContainer>
-          <LinksContainer>
-            <typography.NewLinks
-              href="https://github.com/lesliexin/"
-              target="_blank"
-            >
-              code
-            </typography.NewLinks>
-            <br />
-            <typography.NewLinks href="/XinLeslie2022.pdf" target="_blank">
-              résumé
-            </typography.NewLinks>
-            <br />
-            <typography.NewLinks href="mailto:l6xin@uwaterloo.ca">
-              email
-            </typography.NewLinks>
-            <br />
-            <typography.NewLinks
-              href="https://www.linkedin.com/in/lesliexin/"
-              target="_blank"
-            >
-              linkedin
-            </typography.NewLinks>
-            <br />
-            <typography.NewLinks
-              href="https://www.youtube.com/watch?v=IyV5c_sd_4k"
-              target="_blank"
-            >
-              fun
-            </typography.NewLinks>
-          </LinksContainer>
+          <SideNav />
         </ContentContainer>
       </Container>
     </>
