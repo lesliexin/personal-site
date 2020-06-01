@@ -1,7 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { colors, typography } from "../styles";
+import { colors } from "../styles";
+import { oldTypography } from "./oldTypography";
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,22 +27,22 @@ export const TopNavBar = () => {
           history.push("/");
         }}
       >
-        <typography.LargeTitle>lx.</typography.LargeTitle>
+        <oldTypography.LargeTitle>lx.</oldTypography.LargeTitle>
       </NavLogo>
-      <typography.NewLinks
+      <oldTypography.Body
         onClick={() => {
           history.push("/");
         }}
       >
         HOME
-      </typography.NewLinks>
-      <typography.NewLinks
+      </oldTypography.Body>
+      <oldTypography.Body
         onClick={() => {
           history.push("/about");
         }}
       >
         ABOUT
-      </typography.NewLinks>
+      </oldTypography.Body>
     </Wrapper>
   );
 };
