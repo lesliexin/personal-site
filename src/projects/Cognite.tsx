@@ -31,7 +31,7 @@ const BodyContainer = styled.div`
   width: 55%;
 
   @media ${device.mobileM} {
-    width: 95%;
+    width: 90%;
   }
 `;
 

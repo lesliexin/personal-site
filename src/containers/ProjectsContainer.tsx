@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Cognite, projectContent } from "../projects";
-import { Footer } from "../components";
+import { Footer, BackButton } from "../components";
 import { typography, device } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
@@ -13,16 +13,18 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: ${colors.lightBlue};
+  background-image: url(${titleImage});
+  background-repeat: no-repeat;
+  background-position: right 80%;
+  background-size: 75%;
 
   @media ${device.mobileM} {
     padding: 20px;
-  }
-
-  @media ${device.tablet} {
     background-image: url(${titleImage});
     background-repeat: no-repeat;
-    background-position: right 80%;
+    background-position: center top 5%;
     background-size: 75%;
+    height: 100vh;
   }
 `;
 
@@ -100,9 +102,8 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
     <>
       <TitleContainer>
         <TitleTextContainer>
-          <typography.NewDetailLeft style={{ paddingTop: "18px" }}>
-            CASE STUDY
-          </typography.NewDetailLeft>
+          <BackButton />
+          <typography.NewDetailLeft>CASE STUDY</typography.NewDetailLeft>
           <typography.CaseTitle>
             {currentCompany.title1}
             <br /> {currentCompany.title2}

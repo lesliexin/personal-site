@@ -23,10 +23,10 @@ const LinksContainer = styled.div`
 const TitleTextContainer = styled.div`
   width: 65%;
   margin-left: 60px;
-`;
 
-const BodyContainer = styled.div`
-  margin-top: 30px;
+  @media ${device.mobileM} {
+    margin-left: 4px;
+  }
 `;
 
 export const AboutPage = () => {
@@ -35,16 +35,16 @@ export const AboutPage = () => {
       <containers.ContentContainer>
         <TitleTextContainer>
           <typography.NewTitle>It's nice to meet you.</typography.NewTitle>
-          <BodyContainer>
+          <containers.Top30>
             <typography.NewBody>
               I'm a software engineer with an affinity for design. It all
               started when I was accidentally placed in a computer science class
               in high school. Despite my apprehension, after 2 weeks of
               introductory python, I was hooked.
             </typography.NewBody>
-          </BodyContainer>
+          </containers.Top30>
 
-          <BodyContainer>
+          <containers.Top30>
             <typography.NewBody>
               From that first python program to now, I've thrown myself into the
               tech community. From
@@ -73,7 +73,7 @@ export const AboutPage = () => {
               —I am passionate about giving back to the community that helped
               raise me.
             </typography.NewBody>
-          </BodyContainer>
+          </containers.Top30>
 
           <LinksContainer>
             <typography.NewLinksGrey

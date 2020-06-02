@@ -8,6 +8,10 @@ const Top24 = styled.div`
   padding-top: 24px;
 `;
 
+const Top30 = styled.div`
+  padding-top: 30px;
+`;
+
 const PageContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -22,8 +26,8 @@ const ContentContainer = styled.div`
   padding-top: 140px;
 
   @media ${device.mobileM} {
-    width: 85%;
-    padding-top: 20px;
+    width: 90%;
+    padding-top: 40px;
   }
 
   @media ${device.laptop} {
@@ -36,4 +40,5 @@ export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
   Top24: Top24,
+  Top30: Top30,
 };

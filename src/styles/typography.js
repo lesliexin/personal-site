@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "./colors";
 import { device } from "./device";
+
 const extraLargeText = "42px";
 const largeText = "36px";
 const bodyText = "16px";
@@ -286,6 +287,10 @@ const NewDetailLeft = styled.p`
   text-align: left;
   font-weight: 600;
   margin-top: 48px;
+
+  @media ${device.mobileM} {
+    font-size: ${tinyText};
+  }
 `;
 
 // Case study
