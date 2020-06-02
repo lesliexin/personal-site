@@ -1,19 +1,14 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { fonts, colors, typography } from "../styles";
+import { colors } from "../styles";
+import { oldTypography } from "./oldTypography";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${colors.lightBlue};
   justify-content: flex-end;
-`;
-
-const NavOption = styled.div`
-  padding: 32px;
-  cursor: pointer;
-  font-family: ${fonts.openSansBold};
 `;
 
 const NavLogo = styled.div`
@@ -32,22 +27,22 @@ export const TopNavBar = () => {
           history.push("/");
         }}
       >
-        <typography.LargeTitle>lx.</typography.LargeTitle>
+        <oldTypography.LargeTitle>lx.</oldTypography.LargeTitle>
       </NavLogo>
-      <NavOption
+      <oldTypography.Body
         onClick={() => {
           history.push("/");
         }}
       >
         HOME
-      </NavOption>
-      <NavOption
+      </oldTypography.Body>
+      <oldTypography.Body
         onClick={() => {
           history.push("/about");
         }}
       >
         ABOUT
-      </NavOption>
+      </oldTypography.Body>
     </Wrapper>
   );
 };

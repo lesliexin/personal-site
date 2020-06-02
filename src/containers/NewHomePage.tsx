@@ -1,24 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { typography } from "../styles";
+import { typography, containers } from "../styles";
 import { ReactComponent as Wave } from "../assets/wave.svg";
 import { useHistory } from "react-router-dom";
 import { SideNav } from "../components";
-
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-`;
-
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-top: 140px;
-  width: 78%;
-`;
 
 const TitleTextContainer = styled.div`
   width: 85%;
@@ -48,8 +33,8 @@ export const NewHomePage = () => {
 
   return (
     <>
-      <Container>
-        <ContentContainer>
+      <containers.PageContainer>
+        <containers.ContentContainer>
           <TitleTextContainer>
             <StyledTable>
               <StyledRow>
@@ -205,8 +190,8 @@ export const NewHomePage = () => {
             </StyledTable>
           </TitleTextContainer>
           <SideNav />
-        </ContentContainer>
-      </Container>
+        </containers.ContentContainer>
+      </containers.PageContainer>
     </>
   );
 };

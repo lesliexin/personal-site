@@ -1,55 +1,50 @@
 import React from "react";
 import styled from "styled-components";
-import { typography } from "../styles";
+import { typography, device, containers } from "../styles";
 import { SideNav } from "../components";
-
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-`;
-
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-top: 140px;
-  width: 78%;
-`;
 
 const LinksContainer = styled.div`
   display: flex;
   margin-top: 60px;
   flex-direction: row;
   justify-content: space-between;
+
+  @media ${device.mobileM} {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const TitleTextContainer = styled.div`
   width: 65%;
   margin-left: 60px;
-`;
 
-const BodyContainer = styled.div`
-  margin-top: 30px;
+  @media ${device.mobileM} {
+    margin-left: 4px;
+  }
 `;
 
 export const AboutPage = () => {
   return (
-    <Container>
-      <ContentContainer>
+    <containers.PageContainer>
+      <containers.ContentContainer>
         <TitleTextContainer>
           <typography.NewTitle>It's nice to meet you.</typography.NewTitle>
-          <BodyContainer>
+          <containers.Top30>
             <typography.NewBody>
               I'm a software engineer with an affinity for design. It all
               started when I was accidentally placed in a computer science class
               in high school. Despite my apprehension, after 2 weeks of
-              introductory, python I was hooked.
+              introductory python, I was hooked.
             </typography.NewBody>
-          </BodyContainer>
+          </containers.Top30>
 
-          <BodyContainer>
+          <containers.Top30>
             <typography.NewBody>
               From that first python program to now, I've thrown myself into the
               tech community. From
@@ -78,7 +73,7 @@ export const AboutPage = () => {
               —I am passionate about giving back to the community that helped
               raise me.
             </typography.NewBody>
-          </BodyContainer>
+          </containers.Top30>
 
           <LinksContainer>
             <typography.NewLinksGrey
@@ -116,7 +111,7 @@ export const AboutPage = () => {
           </LinksContainer>
         </TitleTextContainer>
         <SideNav />
-      </ContentContainer>
-    </Container>
+      </containers.ContentContainer>
+    </containers.PageContainer>
   );
 };

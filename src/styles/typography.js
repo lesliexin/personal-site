@@ -1,87 +1,33 @@
-/**
- * @providesModule TextStyles
- */
 import styled from "styled-components";
-import fonts from "./fonts";
 import colors from "./colors";
-const extralargeText = "72px";
-const largeText = "40px";
-const subtitleText = "20px";
-const medText = "14px";
+import { device } from "./device";
 
-// Design 1
+const extraLargeText = "42px";
+const largeText = "36px";
+const bodyText = "16px";
+const smallText = "14px";
+const extraSmallText = "12px";
+const tinyText = "10px";
 
-const ExtraLargeTitle = styled.p`
-  font-size: ${extralargeText};
-  margin: 0px;
-  padding-bottom: 28px;
-  font-family: "EB Garamond", serif;
-  font-weight: bold;
-  word-wrap: normal;
-  text-align: left;
-`;
-
-const LargeTitle = styled.p`
-  margin: 0px;
-  font-family: "EB Garamond", serif;
-  font-weight: bold;
-  font-size: ${largeText};
-  word-wrap: normal;
-  text-align: left;
-`;
-
-const SubTitle = styled.span`
-  margin: 0px;
-  font-family: ${fonts.openSansSemibold};
-  font-size: ${subtitleText};
-  word-wrap: normal;
-  text-align: left;
-`;
-
-const SubTitleUnderline = styled.a`
-  margin: 0px;
-  font-family: ${fonts.openSansBold};
-  font-size: ${subtitleText};
-  word-wrap: normal;
-  text-align: left;
-  border-bottom: 3px solid ${colors.white};
-  cursor: pointer;
-  text-decoration: none;
-  color: ${colors.black};
-`;
-
-const AllCapsSubtitle = styled.p`
-  margin: 0px;
-  font-family: ${fonts.openSansBold};
-  font-size: ${medText};
-  word-wrap: normal;
-  text-align: left;
-  text-transform: uppercase;
-`;
-
-const Body = styled.span`
-  margin: 0px;
-  font-family: ${fonts.openSansRegular};
-  font-size: ${medText};
-  word-wrap: normal;
-  text-align: left;
-`;
-
-// Design 2
-
+// Large Titles
 const NewTitle = styled.p`
   margin: 0px;
-  font-size: 42px;
+  font-size: ${extraLargeText};
   padding-bottom: 6px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   word-wrap: normal;
   text-align: left;
   color: ${colors.navy};
+
+  @media ${device.mobileM} {
+    font-size: ${largeText};
+  }
 `;
 
+// "Currently" "Previously"
 const NewHeading = styled.p`
-  font-size: 12px;
+  font-size: ${extraSmallText};
   margin: 34px 0px 10px 0px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -92,8 +38,9 @@ const NewHeading = styled.p`
   font-weight: 700;
 `;
 
+// Side Nav
 const NewLinks = styled.a`
-  font-size: 12px;
+  font-size: ${extraSmallText};
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.accentBlue};
@@ -108,12 +55,12 @@ const NewLinks = styled.a`
   }
 `;
 
+// Bottom of About Page
 const NewLinksGrey = styled.a`
-  font-size: 12px;
+  font-size: ${extraSmallText};
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.darkGrey};
-  text-align: right;
   letter-spacing: 0.5px;
   cursor: pointer;
   text-decoration: none;
@@ -124,24 +71,10 @@ const NewLinksGrey = styled.a`
   }
 `;
 
-const SideNav = styled.a`
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  word-wrap: normal;
-  color: ${colors.black};
-  text-align: right;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 12px;
-  font-weight: 700;
-  &:hover {
-    color: ${colors.accentBlue};
-  }
-`;
-
+// Body
 const NewBody = styled.span`
-  font-size: 16px;
+font-size: ${bodyText};
+  }
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -149,20 +82,35 @@ const NewBody = styled.span`
   letter-spacing: 0.5px;
   font-weight: 600;
   line-height: 30px;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
 `;
 
+// "Systems Design Engineering"
 const NewBodyBold = styled.span`
-  font-size: 16px;
+  font-size: ${bodyText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.navy};
   letter-spacing: 0.5px;
   font-weight: 700;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
+// About page
+// "building software for non-profit organizations", etc
 const NewBodyLink = styled.a`
-  font-size: 16px;
+  font-size: ${bodyText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -175,26 +123,61 @@ const NewBodyLink = styled.a`
   &:hover {
     color: ${colors.accentBlue};
   }
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
+// Home page
+// "Cognite", "Bungalow", etc
 const NewBodyUnderline = styled.a`
-  font-size: 16px;
+  font-size: ${bodyText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.navy};
-  border-bottom: 2.5px solid ${colors.accentBlue};
+  // border-bottom: 2.5px solid ${colors.accentBlue};
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.5px;
   font-weight: 700;
-  &:hover {
-    border-bottom: 2.5px solid ${colors.darkGrey};
+  // &:hover {
+  //   border-bottom: 2.5px solid ${colors.darkGrey};
+  // }
+
+  &:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #069;
+    transition: 0.2s;
+  }
+  &:hover:after {
+    width: 100%;
+
+  }
+ 
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
   }
 `;
 
+// Home page years
 const NewDetail = styled.p`
-  font-size: 10px;
+  font-size: ${tinyText};
   margin: 0px 12px 0px 0px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -205,9 +188,11 @@ const NewDetail = styled.p`
   font-weight: 700;
 `;
 
+// Home page
+// "case study here"
 const StyledMark = styled.mark`
   background-color: ${colors.accentYellow};
-  font-size: 12px;
+  font-size: ${extraSmallText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -221,30 +206,37 @@ const StyledMark = styled.mark`
   }
 `;
 
-// Design 3
-
-const TitleText90 = styled.p`
-  font-size: 36px;
+// Case study
+// H1
+const CaseTitle = styled.p`
+  font-size: ${largeText};
   margin: 0px;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   word-wrap: normal;
   text-align: left;
   line-height: 48px;
+
+  @media ${device.mobileM} {
+    font-size: 28px;
+    line-height: 36px;
 `;
 
-const LargeCaps24 = styled.span`
+// Case study
+// H2
+const LargeSubtitle = styled.p`
+  font-family: Open Sans;
   margin: 0px;
-  font-family: "Open Sans", sans-serif;
-  word-wrap: normal;
-  text-align: left;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: ${largeText};
   line-height: 48px;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
+  color: ${colors.accentBlue};
 `;
 
+// Case study
+// H3
 const Subtitle20 = styled.span`
   margin: 32px 0px 6px 0px;
   font-family: "Open Sans", sans-serif;
@@ -253,12 +245,14 @@ const Subtitle20 = styled.span`
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 36px;
+  line-height: ${largeText};
   letter-spacing: 1.5px;
 `;
 
+// Case study
+// Title page text
 const Body2 = styled.p`
-  font-size: 14px;
+  font-size: ${smallText};
   line-height: 26px;
   margin: 0px;
   font-family: "Open Sans", sans-serif;
@@ -268,8 +262,10 @@ const Body2 = styled.p`
   font-weight: normal;
 `;
 
+// Case study
+// Title page text
 const BodyMain = styled.p`
-  font-size: 14px;
+  font-size: ${smallText};
   line-height: 30px;
   margin: 0px;
   font-family: "Open Sans", sans-serif;
@@ -279,19 +275,10 @@ const BodyMain = styled.p`
   font-weight: 600;
 `;
 
-const LargeSubtitle = styled.p`
-  font-family: Open Sans;
-  margin: 0px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-  letter-spacing: 1.5px;
-  color: ${colors.accentBlue};
-`;
-
+// Case study
+// Project section, small text above H2
 const NewDetailLeft = styled.p`
-  font-size: 10px;
+  font-size: ${tinyText};
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.black};
@@ -300,25 +287,33 @@ const NewDetailLeft = styled.p`
   text-align: left;
   font-weight: 600;
   margin-top: 48px;
+
+  @media ${device.mobileM} {
+    font-size: ${tinyText};
+  }
 `;
 
+// Case study
+// H4
 const GreySubtile = styled.p`
+  font-size: ${bodyText};
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
   line-height: 30px;
   color: ${colors.darkGrey};
   letter-spacing: 1.5px;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+
+  @media ${device.laptop} {
+    font-size: ${bodyText};
+  }
 `;
 
 export const typography = {
-  ExtraLargeTitle: ExtraLargeTitle,
-  LargeTitle: LargeTitle,
-  SubTitle: SubTitle,
-  SubTitleUnderline: SubTitleUnderline,
-  AllCapsSubtitle: AllCapsSubtitle,
-  Body: Body,
   NewTitle: NewTitle,
   NewLinks: NewLinks,
   NewHeading: NewHeading,
@@ -326,8 +321,7 @@ export const typography = {
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
   NewBodyBold: NewBodyBold,
-  TitleText90: TitleText90,
-  LargeCaps24: LargeCaps24,
+  CaseTitle: CaseTitle,
   Subtitle20: Subtitle20,
   StyledMark: StyledMark,
   Body2: Body2,
@@ -335,7 +329,6 @@ export const typography = {
   NewDetailLeft: NewDetailLeft,
   BodyMain: BodyMain,
   GreySubtile: GreySubtile,
-  SideNav: SideNav,
   NewLinksGrey: NewLinksGrey,
   NewBodyLink: NewBodyLink,
 };

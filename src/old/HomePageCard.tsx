@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { colors, typography, padding } from "../styles";
+import { colors, containers } from "../styles";
+import { oldTypography } from "./oldTypography";
 import air from "../assets/AIR.svg";
 // import air from "../assets/AIR-browser.svg";
 
@@ -38,19 +39,21 @@ interface HomePageCardProps {
 export const HomePageCard = ({
   title,
   company,
-  description
+  description,
 }: HomePageCardProps) => {
   return (
     <CardContainer>
       <CardImage />
       <CardText>
-        <typography.LargeTitle>{title}</typography.LargeTitle>
-        <padding.Top24>
-          <typography.AllCapsSubtitle>{company}</typography.AllCapsSubtitle>
-        </padding.Top24>
-        <padding.Top24>
-          <typography.Body>{description}</typography.Body>
-        </padding.Top24>
+        <oldTypography.LargeTitle>{title}</oldTypography.LargeTitle>
+        <containers.Top24>
+          <oldTypography.AllCapsSubtitle>
+            {company}
+          </oldTypography.AllCapsSubtitle>
+        </containers.Top24>
+        <containers.Top24>
+          <oldTypography.Body>{description}</oldTypography.Body>
+        </containers.Top24>
       </CardText>
     </CardContainer>
   );

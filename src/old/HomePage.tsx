@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import { HomePageCard } from "../components";
-import { typography, padding } from "../styles";
+import { containers } from "../styles";
+import { oldTypography } from "./oldTypography";
 import blobs from "../assets/both-blobs-med.svg";
 import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
@@ -52,34 +53,37 @@ export const LandingPage = () => {
     <>
       <TitleContainer>
         <TitleTextContainer>
-          <typography.ExtraLargeTitle>
+          <oldTypography.ExtraLargeTitle>
             Hey, I'm Leslie!
-          </typography.ExtraLargeTitle>
-          <typography.SubTitle>
+          </oldTypography.ExtraLargeTitle>
+          <oldTypography.SubTitle>
             Just finished — designing and developing products at&nbsp;
-          </typography.SubTitle>
-          <typography.SubTitleUnderline
+          </oldTypography.SubTitle>
+          <oldTypography.SubTitleUnderline
             href="https://www.cognite.com/en/"
             target="_blank"
           >
             Cognite
-          </typography.SubTitleUnderline>
+          </oldTypography.SubTitleUnderline>
 
-          <typography.SubTitle> &nbsp;in Oslo, Norway.</typography.SubTitle>
-          <padding.Top24>
-            <typography.SubTitle>
+          <oldTypography.SubTitle>
+            {" "}
+            &nbsp;in Oslo, Norway.
+          </oldTypography.SubTitle>
+          <containers.Top24>
+            <oldTypography.SubTitle>
               Currently — studying&nbsp;
-            </typography.SubTitle>
-            <typography.SubTitleUnderline
+            </oldTypography.SubTitle>
+            <oldTypography.SubTitleUnderline
               href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
               target="_blank"
             >
               Systems Design Engineering
-            </typography.SubTitleUnderline>
-            <typography.SubTitle>
+            </oldTypography.SubTitleUnderline>
+            <oldTypography.SubTitle>
               &nbsp;at the University of Waterloo.
-            </typography.SubTitle>
-          </padding.Top24>
+            </oldTypography.SubTitle>
+          </containers.Top24>
         </TitleTextContainer>
         <ChevronContainer onClick={() => scrollTo(window.innerHeight)}>
           <StyledChevron />

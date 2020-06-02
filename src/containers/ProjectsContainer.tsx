@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Cognite, projectContent } from "../projects";
-import { typography } from "../styles";
+import { Footer, BackButton } from "../components";
+import { typography, device } from "../styles";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import titleImage from "../assets/titleImages.svg";
@@ -16,10 +17,27 @@ const TitleContainer = styled.div`
   background-repeat: no-repeat;
   background-position: right 80%;
   background-size: 75%;
+
+  @media ${device.mobileM} {
+    padding: 20px;
+    background-image: url(${titleImage});
+    background-repeat: no-repeat;
+    background-position: center top 5%;
+    background-size: 75%;
+    height: 100vh;
+  }
 `;
 
 const TitleTextContainer = styled.div`
   width: 30%;
+
+  @media ${device.mobileM} {
+    width: 95%;
+  }
+
+  @media ${device.tablet} {
+    width: 30%;
+  }
 `;
 
 const CompanyName = styled.span`
@@ -65,6 +83,14 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
         setCurrentCompany(projectContent.microsoft);
         break;
       }
+      case "bungalow": {
+        setCurrentCompany(projectContent.bungalow);
+        break;
+      }
+      case "cibc": {
+        setCurrentCompany(projectContent.cibc);
+        break;
+      }
       default: {
         setCurrentCompany(projectContent.cognite);
         break;
@@ -76,31 +102,30 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
     <>
       <TitleContainer>
         <TitleTextContainer>
-          <typography.NewDetailLeft style={{ paddingTop: "18px" }}>
-            CASE STUDY
-          </typography.NewDetailLeft>
-          <typography.TitleText90>
-            Enabling Engineers to use Data
-            <br /> Science
-          </typography.TitleText90>
+          <BackButton />
+          <typography.NewDetailLeft>CASE STUDY</typography.NewDetailLeft>
+          <typography.CaseTitle>
+            {currentCompany.title1}
+            <br /> {currentCompany.title2}
+          </typography.CaseTitle>
           <CompanyName>{currentCompany.company}&nbsp;|&nbsp;</CompanyName>
           <CompanyName>{currentCompany.location}</CompanyName>
           <Role>Role</Role>
-          <typography.Body2>Front-End Engineer</typography.Body2>
-          <typography.Body2>Product Designer</typography.Body2>
+          {currentCompany.role.map((role) => (
+            <typography.Body2>{role}</typography.Body2>
+          ))}
 
           <Role>Team</Role>
-          <typography.Body2>Me</typography.Body2>
-          <typography.Body2>Infrastructure Engineer </typography.Body2>
-          <typography.Body2>Data Scientist 1</typography.Body2>
-          <typography.Body2>Data Scientist 2</typography.Body2>
-          <typography.Body2>Front-End Engineer (50%)</typography.Body2>
+          {currentCompany.team.map((person) => (
+            <typography.Body2>{person}</typography.Body2>
+          ))}
 
           <Role>Duration</Role>
-          <typography.Body2>4 Months</typography.Body2>
+          <typography.Body2>{currentCompany.duration}</typography.Body2>
         </TitleTextContainer>
       </TitleContainer>
       <Cognite />
+      <Footer />
     </>
   );
 };
