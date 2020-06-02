@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Structure
 
 Setting up universal styles: https://medium.com/@kelleyannerose/configuring-a-new-react-native-app-171467cd0ed8
+Responsiveness: https://jsramblings.com/how-to-use-media-queries-with-styled-components/
 
 ## Hosting
 

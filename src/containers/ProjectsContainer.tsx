@@ -81,6 +81,14 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
         setCurrentCompany(projectContent.microsoft);
         break;
       }
+      case "bungalow": {
+        setCurrentCompany(projectContent.bungalow);
+        break;
+      }
+      case "cibc": {
+        setCurrentCompany(projectContent.cibc);
+        break;
+      }
       default: {
         setCurrentCompany(projectContent.cognite);
         break;
@@ -96,24 +104,23 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
             CASE STUDY
           </typography.NewDetailLeft>
           <typography.CaseTitle>
-            Enabling Engineers to use Data
-            <br /> Science
+            {currentCompany.title1}
+            <br /> {currentCompany.title2}
           </typography.CaseTitle>
           <CompanyName>{currentCompany.company}&nbsp;|&nbsp;</CompanyName>
           <CompanyName>{currentCompany.location}</CompanyName>
           <Role>Role</Role>
-          <typography.Body2>Front-End Engineer</typography.Body2>
-          <typography.Body2>Product Designer</typography.Body2>
+          {currentCompany.role.map((role) => (
+            <typography.Body2>{role}</typography.Body2>
+          ))}
 
           <Role>Team</Role>
-          <typography.Body2>Me</typography.Body2>
-          <typography.Body2>Infrastructure Engineer </typography.Body2>
-          <typography.Body2>Data Scientist 1</typography.Body2>
-          <typography.Body2>Data Scientist 2</typography.Body2>
-          <typography.Body2>Front-End Engineer (50%)</typography.Body2>
+          {currentCompany.team.map((person) => (
+            <typography.Body2>{person}</typography.Body2>
+          ))}
 
           <Role>Duration</Role>
-          <typography.Body2>4 Months</typography.Body2>
+          <typography.Body2>{currentCompany.duration}</typography.Body2>
         </TitleTextContainer>
       </TitleContainer>
       <Cognite />

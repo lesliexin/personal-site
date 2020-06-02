@@ -140,14 +140,30 @@ const NewBodyUnderline = styled.a`
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.navy};
-  border-bottom: 2.5px solid ${colors.accentBlue};
+  // border-bottom: 2.5px solid ${colors.accentBlue};
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.5px;
   font-weight: 700;
-  &:hover {
-    border-bottom: 2.5px solid ${colors.darkGrey};
+  // &:hover {
+  //   border-bottom: 2.5px solid ${colors.darkGrey};
+  // }
+
+  &:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #069;
+    transition: 0.2s;
   }
+  &:hover:after {
+    width: 100%;
+
+  }
+ 
 
   @media ${device.mobileM} {
     font-size: ${smallText};
@@ -201,8 +217,8 @@ const CaseTitle = styled.p`
   line-height: 48px;
 
   @media ${device.mobileM} {
-    font-size: ${largeText};
-  }
+    font-size: 28px;
+    line-height: 36px;
 `;
 
 // Case study

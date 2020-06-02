@@ -1,22 +1,44 @@
 export const projectContent = {
   cognite: {
-    title: "Enabling Engineers to use Data Science",
+    title1: "Enabling Engineers to use Data",
+    title2: "Science",
     company: "Cognite",
-    location: "Oslo, Norway"
+    location: "Oslo, Norway",
+    role: ["Front-End Engineer", "Product Designer"],
+    team: [
+      "Me",
+      "Infrastructure Engineer",
+      "Data Scientist 1",
+      "Data Scientist 2",
+      "Front-End Engineer (50%)",
+    ],
+    duration: "4 Months",
   },
   microsoft: {
-    title: "Microsoft",
+    title1: "Microsoft",
+    title2: "Microsoft",
     company: "Microsoft",
-    location: "Seattle, US"
+    location: "Seattle, US",
+    role: [],
+    team: [],
+    duration: "4 Months",
   },
   bungalow: {
-    title: "Cognite",
-    company: "Cognite",
-    location: "Toronto, Canada"
+    title1: "Bungalow",
+    title2: "Bungalow",
+    company: "Bungalow",
+    location: "Kitchener, Canada",
+    role: [],
+    team: [],
+    duration: "4 Months",
   },
   cibc: {
-    title: "Cognite",
-    company: "Cognite",
-    location: "Oslo, Norway"
-  }
+    title1: "CIBC",
+    title2: "CIBC",
+    company: "CIBC",
+    location: "Toronto, Canada",
+    role: [],
+    team: [],
+    duration: "4 Months",
+  },
 };

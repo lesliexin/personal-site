@@ -22,8 +22,8 @@ const ContentContainer = styled.div`
   padding-top: 140px;
 
   @media ${device.mobileM} {
-    width: 95%;
-    padding-top: 30px;
+    width: 85%;
+    padding-top: 20px;
   }
 
   @media ${device.laptop} {
