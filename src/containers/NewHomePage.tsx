@@ -63,13 +63,13 @@ export const NewHomePage = () => {
               <StyledRow>
                 <StyledData></StyledData>
                 <StyledData>
-                  <typography.NewBody>Studying&nbsp;</typography.NewBody>
-                  <typography.NewBodyBold>
-                    Systems Design Engineering
-                  </typography.NewBodyBold>
-                  <typography.NewBody>
-                    &nbsp;at the University of Waterloo
-                  </typography.NewBody>
+                  <typography.NewBody>Improving user security for merchants at &nbsp;</typography.NewBody>
+                  <typography.NewBodyUnderline
+                    href="https://www.shopify.com/"
+                    target="_blank"
+                  >
+                    Shopify
+                  </typography.NewBodyUnderline>
                 </StyledData>
               </StyledRow>
 

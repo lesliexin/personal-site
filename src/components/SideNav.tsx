@@ -36,7 +36,7 @@ export const SideNav = () => {
         about
       </typography.NewLinks>
       <br />
-      <typography.NewLinks href="/XinLeslie2022.pdf" target="_blank">
+      <typography.NewLinks href="/LX2021.pdf" target="_blank">
         résumé
       </typography.NewLinks>
     </LinksContainer>
