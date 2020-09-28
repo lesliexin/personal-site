@@ -33,9 +33,15 @@ const ContentContainer = styled.div`
   }
 `;
 
+const Overlap = styled.div`
+  position: absolute;
+  z-index: -10;
+`;
+
 export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
   Top24: Top24,
   Top30: Top30,
+  Overlap: Overlap,
 };

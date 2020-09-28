@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import colors from "./colors";
+import colors from "./colours";
 import { device } from "./device";
 
 const extraLargeText = "42px";
@@ -43,7 +43,7 @@ const NewLinks = styled.a`
   font-size: ${extraSmallText};
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
-  color: ${colors.accentBlue};
+  color: ${colors.baseTextColour};
   text-align: right;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -67,7 +67,7 @@ const NewLinksGrey = styled.a`
   line-height: 12px;
   font-weight: 700;
   &:hover {
-    color: ${colors.accentBlue};
+    color: ${colors.accentColour};
   }
 `;
 
@@ -121,7 +121,7 @@ const NewBodyLink = styled.a`
   font-weight: 700;
   line-height: 30px;
   &:hover {
-    color: ${colors.accentBlue};
+    color: ${colors.accentColour};
   }
 
   @media ${device.mobileM} {
@@ -141,7 +141,7 @@ const NewBodyUnderline = styled.a`
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.navy};
-  border-bottom: 2.5px solid ${colors.accentBlue};
+  border-bottom: 2.5px solid ${colors.accentColour};
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.5px;
@@ -175,7 +175,7 @@ const NewDetail = styled.p`
 // Home page
 // "case study here"
 const StyledMark = styled.mark`
-  background-color: ${colors.accentYellow};
+  background-color: ${colors.accentColour};
   font-size: ${extraSmallText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
@@ -186,7 +186,7 @@ const StyledMark = styled.mark`
   letter-spacing: 0.5px;
   font-weight: 700;
   &:hover {
-    background-color: yellow;
+    background-color: ${colors.accentColour};
   }
 `;
 
@@ -216,7 +216,7 @@ const LargeSubtitle = styled.p`
   font-size: ${largeText};
   line-height: 48px;
   letter-spacing: 1.5px;
-  color: ${colors.accentBlue};
+  color: ${colors.accentColour};
 `;
 
 // Case study

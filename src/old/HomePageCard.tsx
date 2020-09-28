@@ -7,7 +7,7 @@ import air from "../assets/AIR.svg";
 
 const CardContainer = styled.div`
   height: 332px;
-  background-color: ${colors.white};
+  background-color: ${colors.accentColour};
   display: flex;
   padding: 300px 148px;
   justify-content: center;
@@ -15,7 +15,7 @@ const CardContainer = styled.div`
 
 const CardImage = styled.div`
   width: 60%;
-  background-color: ${colors.white};
+  background-color: ${colors.accentColour};
   // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   // box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
   // border-radius: 16px;

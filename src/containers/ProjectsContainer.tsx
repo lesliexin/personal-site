@@ -3,7 +3,7 @@ import { Cognite, projectContent } from "../projects";
 import { Footer, BackButton } from "../components";
 import { typography, device } from "../styles";
 import styled from "styled-components";
-import colors from "../styles/colors";
+import colors from "../styles/colours";
 import titleImage from "../assets/titleImages.svg";
 
 const TitleContainer = styled.div`
@@ -64,7 +64,7 @@ const Role = styled.p`
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1.5px;
-  color: ${colors.accentBlue};
+  color: ${colors.accentColour};
 `;
 
 interface ProjectsContainerProps {

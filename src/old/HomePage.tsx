@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../styles/colors";
+import colors from "../styles/colours";
 import { HomePageCard } from "../components";
 import { containers } from "../styles";
 import { oldTypography } from "./oldTypography";
@@ -34,7 +34,7 @@ const ChevronContainer = styled.div`
 
 const CardsContainer = styled.div`
   width: 100%;
-  background-color: ${colors.white};
+  background-color: ${colors.accentColour};
   display: flex
   flex-direction: column;
 `;
