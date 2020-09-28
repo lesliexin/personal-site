@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { typography, containers } from "../styles";
 import { ReactComponent as Wave } from "../assets/wave.svg";
-import { ReactComponent as Paint } from "../assets/paint.svg";
 import { useHistory } from "react-router-dom";
 import { SideNav } from "../components";
 import Canvas from "../components/Canvas";
@@ -26,7 +25,7 @@ const StyledData = styled.div`
   display: table-cell;
 `;
 
-const StyledPaint = styled(Paint)`
+const StyledWave = styled(Wave)`
   height: 38px;
 `;
 
@@ -42,7 +41,7 @@ export const NewHomePage = () => {
           <TitleTextContainer>
             <StyledTable>
               <StyledRow>
-                <StyledData>{isTitleHover ? <StyledPaint/> : null}</StyledData>
+                <StyledData>{isTitleHover ? null : null}</StyledData>
                 <StyledData>
                   <typography.NewTitle
                     onMouseEnter={() => {
