@@ -20,3 +20,5 @@ https://medium.com/google-cloud/tracking-site-visits-on-react-app-hosted-in-goog
 ## References / Sources
 
 Emojis: https://openmoji.org/
+
+Canvas: https://medium.com/@pdx.lucasm/canvas-with-react-js-32e133c05258
