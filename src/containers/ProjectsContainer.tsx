@@ -64,7 +64,7 @@ const Role = styled.p`
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1.5px;
-  color: ${colors.accentColour};
+  color: ${colors.headingColour};
 `;
 
 interface ProjectsContainerProps {

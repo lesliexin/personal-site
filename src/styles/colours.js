@@ -13,5 +13,6 @@ const colors = {
   accentYellow: "#FCEA2B",
   blob: mustardYellow,
   baseTextColour: black,
+  headingColour: midnightBlue,
 };
 export default colors;

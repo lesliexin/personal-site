@@ -67,7 +67,7 @@ const NewLinksGrey = styled.a`
   line-height: 12px;
   font-weight: 700;
   &:hover {
-    color: ${colors.accentColour};
+    color: ${colors.blob};
   }
 `;
 
@@ -121,7 +121,7 @@ const NewBodyLink = styled.a`
   font-weight: 700;
   line-height: 30px;
   &:hover {
-    color: ${colors.accentColour};
+    color: ${colors.blob};
   }
 
   @media ${device.mobileM} {
@@ -216,7 +216,7 @@ const LargeSubtitle = styled.p`
   font-size: ${largeText};
   line-height: 48px;
   letter-spacing: 1.5px;
-  color: ${colors.accentColour};
+  color: ${colors.headingColour};
 `;
 
 // Case study
