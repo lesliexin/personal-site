@@ -1,9 +1,8 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { typography, device } from "../styles";
+import { typography, device, colors } from "../styles";
 
-const LinksContainer = styled.div`
+const LinksContainer = styled.nav`
   width: 15%;
   margin-left: auto;
   display: flex;
@@ -16,27 +15,28 @@ const LinksContainer = styled.div`
 `;
 
 export const SideNav = () => {
-  const history = useHistory();
 
   return (
     <LinksContainer>
       <typography.NewLinks
-        onClick={() => {
-          history.push("/");
+        exact to="/"
+        activeStyle={{
+          color: colors.accentColour
         }}
       >
         work
       </typography.NewLinks>
       <br />
       <typography.NewLinks
-        onClick={() => {
-          history.push("/about");
+        to="/about"
+        activeStyle={{
+          color: colors.accentColour
         }}
       >
         about
       </typography.NewLinks>
       <br />
-      <typography.NewLinks href="/LX2021.pdf" target="_blank">
+      <typography.NewLinks to="/LX2021.pdf" target="_blank">
         résumé
       </typography.NewLinks>
     </LinksContainer>

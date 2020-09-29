@@ -22,13 +22,13 @@ export const OldFooter = () => {
   return (
     <Wrapper>
       <typography.NewLinks
-        onClick={() => {
-          history.goBack();
-        }}
+        exact to="/"
       >
         Home
       </typography.NewLinks>
-      <typography.NewLinks onClick={scrollToTop}>
+      <typography.NewLinks 
+        exact to="/"
+        onClick={scrollToTop}>
         Scroll To Top
       </typography.NewLinks>
     </Wrapper>
