@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Cognite, projectContent } from "../projects";
 import { Footer, BackButton } from "../components";
 import { typography, device } from "../styles";
@@ -71,10 +72,12 @@ interface ProjectsContainerProps {
   company: string;
 }
 
-export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
+export const ProjectsContainer = () => {
   const [currentCompany, setCurrentCompany] = useState(projectContent.cognite);
+  const location = useLocation().pathname;
+
   useEffect(() => {
-    switch (company) {
+    switch (location) {
       case "cognite": {
         setCurrentCompany(projectContent.cognite);
         break;
@@ -96,7 +99,7 @@ export const ProjectsContainer = ({ company }: ProjectsContainerProps) => {
         break;
       }
     }
-  }, [company]);
+  }, [location]);
 
   return (
     <>

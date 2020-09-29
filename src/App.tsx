@@ -8,10 +8,7 @@ function App() {
   return (
     <Router history={history}>
       <Route exact path="/" component={NewHomePage} />
-      <Route
-        path="/cognite"
-        render={(props) => <ProjectsContainer {...props} company={"cognite"} />}
-      />
+      <Route path="/cognite" component={ProjectsContainer} />
       <Route path="/about" component={AboutPage} />
     </Router>
   );

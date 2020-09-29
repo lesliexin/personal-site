@@ -175,7 +175,7 @@ export const NewHomePage = () => {
               {/* Blueprint */}
               <StyledRow>
                 <StyledData>
-                  <typography.NewDetail>2018 ></typography.NewDetail>
+                  <typography.NewDetail>2018 {'>'}</typography.NewDetail>
                 </StyledData>
                 <StyledData>
                   <typography.NewBody>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import colors from "./colours";
 import { device } from "./device";
+import { NavLink } from "react-router-dom";
 
 const extraLargeText = "42px";
 const largeText = "36px";
@@ -39,7 +40,7 @@ const NewHeading = styled.p`
 `;
 
 // Side Nav
-const NewLinks = styled.a`
+const NewLinks = styled(NavLink)`
   font-size: ${extraSmallText};
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -51,7 +52,7 @@ const NewLinks = styled.a`
   line-height: 12px;
   font-weight: 700;
   &:hover {
-    color: ${colors.darkGrey};
+    color: ${colors.accentColour};
   }
 `;
 
@@ -175,7 +176,7 @@ const NewDetail = styled.p`
 // Home page
 // "case study here"
 const StyledMark = styled.mark`
-  background-color: ${colors.accentColour};
+  background-color: ${colors.white};
   font-size: ${extraSmallText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
