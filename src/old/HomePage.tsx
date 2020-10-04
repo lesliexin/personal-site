@@ -7,25 +7,18 @@ import { oldTypography } from "./oldTypography";
 import blobs from "../assets/both-blobs-med.svg";
 import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
+import Canvas from "../components/Canvas";
+import { draw } from "../components/Blob";
 
-const TitleContainer = styled.div`
-  height: calc(100vh - 220px);
-  width: 100%;
-  background-color: ${colors.lightBlue};
-  background-image: url(${blobs});
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  background-size: auto;
-`;
 
 const TitleTextContainer = styled.div`
-  padding: 90px 0px 0px 220px;
+  height: 100vh;
+  width: 70%;
 `;
 
 const ChevronContainer = styled.div`
   height: 120px;
   width 100%;
-  background-color: ${colors.lightBlue};
   position: absolute;
   bottom: 0 ;
   display: flex;
@@ -34,7 +27,7 @@ const ChevronContainer = styled.div`
 
 const CardsContainer = styled.div`
   width: 100%;
-  background-color: ${colors.accentColour};
+  background-color: ${colors.white};
   display: flex
   flex-direction: column;
 `;
@@ -51,7 +44,11 @@ const scrollTo = (location: number) => {
 export const LandingPage = () => {
   return (
     <>
-      <TitleContainer>
+      <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/>
+
+      
+      <containers.PageContainer>
+      <containers.ContentContainer2>
         <TitleTextContainer>
           <oldTypography.ExtraLargeTitle>
             Hey, I'm Leslie!
@@ -85,10 +82,13 @@ export const LandingPage = () => {
             </oldTypography.SubTitle>
           </containers.Top24>
         </TitleTextContainer>
+        </containers.ContentContainer2>
+      </containers.PageContainer>
         <ChevronContainer onClick={() => scrollTo(window.innerHeight)}>
           <StyledChevron />
         </ChevronContainer>
-      </TitleContainer>
+
+
 
       <CardsContainer>
         <HomePageCard

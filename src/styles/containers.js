@@ -33,6 +33,24 @@ const ContentContainer = styled.div`
   }
 `;
 
+
+const ContentContainer2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-top: 140px;
+
+  @media ${device.mobileM} {
+    width: 85%;
+    padding-top: 40px;
+  }
+
+  @media ${device.laptop} {
+    width: 60%;
+    padding-top: 140px;
+  }
+`;
+
+
 const Overlap = styled.div`
   position: absolute;
   z-index: -10;
@@ -41,6 +59,7 @@ const Overlap = styled.div`
 export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
+  ContentContainer2: ContentContainer2,
   Top24: Top24,
   Top30: Top30,
   Overlap: Overlap,
