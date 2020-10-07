@@ -14,7 +14,6 @@ const PageContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  flex-direction: row;
 `;
 
 const ContentContainer = styled.div`
@@ -36,17 +35,15 @@ const ContentContainer = styled.div`
 
 const ContentContainer2 = styled.div`
   display: flex;
-  flex-direction: row;
-  padding-top: 140px;
+  justify-content: center;
+  flex-direction: column;
 
   @media ${device.mobileM} {
     width: 85%;
-    padding-top: 40px;
   }
 
   @media ${device.laptop} {
     width: 60%;
-    padding-top: 140px;
   }
 `;
 

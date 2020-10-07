@@ -3,11 +3,13 @@ import "./index.css";
 import { Router, Route } from "react-router-dom";
 import history from "./history";
 import { ProjectsContainer, NewHomePage, AboutPage } from "./containers";
-import { LandingPage as HomePage } from "./old/HomePage";
+import { TopNavBar } from "./v2/components";
+import { LandingPage as HomePage } from "./v2/HomePage";
 
 function App() {
   return (
     <Router history={history}>
+      {/* <TopNavBar /> */}
       <HomePage />
 
       {/* <Route exact path="/" component={NewHomePage} />

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { typography, colors } from "../styles";
+import { typography, colors } from "../../styles";
 import { animateScroll as scroll } from "react-scroll";
 
 import { useHistory } from "react-router-dom";

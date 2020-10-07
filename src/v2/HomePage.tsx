@@ -9,11 +9,15 @@ import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
 import Canvas from "../components/Canvas";
 import { draw } from "../components/Blob";
+import { TopNavBar } from "./components";
 
 
 const TitleTextContainer = styled.div`
-  height: 100vh;
-  width: 70%;
+  flex: 1 1 85% ;
+`;
+
+const StyledSpacer = styled.div`
+  flex: 1 1 15% ;
 `;
 
 const ChevronContainer = styled.div`
@@ -41,14 +45,16 @@ const scrollTo = (location: number) => {
   scroll.scrollTo(location);
 };
 
+
+
 export const LandingPage = () => {
   return (
     <>
+      <TopNavBar />
       <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/>
-
-      
       <containers.PageContainer>
       <containers.ContentContainer2>
+        <StyledSpacer/>
         <TitleTextContainer>
           <oldTypography.ExtraLargeTitle>
             Hey, I'm Leslie!
