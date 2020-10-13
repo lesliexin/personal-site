@@ -8,6 +8,8 @@ const NavWrapper = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: absolute;
+  z-index: 20;
 `;
 
 const NavLogo = styled(NavLink)`

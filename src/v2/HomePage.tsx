@@ -9,20 +9,20 @@ import { animateScroll as scroll } from "react-scroll";
 import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
 import Canvas from "../components/Canvas";
 import { draw } from "../components/Blob";
-import { TopNavBar } from "./components";
+import { TopNavBar, ContentCard, OldFooter} from "./components";
 
 
 const TitleTextContainer = styled.div`
-  flex: 1 1 85% ;
+  flex: 1 1 65% ;
 `;
 
 const StyledSpacer = styled.div`
-  flex: 1 1 15% ;
+  flex: 1 1 35% ;
 `;
 
 const ChevronContainer = styled.div`
   height: 120px;
-  width 100%;
+  width: 100%;
   position: absolute;
   bottom: 0 ;
   display: flex;
@@ -32,8 +32,10 @@ const ChevronContainer = styled.div`
 const CardsContainer = styled.div`
   width: 100%;
   background-color: ${colors.white};
-  display: flex
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
 `;
 
 const StyledChevron = styled(Chevron)`
@@ -51,42 +53,17 @@ export const LandingPage = () => {
   return (
     <>
       <TopNavBar />
-      <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/>
+      {/* <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/> */}
       <containers.PageContainer>
       <containers.ContentContainer2>
         <StyledSpacer/>
         <TitleTextContainer>
           <oldTypography.ExtraLargeTitle>
-            Hey, I'm Leslie!
+            Leslie Xin
           </oldTypography.ExtraLargeTitle>
           <oldTypography.SubTitle>
-            Just finished — designing and developing products at&nbsp;
+            Something, some words about who I am ...
           </oldTypography.SubTitle>
-          <oldTypography.SubTitleUnderline
-            href="https://www.cognite.com/en/"
-            target="_blank"
-          >
-            Cognite
-          </oldTypography.SubTitleUnderline>
-
-          <oldTypography.SubTitle>
-            {" "}
-            &nbsp;in Oslo, Norway.
-          </oldTypography.SubTitle>
-          <containers.Top24>
-            <oldTypography.SubTitle>
-              Currently — studying&nbsp;
-            </oldTypography.SubTitle>
-            <oldTypography.SubTitleUnderline
-              href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
-              target="_blank"
-            >
-              Systems Design Engineering
-            </oldTypography.SubTitleUnderline>
-            <oldTypography.SubTitle>
-              &nbsp;at the University of Waterloo.
-            </oldTypography.SubTitle>
-          </containers.Top24>
         </TitleTextContainer>
         </containers.ContentContainer2>
       </containers.PageContainer>
@@ -97,35 +74,26 @@ export const LandingPage = () => {
 
 
       <CardsContainer>
-        <HomePageCard
+        <ContentCard
           // title="Engineers Meet Data Science"
           title="Data Science Tools For Engineers"
           company="Cognite AS | Oslo, Norway"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />
-        <HomePageCard
-          // title="Improving Admin Troubleshooting"
-          title="Creating Proactive Diagnostics"
-          company="Microsoft | Seattle, US"
-          description="Developed an end-to-end diagnostics tool for 40,000+ companies projected to
-          decrease support ticket volume by 20% and increase NPS by 7 pts."
+        <ContentCard
+          // title="Engineers Meet Data Science"
+          title="Data Science Tools For Engineers"
+          company="Cognite AS | Oslo, Norway"
+          description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />
-        <HomePageCard
-          // title="Resdesigning a New Applicant Flow"
-          title="Resdesigning New Applicant Flows"
-          company="Atomic Labs - Bungalow | Kitchener, Canada"
-          description="Redesigned and prototyped initial resident application in Figma, informed by
-          cognitive walkthrough user testing, increasing sign-up conversion rate by 15%."
-        />
-        <HomePageCard
-          // title="Creating a Usable Bitcoin Wallet"
-          title="Enabling Smart Transactions"
-          company="Live Labs - CIBC | Toronto, Canada"
-          description="Drove product vision to develop an internal Bitcoin wallet iOS and Android
-          application, allowing users to seamlessly and securely keep a community
-          financial ledger."
+        <ContentCard
+          // title="Engineers Meet Data Science"
+          title="Data Science Tools For Engineers"
+          company="Cognite AS | Oslo, Norway"
+          description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />
       </CardsContainer>
+      <OldFooter/>
     </>
   );
 };

@@ -6,15 +6,22 @@ const extraLargeText = "56px";
 const largeText = "44px";
 const mediumText = "32px";
 const smallText = "20px";
+const kindaSmallText = "18px";
 const extraSmallText = "14px";
+const bold = 900;
+const semiBold = 700;
+const kindaBold = 600;
+const medium = 500;
+const regular = 400;
 
 const ExtraLargeTitle = styled.p`
   font-size: ${extremelylargeText};
+  font-family: "EB Garamond", serif;
   margin: 0px;
   padding-bottom: 28px;
-  font-weight: bold;
+  font-weight: ${medium};
   word-wrap: normal;
-  text-align: left;
+  text-align: center;
   @media only screen and ${device.mobileM} {
     font-size: ${mediumText};
   }
@@ -28,19 +35,19 @@ const ExtraLargeTitle = styled.p`
 
 const LargeTitle = styled.p`
   margin: 0px;
-  // font-family: "EB Garamond", serif;
-  font-weight: bold;
-  font-size: ${largeText};
+  font-family: "EB Garamond", serif;
+  font-weight: ${medium};
+  font-size: ${extraLargeText};
   word-wrap: normal;
   text-align: left;
 `;
 
-const SubTitle = styled.span`
+const SubTitle = styled.p`
   margin: 0px;
   // font-family: "Open Sans", sans-serif;
   font-size: ${smallText};
   word-wrap: normal;
-  text-align: left;
+  text-align: center;
 `;
 
 const SubTitleUnderline = styled.a`
@@ -57,11 +64,12 @@ const SubTitleUnderline = styled.a`
 
 const AllCapsSubtitle = styled.p`
   margin: 0px;
-  // font-family: "Open Sans", sans-serif;
-  font-size: ${extraSmallText};
+  font-family: "Open Sans", sans-serif;
+  font-size: ${kindaSmallText};
   word-wrap: normal;
   text-align: left;
   text-transform: uppercase;
+  font-weight: ${kindaBold};
 `;
 
 const Body = styled.span`

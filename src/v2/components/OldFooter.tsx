@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { typography, colors } from "../../styles";
 import { animateScroll as scroll } from "react-scroll";
 
-import { useHistory } from "react-router-dom";
-
 const Wrapper = styled.div`
   display: flex;
   height: 20vh;
@@ -18,7 +16,6 @@ const scrollToTop = () => {
 };
 
 export const OldFooter = () => {
-  const history = useHistory();
   return (
     <Wrapper>
       <typography.NewLinks
