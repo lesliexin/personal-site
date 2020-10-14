@@ -76,7 +76,7 @@ export const LandingPage = () => {
       <CardsContainer>
         <ContentCard
           // title="Engineers Meet Data Science"
-          title="Data Science Tools For Engineers"
+          title="Enabling Engineers to use Data Science"
           company="Cognite AS | Oslo, Norway"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />

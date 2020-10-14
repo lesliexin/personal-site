@@ -36,10 +36,11 @@ const ExtraLargeTitle = styled.p`
 const LargeTitle = styled.p`
   margin: 0px;
   font-family: "EB Garamond", serif;
-  font-weight: ${medium};
+  font-weight: ${kindaBold};
   font-size: ${extraLargeText};
   word-wrap: normal;
   text-align: left;
+  width: 40vw;
 `;
 
 const SubTitle = styled.p`
