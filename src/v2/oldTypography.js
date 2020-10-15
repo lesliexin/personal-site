@@ -3,10 +3,12 @@ import { colors } from "../styles";
 import { device } from "../styles";
 const extremelylargeText = "68px";
 const extraLargeText = "56px";
+const largerText = "50px";
 const largeText = "44px";
 const mediumText = "32px";
 const smallText = "20px";
 const kindaSmallText = "18px";
+const kindaSmallerText = "16px";
 const extraSmallText = "14px";
 const bold = 900;
 const semiBold = 700;
@@ -37,10 +39,11 @@ const LargeTitle = styled.p`
   margin: 0px;
   font-family: "EB Garamond", serif;
   font-weight: ${kindaBold};
-  font-size: ${extraLargeText};
+  font-size: ${largerText};
   word-wrap: normal;
   text-align: left;
   width: 40vw;
+  line-height: 60px;
 `;
 
 const SubTitle = styled.p`
@@ -49,6 +52,19 @@ const SubTitle = styled.p`
   font-size: ${smallText};
   word-wrap: normal;
   text-align: center;
+`;
+
+const CardLinks = styled.p`
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: ${kindaSmallText};
+  word-wrap: normal;
+  text-align: left;
+  cursor: pointer;
+  &:hover {
+    color: ${colors.accentColor};
+  }
+
 `;
 
 const SubTitleUnderline = styled.a`
@@ -66,7 +82,7 @@ const SubTitleUnderline = styled.a`
 const AllCapsSubtitle = styled.p`
   margin: 0px;
   font-family: "Open Sans", sans-serif;
-  font-size: ${kindaSmallText};
+  font-size: ${kindaSmallerText};
   word-wrap: normal;
   text-align: left;
   text-transform: uppercase;
@@ -88,4 +104,5 @@ export const oldTypography = {
   SubTitleUnderline: SubTitleUnderline,
   AllCapsSubtitle: AllCapsSubtitle,
   Body: Body,
+  CardLinks: CardLinks,
 };

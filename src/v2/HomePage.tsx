@@ -10,6 +10,9 @@ import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
 import Canvas from "../components/Canvas";
 import { draw } from "../components/Blob";
 import { TopNavBar, ContentCard, OldFooter} from "./components";
+import ProcessingWrapper from "./components/ProcessingWrapper";
+import { generate } from 'shortid';
+import sketch1 from "./components/ProcessingWrapper/sketch1/index";
 
 
 const TitleTextContainer = styled.div`
@@ -47,6 +50,7 @@ const scrollTo = (location: number) => {
   scroll.scrollTo(location);
 };
 
+const ProcessingWrapper1 = ProcessingWrapper(generate())
 
 
 export const LandingPage = () => {
@@ -54,6 +58,7 @@ export const LandingPage = () => {
     <>
       <TopNavBar />
       {/* <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/> */}
+      <ProcessingWrapper1/>
       <containers.PageContainer>
       <containers.ContentContainer2>
         <StyledSpacer/>
@@ -81,14 +86,12 @@ export const LandingPage = () => {
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />
         <ContentCard
-          // title="Engineers Meet Data Science"
-          title="Data Science Tools For Engineers"
-          company="Cognite AS | Oslo, Norway"
+          title="Exploring interactive diagnostics visualization"
+          company="Microsoft | Seattle, US"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />
         <ContentCard
-          // title="Engineers Meet Data Science"
-          title="Data Science Tools For Engineers"
+          title="Reimagining new applicant flows"
           company="Cognite AS | Oslo, Norway"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
         />

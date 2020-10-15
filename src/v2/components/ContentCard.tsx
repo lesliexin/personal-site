@@ -32,6 +32,7 @@ const CardText = styled.div<any>`
   ${(props: any) => props.isCardExpanded && css`
     width: 85%
   `};
+  padding-top: 8vh;
 `;
 interface ContentCardProps {
   title: string;
@@ -51,12 +52,12 @@ export const ContentCard = ({
 
       <CardImage isCardExpanded={isCardExpanded}>hi</CardImage>
       <CardText isCardExpanded={isCardExpanded}>
-        <oldTypography.LargeTitle>{title}</oldTypography.LargeTitle>
-          <oldTypography.AllCapsSubtitle>
+        <oldTypography.LargeTitle style={{paddingBottom: "5vh"}}>{title}</oldTypography.LargeTitle>
+          <oldTypography.AllCapsSubtitle style={{paddingBottom: "5vh"}}>
             {company}
           </oldTypography.AllCapsSubtitle>
+          <div onClick={() => {setIsCardExpanded(!isCardExpanded)}}><oldTypography.CardLinks>More info</oldTypography.CardLinks></div>
       </CardText>
-      <button onClick={() => {setIsCardExpanded(!isCardExpanded)}}>toggle card</button>
     </CardContainer>
   );
 };

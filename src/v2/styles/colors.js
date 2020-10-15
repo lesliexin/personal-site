@@ -10,11 +10,11 @@ const colors = {
   lightPink: "#FAE6DE",
   darkGrey: "#A9A9AC",
   navy: "#17182C",
-  accentColour: blueScreenOfDeath,
+  accentColor: blueScreenOfDeath,
   accentYellow: "#FCEA2B",
   blob: mustardYellow,
-  baseTextColour: black,
-  headingColour: midnightBlue,
+  baseTextColor: black,
+  headingColor: midnightBlue,
   white: white,
 };
 export default colors;
