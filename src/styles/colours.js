@@ -16,5 +16,6 @@ const colors = {
   baseTextColour: black,
   headingColour: midnightBlue,
   white: white,
+  black: black,
 };
 export default colors;

@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../styles/colours";
 import { HomePageCard } from "../components";
-import { containers } from "../styles";
+import { containers, colors } from "../styles";
 import { oldTypography } from "./oldTypography";
 import blobs from "../assets/both-blobs-med.svg";
 import { animateScroll as scroll } from "react-scroll";
@@ -10,9 +9,7 @@ import { ReactComponent as Chevron } from "../assets/chev-dark.svg";
 import Canvas from "../components/Canvas";
 import { draw } from "../components/Blob";
 import { TopNavBar, ContentCard, OldFooter} from "./components";
-import ProcessingWrapper from "./components/ProcessingWrapper";
 import { generate } from 'shortid';
-import sketch1 from "./components/ProcessingWrapper/sketch1/index";
 
 
 const TitleTextContainer = styled.div`
@@ -50,15 +47,12 @@ const scrollTo = (location: number) => {
   scroll.scrollTo(location);
 };
 
-const ProcessingWrapper1 = ProcessingWrapper(generate())
-
 
 export const LandingPage = () => {
   return (
     <>
       <TopNavBar />
       {/* <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/> */}
-      <ProcessingWrapper1/>
       <containers.PageContainer>
       <containers.ContentContainer2>
         <StyledSpacer/>

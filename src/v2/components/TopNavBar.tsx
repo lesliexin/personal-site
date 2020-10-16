@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "../../styles";
 import { oldTypography } from "../oldTypography";
@@ -10,57 +10,69 @@ const NavWrapper = styled.nav`
   justify-content: flex-end;
   position: absolute;
   z-index: 20;
+  width: 100%;
 `;
 
 const NavLogo = styled(NavLink)`
-  padding: 32px;
+  padding-left: 5vh;
   margin-right: auto;
   cursor: pointer;
+  text-decoration: none;
+  &:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+  }
 `;
 
 const NavOption = styled(NavLink)`
   text-align: left;
   word-wrap: normal;
   cursor: pointer;
+  text-decoration: none;
+  &:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+  }
+  padding-right: 5vh;
+`;
+
+const NavOptions = styled.div`
+  justify-content: flex-end;
+  flex-direction: row;
+  // padding-right: 5vh;
 `;
 
 export const TopNavBar = () => {
-  const history = useHistory();
 
   return (
     <NavWrapper>
       <NavLogo
         exact to="/"
-        activeStyle={{
-          color: colors.accentColour
-        }}
       >
         <oldTypography.LargeTitle>lx.</oldTypography.LargeTitle>
       </NavLogo>
-      <NavOption
-        exact to="/"
-        activeStyle={{
-          color: colors.accentColour
-        }}
-      >
-        home
-      </NavOption>
-      <NavOption
-        to="/about"
-        activeStyle={{
-          color: colors.accentColour
-        }}
-      >
-        about
-      </NavOption>
-      <NavOption
-        to="/resume"
-        activeStyle={{
-          color: colors.accentColour
-        }}
-      >
-        resume
-      </NavOption>
+        <NavOption
+          exact to="/"
+          activeStyle={{
+            color: colors.accentColour
+          }}
+        >
+          <oldTypography.NavText>home</oldTypography.NavText>
+        </NavOption>
+        <NavOption
+          to="/about"
+          activeStyle={{
+            color: colors.accentColour
+          }}
+        >
+          <oldTypography.NavText>about</oldTypography.NavText>
+        </NavOption>
+        <NavOption
+          to="/resume"
+          activeStyle={{
+            color: colors.accentColour
+          }}
+        >
+          <oldTypography.NavText>resume</oldTypography.NavText>
+        </NavOption>
     </NavWrapper>
   );
 };

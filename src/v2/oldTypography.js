@@ -35,7 +35,7 @@ const ExtraLargeTitle = styled.p`
   }
 `;
 
-const LargeTitle = styled.p`
+const LargeTitle = styled.span`
   margin: 0px;
   font-family: "EB Garamond", serif;
   font-weight: ${kindaBold};
@@ -44,11 +44,22 @@ const LargeTitle = styled.p`
   text-align: left;
   width: 40vw;
   line-height: 60px;
+  color: ${colors.black};
+`;
+
+const NavText = styled.span`
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: ${medium};
+  font-size: ${kindaSmallText};
+  word-wrap: normal;
+  text-align: right;
+  line-height: 60px;
+  color: ${colors.black};
 `;
 
 const SubTitle = styled.p`
   margin: 0px;
-  // font-family: "Open Sans", sans-serif;
   font-size: ${smallText};
   word-wrap: normal;
   text-align: center;
@@ -105,4 +116,5 @@ export const oldTypography = {
   AllCapsSubtitle: AllCapsSubtitle,
   Body: Body,
   CardLinks: CardLinks,
+  NavText: NavText,
 };
