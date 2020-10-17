@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../styles";
 import { device } from "../styles";
-const extremelylargeText = "68px";
+const extremelylargeText = "76px";
 const extraLargeText = "56px";
 const largerText = "50px";
 const largeText = "44px";

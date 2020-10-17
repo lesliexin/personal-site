@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styled, { css } from "styled-components";
 import {oldTypography} from "../oldTypography";
 import {colors} from "../styles";
+import cogniteMock from "../../assets/cognite-mock.svg";
 
 const CardContainer = styled.div`
   width: 80%;
@@ -13,13 +14,17 @@ const CardContainer = styled.div`
   height: 100vh;
 `;
 
-const CardImage = styled.div<any>`
+const CardImageCognite = styled.div<any>`
   width: 50%;
   height: 80vh;
-  background-color: ${colors.lightBlue};
+  background-color: ${colors.cardBackground1};
   position: absolute;
   z-index: -1;
   transition: width 1.8s;
+  background-image: url(${cogniteMock});
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 80%;
   ${(props: any) => props.isCardExpanded && css`
     width: 25%
   `};
@@ -38,23 +43,24 @@ interface ContentCardProps {
   title: string;
   company: string;
   description: string;
+  companyText: string;
 }
 
 export const ContentCard = ({
   title,
   company,
+  companyText,
   description,
 }: ContentCardProps) => {
   const [isCardExpanded, setIsCardExpanded] = useState(false);
 
   return (
     <CardContainer>
-
-      <CardImage isCardExpanded={isCardExpanded}>hi</CardImage>
+      {company === 'cognite' && <CardImageCognite isCardExpanded={isCardExpanded}>hi</CardImageCognite>}
       <CardText isCardExpanded={isCardExpanded}>
         <oldTypography.LargeTitle style={{paddingBottom: "5vh"}}>{title}</oldTypography.LargeTitle>
           <oldTypography.AllCapsSubtitle style={{paddingBottom: "5vh"}}>
-            {company}
+            {companyText}
           </oldTypography.AllCapsSubtitle>
           <div onClick={() => {setIsCardExpanded(!isCardExpanded)}}><oldTypography.CardLinks>More info</oldTypography.CardLinks></div>
       </CardText>

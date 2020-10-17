@@ -10,6 +10,7 @@ import Canvas from "../components/Canvas";
 import { draw } from "../components/Blob";
 import { TopNavBar, ContentCard, OldFooter} from "./components";
 import { generate } from 'shortid';
+import cogniteMock from "../assets/cognite-mock.svg";
 
 
 const TitleTextContainer = styled.div`
@@ -76,18 +77,24 @@ export const LandingPage = () => {
         <ContentCard
           // title="Engineers Meet Data Science"
           title="Enabling Engineers to use Data Science"
-          company="Cognite AS | Oslo, Norway"
+          company='cognite'
+          companyText="Cognite AS | Oslo, Norway"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
+          image={cogniteMock}
         />
         <ContentCard
           title="Exploring interactive diagnostics visualization"
-          company="Microsoft | Seattle, US"
+          companyText="Cognite AS | Oslo, Norway"
+          company='cognite'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
+          image={cogniteMock}
         />
         <ContentCard
           title="Reimagining new applicant flows"
-          company="Cognite AS | Oslo, Norway"
+          companyText="Cognite AS | Oslo, Norway"
+          company='cognite'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
+          image={cogniteMock}
         />
       </CardsContainer>
       <OldFooter/>
