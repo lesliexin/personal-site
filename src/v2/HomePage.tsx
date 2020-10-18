@@ -77,22 +77,29 @@ export const LandingPage = () => {
         <ContentCard
           // title="Engineers Meet Data Science"
           title="Enabling Engineers to use Data Science"
-          company='cognite'
-          companyText="Cognite AS | Oslo, Norway"
+          company='Cognite'
+          location="Oslo, Norway"
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
         />
         <ContentCard
           title="Exploring interactive diagnostics visualization"
-          companyText="Cognite AS | Oslo, Norway"
-          company='cognite'
+          location="Seattle, US"
+          company='Cognite'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
         />
         <ContentCard
           title="Reimagining new applicant flows"
-          companyText="Cognite AS | Oslo, Norway"
-          company='cognite'
+          location="Kitchener, Canada"
+          company='Cognite'
+          description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
+          image={cogniteMock}
+        />
+        <ContentCard
+          title="Reimagining new applicant flows"
+          location="Toronto, Canada"
+          company='Cognite'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
         />

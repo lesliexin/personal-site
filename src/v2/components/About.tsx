@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {colors} from "../styles";
 import { typography, containers, device } from "../../styles";
 import {TopNavBar} from "./TopNavBar";
+import {oldTypography} from "../oldTypography";
 
 const LinksContainer = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ const LinksContainer = styled.div`
 `;
 
 const TitleTextContainer = styled.div`
-  width: 65%;
+  width: 50%;
   margin-left: 60px;
 
   @media ${device.mobileM} {
@@ -30,14 +31,21 @@ const TitleTextContainer = styled.div`
   }
 `;
 
+const CenterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 140px;
+`;
+
 export const About = () => {
   return (
       <>
     <TopNavBar/>
     <containers.PageContainer>
-      <containers.ContentContainer>
+      <CenterContainer>
         <TitleTextContainer>
-          <typography.NewTitle>It's nice to meet you.</typography.NewTitle>
+          <oldTypography.LargeTitle>It's nice to meet you.</oldTypography.LargeTitle>
           <containers.Top30>
             <typography.NewBody>
               I'm a software engineer with an affinity for design. It all
@@ -65,7 +73,7 @@ export const About = () => {
             >
               &nbsp;mentoring students
             </typography.NewBodyLink>
-            <typography.NewBody>, to </typography.NewBody>
+            <typography.NewBody>, to</typography.NewBody>
             <typography.NewBodyLink
               href="https://www.youtube.com/watch?v=IyV5c_sd_4k"
               target="_blank"
@@ -113,7 +121,7 @@ export const About = () => {
             </typography.NewLinksGrey>
           </LinksContainer>
         </TitleTextContainer>
-      </containers.ContentContainer>
+      </CenterContainer>
     </containers.PageContainer>
     </>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../styles";
 import { device } from "../styles";
-const extremelylargeText = "76px";
+const extremelylargeText = "68px";
 const extraLargeText = "56px";
 const largerText = "50px";
 const largeText = "44px";
@@ -18,10 +18,10 @@ const regular = 400;
 
 const ExtraLargeTitle = styled.p`
   font-size: ${extremelylargeText};
-  font-family: "EB Garamond", serif;
+  font-family: 'Playfair Display', serif;
   margin: 0px;
   padding-bottom: 28px;
-  font-weight: ${medium};
+  font-weight: ${kindaBold};
   word-wrap: normal;
   text-align: center;
   @media only screen and ${device.mobileM} {
@@ -35,9 +35,9 @@ const ExtraLargeTitle = styled.p`
   }
 `;
 
-const LargeTitle = styled.span`
+const LargeTitle = styled.p`
   margin: 0px;
-  font-family: "EB Garamond", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: ${kindaBold};
   font-size: ${largerText};
   word-wrap: normal;
@@ -50,17 +50,18 @@ const LargeTitle = styled.span`
 const NavText = styled.span`
   margin: 0px;
   font-family: "Open Sans", sans-serif;
-  font-weight: ${medium};
-  font-size: ${kindaSmallText};
+  font-weight: ${semiBold};
+  font-size: ${extraSmallText};
   word-wrap: normal;
   text-align: right;
   line-height: 60px;
-  color: ${colors.black};
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
 `;
 
 const SubTitle = styled.p`
   margin: 0px;
-  font-size: ${smallText};
+  font-size: ${kindaSmallText};
   word-wrap: normal;
   text-align: center;
 `;
@@ -68,14 +69,24 @@ const SubTitle = styled.p`
 const CardLinks = styled.p`
   margin: 0px;
   font-family: "Open Sans", sans-serif;
-  font-size: ${kindaSmallText};
+  font-size: ${kindaSmallerText};
   word-wrap: normal;
   text-align: left;
   cursor: pointer;
+  border-bottom: 1.5px solid;
   &:hover {
     color: ${colors.accentColor};
   }
+`;
 
+const CardButton = styled.p`
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: ${kindaSmallerText};
+  font-weight: ${kindaBold};
+  word-wrap: normal;
+  text-align: center;
+  line-height: 28px;
 `;
 
 const SubTitleUnderline = styled.a`
@@ -90,14 +101,15 @@ const SubTitleUnderline = styled.a`
   color: ${colors.black};
 `;
 
-const AllCapsSubtitle = styled.p`
+const AllCapsSubtitle = styled.span`
   margin: 0px;
   font-family: "Open Sans", sans-serif;
-  font-size: ${kindaSmallerText};
+  font-size: ${extraSmallText};
   word-wrap: normal;
   text-align: left;
   text-transform: uppercase;
-  font-weight: ${kindaBold};
+  font-weight: ${semiBold};
+  letter-spacing: 2px;
 `;
 
 const Body = styled.span`
@@ -117,4 +129,5 @@ export const oldTypography = {
   Body: Body,
   CardLinks: CardLinks,
   NavText: NavText,
+  CardButton: CardButton,
 };

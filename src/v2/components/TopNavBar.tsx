@@ -28,6 +28,7 @@ const NavOption = styled(NavLink)`
   word-wrap: normal;
   cursor: pointer;
   text-decoration: none;
+  color: ${colors.black};
   &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
   }
@@ -47,7 +48,7 @@ export const TopNavBar = () => {
       <NavLogo
         exact to="/"
       >
-        <oldTypography.LargeTitle>lx.</oldTypography.LargeTitle>
+        <oldTypography.LargeTitle>lx</oldTypography.LargeTitle>
       </NavLogo>
         <NavOption
           exact to="/"
@@ -55,7 +56,7 @@ export const TopNavBar = () => {
             color: colors.accentColour
           }}
         >
-          <oldTypography.NavText>home</oldTypography.NavText>
+          <oldTypography.NavText>work</oldTypography.NavText>
         </NavOption>
         <NavOption
           to="/about"
