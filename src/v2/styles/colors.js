@@ -4,18 +4,21 @@ const brightYellow = "#FCEA2B";
 const mustardYellow = "#F3CF68";
 const white = "#FFFFFF";
 const black = "#000000";
+const blueGrey = "#DAE9F9";
+const lightBlue = "#F0F4F9";
 
 const colors = {
   lightBlue: "#F7F9FF",
   lightPink: "#FAE6DE",
   darkGrey: "#A9A9AC",
   navy: "#17182C",
-  accentColour: blueScreenOfDeath,
+  accentColor: blueScreenOfDeath,
   accentYellow: "#FCEA2B",
   blob: mustardYellow,
-  baseTextColour: black,
-  headingColour: midnightBlue,
+  baseTextColor: black,
+  headingColor: midnightBlue,
   white: white,
-  black: black,
+  cardBackground1: blueGrey,
+  homeBackground: lightBlue,
 };
 export default colors;

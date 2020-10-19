@@ -7,15 +7,15 @@ import air from "../assets/AIR.svg";
 
 const CardContainer = styled.div`
   height: 332px;
-  background-color: ${colors.accentColour};
+  background-color: ${colors.white};
   display: flex;
-  padding: 300px 148px;
+  padding: 100px 148px;
   justify-content: center;
 `;
 
 const CardImage = styled.div`
   width: 60%;
-  background-color: ${colors.accentColour};
+  background-color: ${colors.white};
   // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   // box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
   // border-radius: 16px;

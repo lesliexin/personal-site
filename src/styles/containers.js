@@ -14,7 +14,6 @@ const PageContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  flex-direction: row;
 `;
 
 const ContentContainer = styled.div`
@@ -33,6 +32,22 @@ const ContentContainer = styled.div`
   }
 `;
 
+
+const ContentContainer2 = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media ${device.mobileM} {
+    width: 85%;
+  }
+
+  @media ${device.laptop} {
+    width: 60%;
+  }
+`;
+
+
 const Overlap = styled.div`
   position: absolute;
   z-index: -10;
@@ -41,6 +56,7 @@ const Overlap = styled.div`
 export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
+  ContentContainer2: ContentContainer2,
   Top24: Top24,
   Top30: Top30,
   Overlap: Overlap,
