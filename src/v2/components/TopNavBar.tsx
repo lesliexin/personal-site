@@ -11,6 +11,8 @@ const NavWrapper = styled.nav`
   position: absolute;
   z-index: 20;
   width: 100%;
+  padding: 28px 10px;
+  box-sizing:border-box;
 `;
 
 const NavLogo = styled(NavLink)`
@@ -33,6 +35,7 @@ const NavOption = styled(NavLink)`
     text-decoration: none;
   }
   padding-right: 5vh;
+  padding-top: 10px;
 `;
 
 const NavOptions = styled.div`
@@ -48,7 +51,7 @@ export const TopNavBar = () => {
       <NavLogo
         exact to="/"
       >
-        <oldTypography.LargeTitle>lx</oldTypography.LargeTitle>
+        <oldTypography.NavLogoText>lx</oldTypography.NavLogoText>
       </NavLogo>
         <NavOption
           exact to="/"
@@ -67,7 +70,8 @@ export const TopNavBar = () => {
           <oldTypography.NavText>about</oldTypography.NavText>
         </NavOption>
         <NavOption
-          to="/resume"
+          to="/LX2021.pdf"
+          target="_blank"
           activeStyle={{
             color: colors.accentColour
           }}

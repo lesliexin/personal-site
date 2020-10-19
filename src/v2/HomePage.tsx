@@ -28,6 +28,8 @@ const ChevronContainer = styled.div`
   bottom: 0 ;
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  background-color: ${colors.white};
 `;
 
 const CardsContainer = styled.div`
@@ -40,7 +42,7 @@ const CardsContainer = styled.div`
 `;
 
 const StyledChevron = styled(Chevron)`
-  padding-top: 20px;
+  padding-top: 40px;
   cursor: pointer;
 `;
 
@@ -79,29 +81,33 @@ export const LandingPage = () => {
           title="Enabling Engineers to use Data Science"
           company='Cognite'
           location="Oslo, Norway"
-          description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
+          description="Designed and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
+          isCaseStudy={true}
         />
         <ContentCard
-          title="Exploring interactive diagnostics visualization"
+          title="Streamlining the Admin Troubleshooting Experience"
           location="Seattle, US"
-          company='Cognite'
+          company='Microsoft'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
+          isCaseStudy={false}
         />
         <ContentCard
-          title="Reimagining new applicant flows"
+          title="Reimagining the Renter Applicant Flow"
           location="Kitchener, Canada"
-          company='Cognite'
+          company='Bungalow'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
+          isCaseStudy={false}
         />
         <ContentCard
           title="Reimagining new applicant flows"
           location="Toronto, Canada"
-          company='Cognite'
+          company='CIBC'
           description="Design and developed a condition based monitoring tool to enable engineers to utilize complex data science models."
           image={cogniteMock}
+          isCaseStudy={false}
         />
       </CardsContainer>
       <OldFooter/>

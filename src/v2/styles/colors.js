@@ -5,6 +5,7 @@ const mustardYellow = "#F3CF68";
 const white = "#FFFFFF";
 const black = "#000000";
 const blueGrey = "#DAE9F9";
+const lightBlue = "#F0F4F9";
 
 const colors = {
   lightBlue: "#F7F9FF",
@@ -18,5 +19,6 @@ const colors = {
   headingColor: midnightBlue,
   white: white,
   cardBackground1: blueGrey,
+  homeBackground: lightBlue,
 };
 export default colors;

@@ -4,6 +4,7 @@ import {colors} from "../styles";
 import { typography, containers, device } from "../../styles";
 import {TopNavBar} from "./TopNavBar";
 import {oldTypography} from "../oldTypography";
+import me from "../../assets/me.png";
 
 const LinksContainer = styled.div`
   display: flex;
@@ -23,19 +24,14 @@ const LinksContainer = styled.div`
 `;
 
 const TitleTextContainer = styled.div`
-  width: 50%;
-  margin-left: 60px;
-
-  @media ${device.mobileM} {
-    margin-left: 4px;
-  }
+  width: 30%;
 `;
 
 const CenterContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 140px;
+  padding-top: 20vh;
 `;
 
 export const About = () => {
@@ -60,26 +56,26 @@ export const About = () => {
               From that first python program to now, I've thrown myself into the
               tech community. From
             </typography.NewBody>
-            <typography.NewBodyLink
+            <oldTypography.AboutBodyLink
               href="https://uwblueprint.org/"
               target="_blank"
             >
               &nbsp;building software for non-profit organizations
-            </typography.NewBodyLink>
+            </oldTypography.AboutBodyLink>
             <typography.NewBody>, to</typography.NewBody>
-            <typography.NewBodyLink
+            <oldTypography.AboutBodyLink
               href="https://www.facebook.com/techplusmp/"
               target="_blank"
             >
               &nbsp;mentoring students
-            </typography.NewBodyLink>
+            </oldTypography.AboutBodyLink>
             <typography.NewBody>, to</typography.NewBody>
-            <typography.NewBodyLink
+            <oldTypography.AboutBodyLink
               href="https://www.youtube.com/watch?v=IyV5c_sd_4k"
               target="_blank"
             >
               &nbsp;humanizing internships
-            </typography.NewBodyLink>
+            </oldTypography.AboutBodyLink>
             <typography.NewBody>
               —I am passionate about giving back to the community that helped
               raise me.
@@ -87,40 +83,40 @@ export const About = () => {
           </containers.Top30>
 
           <LinksContainer>
-            <typography.NewLinksGrey
+            <oldTypography.AboutLinks
               href="https://github.com/lesliexin/"
               target="_blank"
             >
               code
-            </typography.NewLinksGrey>
+            </oldTypography.AboutLinks>
             <br />
 
-            <typography.NewLinksGrey href="mailto:l6xin@uwaterloo.ca">
+            <oldTypography.AboutLinks href="mailto:l6xin@uwaterloo.ca">
               email
-            </typography.NewLinksGrey>
+            </oldTypography.AboutLinks>
             <br />
-            <typography.NewLinksGrey
+            <oldTypography.AboutLinks
               href="https://www.linkedin.com/in/lesliexin/"
               target="_blank"
             >
               linkedin
-            </typography.NewLinksGrey>
+            </oldTypography.AboutLinks>
             <br />
-            <typography.NewLinksGrey
+            <oldTypography.AboutLinks
               href="https://twitter.com/Leslie_Xin"
               target="_blank"
             >
               twitter
-            </typography.NewLinksGrey>
-            <br />
-            <typography.NewLinksGrey
-              href="https://www.cbc.ca/player/play/1382926403834"
-              target="_blank"
-            >
-              fun
-            </typography.NewLinksGrey>
+            </oldTypography.AboutLinks>
           </LinksContainer>
         </TitleTextContainer>
+        <img src={me} style={{
+          width: "30%",
+          height: "70%",
+          marginLeft: "10vh",
+          objectFit: "cover",
+        }} alt="myself"/>
+        {/* <oldTypography.LargeTitle>Budapest, 2020</oldTypography.LargeTitle> */}
       </CenterContainer>
     </containers.PageContainer>
     </>
