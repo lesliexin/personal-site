@@ -8,7 +8,7 @@ const black = "#000000";
 const colors = {
   lightBlue: "#F7F9FF",
   lightPink: "#FAE6DE",
-  darkGrey: "#A9A9AC",
+  darkGrey: "#959595",
   navy: "#17182C",
   accentColour: blueScreenOfDeath,
   accentYellow: "#FCEA2B",

@@ -68,14 +68,13 @@ const NewLinksGrey = styled.a`
   line-height: 12px;
   font-weight: 700;
   &:hover {
-    color: ${colors.blob};
+    color: ${colors.accentColour};
   }
 `;
 
 // Body
 const NewBody = styled.span`
 font-size: ${bodyText};
-  }
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -122,7 +121,7 @@ const NewBodyLink = styled.a`
   font-weight: 700;
   line-height: 30px;
   &:hover {
-    color: ${colors.blob};
+    color: ${colors.accentColour};
   }
 
   @media ${device.mobileM} {
@@ -176,7 +175,7 @@ const NewDetail = styled.p`
 // Home page
 // "case study here"
 const StyledMark = styled.mark`
-  background-color: ${colors.white};
+  background-color: #D6DCFF;
   font-size: ${extraSmallText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
@@ -188,6 +187,7 @@ const StyledMark = styled.mark`
   font-weight: 700;
   &:hover {
     background-color: ${colors.accentColour};
+    color: ${colors.white};
   }
 `;
 

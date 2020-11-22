@@ -101,13 +101,6 @@ export const AboutPage = () => {
             >
               twitter
             </typography.NewLinksGrey>
-            <br />
-            <typography.NewLinksGrey
-              href="https://www.cbc.ca/player/play/1382926403834"
-              target="_blank"
-            >
-              fun
-            </typography.NewLinksGrey>
           </LinksContainer>
         </TitleTextContainer>
         <SideNav />
