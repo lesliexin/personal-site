@@ -35,7 +35,7 @@ export const NewHomePage = () => {
 
   return (
     <>
-      <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/>
+      {/* <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/> */}
       <containers.PageContainer>
         <containers.ContentContainer>
           <TitleTextContainer>
