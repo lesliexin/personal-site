@@ -66,12 +66,15 @@ export const NewHomePage = () => {
               <StyledRow>
                 <StyledData></StyledData>
                 <StyledData>
-                  <typography.NewBody>Improving user security for merchants at &nbsp;</typography.NewBody>
+                  <typography.NewBody>
+                    Researching digital storytelling for quantum technologies at
+                    &nbsp;
+                  </typography.NewBody>
                   <typography.NewBodyUnderline
-                    href="https://www.shopify.com/"
+                    href="https://tqt.uwaterloo.ca/project-details/using-interactive-digital-storytelling-to-represent-transformative-quantum-technologies-in-augmented-extended-reality-environments/"
                     target="_blank"
                   >
-                    Shopify
+                    UWaterloo
                   </typography.NewBodyUnderline>
                 </StyledData>
               </StyledRow>
@@ -80,6 +83,42 @@ export const NewHomePage = () => {
                 <StyledData></StyledData>
                 <StyledData>
                   <typography.NewHeading>Previously</typography.NewHeading>
+                </StyledData>
+              </StyledRow>
+
+              {/* Twitter */}
+              <StyledRow>
+                <StyledData>
+                  <typography.NewDetail>2021</typography.NewDetail>
+                </StyledData>
+                <StyledData>
+                  <typography.NewBody>
+                    Supporting design systems at &nbsp;
+                  </typography.NewBody>
+                  <typography.NewBodyUnderline
+                    href="https://twitter.com/TwitterDesign?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                    target="_blank"
+                  >
+                    Twitter
+                  </typography.NewBodyUnderline>
+                </StyledData>
+              </StyledRow>
+
+              {/* Shopify */}
+              <StyledRow>
+                <StyledData>
+                  <typography.NewDetail>2020</typography.NewDetail>
+                </StyledData>
+                <StyledData>
+                  <typography.NewBody>
+                    Improving user security for merchants at &nbsp;
+                  </typography.NewBody>
+                  <typography.NewBodyUnderline
+                    href="https://www.shopify.com/"
+                    target="_blank"
+                  >
+                    Shopify
+                  </typography.NewBodyUnderline>
                 </StyledData>
               </StyledRow>
 
@@ -168,25 +207,6 @@ export const NewHomePage = () => {
                     target="_blank"
                   >
                     CIBC Live Labs
-                  </typography.NewBodyUnderline>
-                </StyledData>
-              </StyledRow>
-
-              {/* Blueprint */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2018 {'>'}</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Creating skill-building games for children with cognitive
-                    disabilities at&nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://uwblueprint.org/"
-                    target="_blank"
-                  >
-                    Blueprint
                   </typography.NewBodyUnderline>
                 </StyledData>
               </StyledRow>
