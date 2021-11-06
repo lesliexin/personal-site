@@ -3,70 +3,54 @@ import colors from "./colours";
 import { device } from "./device";
 import { NavLink } from "react-router-dom";
 
-const extraLargeText = "42px";
 const largeText = "36px";
+const mediumText = "24px";
+const headingText = "18px";
 const bodyText = "16px";
 const smallText = "14px";
 const extraSmallText = "12px";
 const tinyText = "10px";
 
 // Large Titles
-const NewTitle = styled.p`
-  margin: 0px;
-  font-size: ${extraLargeText};
-  padding-bottom: 6px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+const Bio = styled.p`
+  font-size: ${mediumText};
+  margin: 0 0 12px 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   word-wrap: normal;
   text-align: left;
-  color: ${colors.navy};
+  color: ${colors.black};
 
   @media ${device.mobileM} {
     font-size: ${largeText};
   }
 `;
 
-// "Currently" "Previously"
-const NewHeading = styled.p`
-  font-size: ${extraSmallText};
-  margin: 34px 0px 10px 0px;
-  font-family: "Open Sans", sans-serif;
+// "at the moment i’m... " "Previously"
+const Heading = styled.p`
+  font-size: ${headingText};
+  margin: 48px 0px 18px 0px;
+  font-family: "Inter";
   word-wrap: normal;
-  color: ${colors.darkGrey};
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 14px;
+  color: ${colors.accentColour};
+  letter-spacing: 1px;
+  line-height: 30px;
   font-weight: 700;
 `;
 
 // Side Nav
 const NewLinks = styled(NavLink)`
-  font-size: ${extraSmallText};
-  font-family: "Open Sans", sans-serif;
+  font-size: ${bodyText};
+  font-family: "Inter", sans-serif;
   word-wrap: normal;
   color: ${colors.baseTextColour};
-  text-align: right;
+  text-align: left;
   letter-spacing: 0.5px;
   cursor: pointer;
   text-decoration: none;
+  margin: 0 0 6px 0;
   line-height: 12px;
-  font-weight: 700;
-  &:hover {
-    color: ${colors.accentColour};
-  }
-`;
-
-// Bottom of About Page
-const NewLinksGrey = styled.a`
-  font-size: ${extraSmallText};
-  font-family: "Open Sans", sans-serif;
-  word-wrap: normal;
-  color: ${colors.darkGrey};
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-decoration: none;
-  line-height: 12px;
-  font-weight: 700;
+  font-weight: 400;
   &:hover {
     color: ${colors.accentColour};
   }
@@ -74,7 +58,7 @@ const NewLinksGrey = styled.a`
 
 // Body
 const NewBody = styled.span`
-font-size: ${bodyText};
+  font-size: ${bodyText};
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
@@ -88,22 +72,17 @@ font-size: ${bodyText};
   }
 `;
 
-// "Systems Design Engineering"
-const NewBodyBold = styled.span`
+const CompanyTitles = styled.span`
   font-size: ${bodyText};
-  margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 8px;
   word-wrap: normal;
-  color: ${colors.navy};
+  color: ${colors.black};
   letter-spacing: 0.5px;
-  font-weight: 700;
+  font-weight: 600;
 
   @media ${device.mobileM} {
     font-size: ${smallText};
-  }
-
-  @media ${device.laptop} {
-    font-size: ${bodyText};
   }
 `;
 
@@ -162,7 +141,7 @@ const NewBodyUnderline = styled.a`
 // Home page years
 const NewDetail = styled.p`
   font-size: ${tinyText};
-  margin: 0px 12px 0px 0px;
+  margin: 0px 14px 0px 0px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
   color: ${colors.darkGrey};
@@ -172,23 +151,15 @@ const NewDetail = styled.p`
   font-weight: 700;
 `;
 
-// Home page
-// "case study here"
-const StyledMark = styled.mark`
-  background-color: #D6DCFF;
-  font-size: ${extraSmallText};
-  margin-bottom: 4px;
-  font-family: "Open Sans", sans-serif;
+// Home page years
+const Description = styled.p`
+  font-size: ${smallText};
+  font-family: "Inter", sans-serif;
+  margin: 0 0 20px 0;
   word-wrap: normal;
-  color: ${colors.navy};
-  cursor: pointer;
-  text-decoration: none;
   letter-spacing: 0.5px;
-  font-weight: 700;
-  &:hover {
-    background-color: ${colors.accentColour};
-    color: ${colors.white};
-  }
+  color: ${colors.black};
+  font-weight: 400;
 `;
 
 // Case study
@@ -299,21 +270,20 @@ const GreySubtile = styled.p`
 `;
 
 export const typography = {
-  NewTitle: NewTitle,
+  Bio: Bio,
   NewLinks: NewLinks,
-  NewHeading: NewHeading,
+  Heading: Heading,
   NewBody: NewBody,
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
-  NewBodyBold: NewBodyBold,
   CaseTitle: CaseTitle,
   Subtitle20: Subtitle20,
-  StyledMark: StyledMark,
   Body2: Body2,
   LargeSubtitle: LargeSubtitle,
   NewDetailLeft: NewDetailLeft,
   BodyMain: BodyMain,
   GreySubtile: GreySubtile,
-  NewLinksGrey: NewLinksGrey,
   NewBodyLink: NewBodyLink,
+  Description: Description,
+  CompanyTitles: CompanyTitles,
 };

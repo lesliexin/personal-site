@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { typography, device, containers } from "../styles";
 import { SideNav } from "../components";
 
-export const AboutPage = () => {
+export const OutputPage = () => {
   return (
     <containers.PageContainer>
       <containers.ContentContainer>

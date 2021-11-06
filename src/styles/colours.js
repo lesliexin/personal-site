@@ -1,5 +1,5 @@
 const midnightBlue = "#1151F9";
-const blueScreenOfDeath = "#5C75FB";
+const blueScreenOfDeath = "#0047FF";
 const brightYellow = "#FCEA2B";
 const mustardYellow = "#F3CF68";
 const white = "#FFFFFF";

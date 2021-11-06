@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { typography, containers } from "../styles";
-import { ReactComponent as Wave } from "../assets/wave.svg";
 import { useHistory } from "react-router-dom";
 import { SideNav } from "../components";
-import Canvas from "../components/Canvas";
-import { draw } from "../components/Blob";
-
-const TitleTextContainer = styled.div`
-  width: 85%;
-`;
 
 const StyledTable = styled.div`
   border-spacing: 0px;
@@ -21,198 +14,205 @@ const StyledRow = styled.div`
 `;
 
 const StyledData = styled.div`
-  height: 38px;
+  height: 28px;
   display: table-cell;
 `;
 
-const StyledWave = styled(Wave)`
-  height: 38px;
-`;
-
 export const NewHomePage = () => {
-  const [isTitleHover, setIsTitleHover] = useState(false);
   const history = useHistory();
 
   return (
     <>
-      {/* <Canvas draw={draw} style={{position: "absolute", zIndex: "-1"}}/> */}
       <containers.PageContainer>
+        <SideNav />
         <containers.ContentContainer>
-          <TitleTextContainer>
-            <StyledTable>
-              <StyledRow>
-                <StyledData>{isTitleHover ? null : null}</StyledData>
-                <StyledData>
-                  <typography.NewTitle
-                    onMouseEnter={() => {
-                      setIsTitleHover(!isTitleHover);
-                    }}
-                    onMouseLeave={() => {
-                      setIsTitleHover(!isTitleHover);
-                    }}
-                  >
-                    Hi, I'm Leslie!
-                  </typography.NewTitle>
-                </StyledData>
-              </StyledRow>
+          <StyledTable>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.NewLinks to="/">leslie xin</typography.NewLinks>{" "}
+              </StyledData>
+            </StyledRow>
 
-              <StyledRow>
-                <StyledData></StyledData>
-                <StyledData>
-                  <typography.NewHeading>Currently</typography.NewHeading>
-                </StyledData>
-              </StyledRow>
+            <containers.Top60 />
+            <StyledRow>
+              <StyledData></StyledData>
+              <typography.Bio>
+                I’m a design engineer interested in exploring and pushing the
+                boundaries of our digital experiences.{" "}
+              </typography.Bio>
+            </StyledRow>
 
-              <StyledRow>
-                <StyledData></StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Researching digital storytelling for quantum technologies at
-                    &nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://tqt.uwaterloo.ca/project-details/using-interactive-digital-storytelling-to-represent-transformative-quantum-technologies-in-augmented-extended-reality-environments/"
-                    target="_blank"
-                  >
-                    UWaterloo
-                  </typography.NewBodyUnderline>
-                </StyledData>
-              </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Heading>at the moment i'm...</typography.Heading>
+              </StyledData>
+            </StyledRow>
 
-              <StyledRow>
-                <StyledData></StyledData>
-                <StyledData>
-                  <typography.NewHeading>Previously</typography.NewHeading>
-                </StyledData>
-              </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.CompanyTitles>
+                  Studying &nbsp;
+                </typography.CompanyTitles>
+                <typography.NewBodyUnderline
+                  href="https://twitter.com/TwitterDesign?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                  target="_blank"
+                >
+                  Systems Design Engineering
+                </typography.NewBodyUnderline>
+                <typography.CompanyTitles>
+                  {" "}
+                  a the Unversity of Waterloo
+                </typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
 
-              {/* Twitter */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2021</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Supporting design systems at &nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://twitter.com/TwitterDesign?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                    target="_blank"
-                  >
-                    Twitter
-                  </typography.NewBodyUnderline>
-                </StyledData>
-              </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Heading>
+                  which has led me to work at...
+                </typography.Heading>
+              </StyledData>
+            </StyledRow>
 
-              {/* Shopify */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2020</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Improving user security for merchants at &nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://www.shopify.com/"
-                    target="_blank"
-                  >
-                    Shopify
-                  </typography.NewBodyUnderline>
-                </StyledData>
-              </StyledRow>
+            {/* Twitter */}
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2021</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>Twitter</typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Supported design systems
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
 
-              {/* Cognite */}
+            {/* Shopify */}
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2020</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>Shopify</typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Improved user security
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
 
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2020</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Building data science tools for engineers at&nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://www.cognite.com/en/"
-                    target="_blank"
-                  >
-                    Cognite
-                  </typography.NewBodyUnderline>
-                  <typography.NewBody>
-                    &nbsp;in Oslo, Norway &nbsp;
-                    <typography.StyledMark
-                      onClick={() => {
-                        history.push("/cognite");
-                      }}
-                    >
-                      &nbsp;
-                      <span role="img" aria-label="case emoji">
-                        💼
-                      </span>
-                      case study here!&nbsp;
-                    </typography.StyledMark>
-                  </typography.NewBody>
-                </StyledData>
-              </StyledRow>
+            {/* Cognite */}
 
-              {/* Microsoft */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2019</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>Improving&nbsp;</typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://docs.microsoft.com/en-us/power-platform/admin/admin-documentation"
-                    target="_blank"
-                  >
-                    Microsoft Power Platform's
-                  </typography.NewBodyUnderline>
-                  <typography.NewBody>
-                    &nbsp;diagnostics visualization tooling
-                  </typography.NewBody>
-                </StyledData>
-              </StyledRow>
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2020</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>Cognite</typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Enabled engineers to use data science
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
 
-              {/* Bungalow */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2018</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Reimagining the new applicant flow at&nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://bungalow.com/"
-                    target="_blank"
-                  >
-                    Bungalow
-                  </typography.NewBodyUnderline>
-                  <typography.NewBody>&nbsp; (Atomic Labs)</typography.NewBody>
-                </StyledData>
-              </StyledRow>
+            {/* Microsoft */}
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2019</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>Microsoft</typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Improved diagnostics visualization tooling
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
 
-              {/* CIBC */}
-              <StyledRow>
-                <StyledData>
-                  <typography.NewDetail>2018</typography.NewDetail>
-                </StyledData>
-                <StyledData>
-                  <typography.NewBody>
-                    Enabling smart transactions through Bitcoin wallets at&nbsp;
-                  </typography.NewBody>
-                  <typography.NewBodyUnderline
-                    href="https://medium.com/cibc-live-labs/about-live-labs-b8aebdd8815a"
-                    target="_blank"
-                  >
-                    CIBC Live Labs
-                  </typography.NewBodyUnderline>
-                </StyledData>
-              </StyledRow>
-            </StyledTable>
-          </TitleTextContainer>
-          <SideNav />
+            {/* Bungalow */}
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2018</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>Bungalow</typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Reimagined the new applicant flow
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
+
+            {/* CIBC */}
+            <StyledRow>
+              <StyledData>
+                <typography.NewDetail>2018</typography.NewDetail>
+              </StyledData>
+              <StyledData>
+                <typography.CompanyTitles>
+                  CIBC Live Labs
+                </typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Description>
+                  Enabled smart transactions through Bitcoin wallets
+                </typography.Description>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Heading>where i learned...</typography.Heading>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.Heading>
+                  in the future i'd like to...
+                </typography.Heading>
+              </StyledData>
+            </StyledRow>
+            <StyledRow>
+              <StyledData></StyledData>
+              <StyledData>
+                <typography.CompanyTitles>
+                  continue to use technology as the means to create art. I hope
+                  to build experiences that challenge conventional design and
+                  induce feelings over utility.
+                </typography.CompanyTitles>
+              </StyledData>
+            </StyledRow>
+          </StyledTable>
         </containers.ContentContainer>
       </containers.PageContainer>
     </>

@@ -4,10 +4,12 @@ import { typography, device, colors } from "../styles";
 
 const LinksContainer = styled.nav`
   width: 15%;
-  margin-left: auto;
   display: flex;
   flex-direction: column;
-  padding: 10px 36px 0px 0px;
+  margin: 164px 0px 0px 160px;
+  left: 0;
+  top: 0;
+  position: fixed;
 
   @media ${device.mobileM} {
     padding: 10px 0px 0px 0px;
@@ -15,30 +17,38 @@ const LinksContainer = styled.nav`
 `;
 
 export const SideNav = () => {
-
   return (
     <LinksContainer>
       <typography.NewLinks
-        exact to="/"
+        exact
+        to="/"
         activeStyle={{
-          color: colors.accentColour
+          color: colors.accentColour,
         }}
       >
-        work
+        me
       </typography.NewLinks>
       <br />
       <typography.NewLinks
         to="/about"
         activeStyle={{
-          color: colors.accentColour
+          color: colors.accentColour,
         }}
       >
-        about
+        input
       </typography.NewLinks>
       <br />
-      <typography.NewLinks to="/LX2021.pdf" target="_blank">
-        résumé
+      <typography.NewLinks
+        to="/about"
+        activeStyle={{
+          color: colors.accentColour,
+        }}
+      >
+        output
       </typography.NewLinks>
+      {/* <typography.NewLinks to="/LX2021.pdf" target="_blank">
+        resume
+      </typography.NewLinks> */}
     </LinksContainer>
   );
 };
