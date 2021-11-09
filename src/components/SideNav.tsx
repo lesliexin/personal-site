@@ -6,7 +6,7 @@ const LinksContainer = styled.nav`
   width: 15%;
   display: flex;
   flex-direction: column;
-  margin: 164px 0px 0px 160px;
+  padding: 164px 0px 0px 160px;
   left: 0;
   top: 0;
   position: fixed;
@@ -30,7 +30,7 @@ export const SideNav = () => {
       </typography.NewLinks>
       <br />
       <typography.NewLinks
-        to="/about"
+        to="/input"
         activeStyle={{
           color: colors.accentColour,
         }}
@@ -39,7 +39,7 @@ export const SideNav = () => {
       </typography.NewLinks>
       <br />
       <typography.NewLinks
-        to="/about"
+        to="/output"
         activeStyle={{
           color: colors.accentColour,
         }}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { AnyStyledComponent, css } from "styled-components";
 import colors from "./colours";
 import { device } from "./device";
 import { NavLink } from "react-router-dom";
@@ -12,14 +12,21 @@ const extraSmallText = "12px";
 const tinyText = "10px";
 
 // Large Titles
-const Bio = styled.p`
+const Bio = styled.span<any>`
   font-size: ${mediumText};
   margin: 0 0 12px 0;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   word-wrap: normal;
   text-align: left;
+  line-height: 36px;
   color: ${colors.black};
+
+  ${(props: any) =>
+    props.isHighlighted &&
+    css`
+      background-color: ${colors.accentYellow};
+    `};
 
   @media ${device.mobileM} {
     font-size: ${largeText};
@@ -86,6 +93,40 @@ const CompanyTitles = styled.span`
   }
 `;
 
+const TitleLinks = styled.a`
+  font-size: ${bodyText};
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 8px;
+  text-decoration: none;
+  word-wrap: normal;
+  color: ${colors.black};
+  letter-spacing: 0.5px;
+  font-weight: 600;
+
+  &:hover {
+    border-bottom: 2px solid ${colors.darkGrey};
+    cursor: pointer;
+  }
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+`;
+
+const ListItems = styled.span`
+  font-size: ${smallText};
+  font-family: "Inter", sans-serif;
+  margin-bottom: 6px;
+  word-wrap: normal;
+  color: ${colors.black};
+  letter-spacing: 0.5px;
+  font-weight: 400;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+`;
+
 // About page
 // "building software for non-profit organizations", etc
 const NewBodyLink = styled.a`
@@ -119,14 +160,15 @@ const NewBodyUnderline = styled.a`
   margin-bottom: 4px;
   font-family: "Open Sans", sans-serif;
   word-wrap: normal;
-  color: ${colors.navy};
-  border-bottom: 2.5px solid ${colors.accentColour};
+  color: ${colors.black};
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.5px;
+  display: inline-block;
+  line-height: 16px;
   font-weight: 700;
   &:hover {
-    border-bottom: 2.5px solid ${colors.darkGrey};
+    border-bottom: 2px solid ${colors.darkGrey};
   }
 
   @media ${device.mobileM} {
@@ -152,7 +194,7 @@ const NewDetail = styled.p`
 `;
 
 // Home page years
-const Description = styled.p`
+const Description = styled.p<any>`
   font-size: ${smallText};
   font-family: "Inter", sans-serif;
   margin: 0 0 20px 0;
@@ -160,6 +202,15 @@ const Description = styled.p`
   letter-spacing: 0.5px;
   color: ${colors.black};
   font-weight: 400;
+  width: 90%;
+  line-height: 20px;
+
+  ${(props: any) =>
+    props.margin &&
+    css`
+      margin-bottom: ${props.margin};
+    `};
+}
 `;
 
 // Case study
@@ -286,4 +337,6 @@ export const typography = {
   NewBodyLink: NewBodyLink,
   Description: Description,
   CompanyTitles: CompanyTitles,
+  ListItems: ListItems,
+  TitleLinks: TitleLinks,
 };

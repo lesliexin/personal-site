@@ -4,215 +4,265 @@ import { typography, containers } from "../styles";
 import { useHistory } from "react-router-dom";
 import { SideNav } from "../components";
 
-const StyledTable = styled.div`
-  border-spacing: 0px;
-  display: table;
-`;
-
-const StyledRow = styled.div`
-  display: table-row;
-`;
-
-const StyledData = styled.div`
-  height: 28px;
-  display: table-cell;
-`;
-
 export const NewHomePage = () => {
-  const history = useHistory();
-
   return (
     <>
       <containers.PageContainer>
         <SideNav />
         <containers.ContentContainer>
-          <StyledTable>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+          <containers.StyledTable>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.NewLinks to="/">leslie xin</typography.NewLinks>{" "}
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             <containers.Top60 />
-            <StyledRow>
-              <StyledData></StyledData>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <typography.Bio>I’m a </typography.Bio>
+              <typography.Bio>design engineer</typography.Bio>
               <typography.Bio>
-                I’m a design engineer interested in exploring and pushing the
-                boundaries of our digital experiences.{" "}
+                {" "}
+                interested in exploring and pushing the boundaries of our
+                digital experiences.
               </typography.Bio>
-            </StyledRow>
+            </containers.StyledRow>
 
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Heading>at the moment i'm...</typography.Heading>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.CompanyTitles>
                   Studying &nbsp;
                 </typography.CompanyTitles>
                 <typography.NewBodyUnderline
-                  href="https://twitter.com/TwitterDesign?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                  href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
                   target="_blank"
                 >
                   Systems Design Engineering
                 </typography.NewBodyUnderline>
                 <typography.CompanyTitles>
                   {" "}
-                  a the Unversity of Waterloo
+                  at the Unversity of Waterloo
                 </typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Heading>
                   which has led me to work at...
                 </typography.Heading>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* Twitter */}
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2021</typography.NewDetail>
-              </StyledData>
-              <StyledData>
-                <typography.CompanyTitles>Twitter</typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
+                <typography.CompanyTitles>Twitter </typography.CompanyTitles>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Description>
-                  Supported design systems
+                  As a Design Engineer supporting design systems
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* Shopify */}
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2020</typography.NewDetail>
-              </StyledData>
-              <StyledData>
-                <typography.CompanyTitles>Shopify</typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
+                <typography.CompanyTitles>Shopify </typography.CompanyTitles>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Description>
-                  Improved user security
+                  As a Frontend Engineer improving user security
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* Cognite */}
 
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2020</typography.NewDetail>
-              </StyledData>
-              <StyledData>
-                <typography.CompanyTitles>Cognite</typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
+                <typography.CompanyTitles>Cognite </typography.CompanyTitles>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Description>
-                  Enabled engineers to use data science
+                  As a Frontend Engineer and Product Designer enabling engineers{" "}
+                  {"\n"}
+                  to use data science
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* Microsoft */}
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2019</typography.NewDetail>
-              </StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
                 <typography.CompanyTitles>Microsoft</typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Description>
-                  Improved diagnostics visualization tooling
+                  As a Software Engineer improving diagnostics visualization
+                  tooling
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* Bungalow */}
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2018</typography.NewDetail>
-              </StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
                 <typography.CompanyTitles>Bungalow</typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Description>
-                  Reimagined the new applicant flow
+                  As a Software Engineer reimagining the new applicant flow
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
+              </containers.StyledData>
+            </containers.StyledRow>
 
             {/* CIBC */}
-            <StyledRow>
-              <StyledData>
+            <containers.StyledRow>
+              <containers.StyledData>
                 <typography.NewDetail>2018</typography.NewDetail>
-              </StyledData>
-              <StyledData>
+              </containers.StyledData>
+              <containers.StyledData>
                 <typography.CompanyTitles>
                   CIBC Live Labs
                 </typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
-                <typography.Description>
-                  Enabled smart transactions through Bitcoin wallets
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
+                <typography.Description margin="0">
+                  As a Software Engineer enabling smart transactions through
+                  Bitcoin wallets
                 </typography.Description>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
-                <typography.Heading>where i learned...</typography.Heading>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
+                <typography.Heading>
+                  where i learned how to use...
+                </typography.Heading>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
+                <containers.Columns>
+                  <containers.VerticalList>
+                    <typography.CompanyTitles>
+                      Languages&nbsp;
+                    </typography.CompanyTitles>
+                    <typography.ListItems>JavaScript</typography.ListItems>
+                    <typography.ListItems>TypeScript</typography.ListItems>
+                    <typography.ListItems>HTML / CSS</typography.ListItems>
+                    <typography.ListItems>Python</typography.ListItems>
+                    <typography.ListItems>C++</typography.ListItems>
+                    <typography.ListItems>Java</typography.ListItems>
+                  </containers.VerticalList>
+                  <containers.VerticalList>
+                    <typography.CompanyTitles>
+                      Tools&nbsp;
+                    </typography.CompanyTitles>
+                    <typography.ListItems>React</typography.ListItems>
+                    <typography.ListItems>Next.js</typography.ListItems>
+                    <typography.ListItems>Flask</typography.ListItems>
+                    <typography.ListItems>Django</typography.ListItems>
+                    <typography.ListItems>GraphQL</typography.ListItems>
+                    <typography.ListItems>OpenGL</typography.ListItems>
+                    <typography.ListItems>Postgres</typography.ListItems>
+                    <typography.ListItems>MongoDB</typography.ListItems>
+                    <typography.ListItems>Git</typography.ListItems>
+                  </containers.VerticalList>
+                  <containers.VerticalList>
+                    <typography.CompanyTitles>
+                      Design&nbsp;
+                    </typography.CompanyTitles>
+                    <typography.ListItems>Figma</typography.ListItems>
+                    <typography.ListItems>Sketch</typography.ListItems>
+                    <typography.ListItems>Invision</typography.ListItems>
+                    <typography.ListItems>Procreate</typography.ListItems>
+                  </containers.VerticalList>
+                </containers.Columns>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.Heading>
                   in the future i'd like to...
                 </typography.Heading>
-              </StyledData>
-            </StyledRow>
-            <StyledRow>
-              <StyledData></StyledData>
-              <StyledData>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
                 <typography.CompanyTitles>
-                  continue to use technology as the means to create art. I hope
-                  to build experiences that challenge conventional design and
-                  induce feelings over utility.
+                  Continue to use technology as a means to create art. If you'd
+                  like to work together, say hello at{" "}
                 </typography.CompanyTitles>
-              </StyledData>
-            </StyledRow>
-          </StyledTable>
+                <typography.NewBodyUnderline
+                  href="mailto:leslie.xin@uwaterloo.ca"
+                  target="_blank"
+                >
+                  leslie.xin@uwaterloo.ca
+                </typography.NewBodyUnderline>
+              </containers.StyledData>
+            </containers.StyledRow>
+            <containers.Top60 />
+            {/* <containers.StyledRow>
+              <containers.StyledData></containers.StyledData>
+              <containers.StyledData>
+                <containers.Columns>
+                  <typography.NewLinks to="/">github</typography.NewLinks>
+                  <typography.NewLinks to="/">twitter</typography.NewLinks>
+                  <typography.NewLinks to="/">linkedin</typography.NewLinks>
+                </containers.Columns>
+              </containers.StyledData>
+            </containers.StyledRow> */}
+          </containers.StyledTable>
         </containers.ContentContainer>
       </containers.PageContainer>
     </>

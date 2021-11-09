@@ -41,6 +41,35 @@ const ContentContainer = styled.div`
   }
 `;
 
+const StyledTable = styled.div`
+  border-spacing: 0px;
+  display: table;
+`;
+
+const StyledRow = styled.div`
+  display: table-row;
+`;
+
+const StyledData = styled.div`
+  height: 28px;
+  display: table-cell;
+`;
+
+const VerticalList = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 52px;
+`;
+
+const Columns = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const AboutContainer = styled.div`
+  padding-left: 44px;
+`;
+
 const CardsContainer = styled.div`
   width: 60%;
   display: flex;
@@ -58,6 +87,12 @@ export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
   CardsContainer: CardsContainer,
+  StyledTable: StyledTable,
+  StyledRow: StyledRow,
+  StyledData: StyledData,
+  VerticalList: VerticalList,
+  AboutContainer: AboutContainer,
+  Columns: Columns,
   Top12: Top12,
   Top24: Top24,
   Top30: Top30,

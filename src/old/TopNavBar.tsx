@@ -38,7 +38,7 @@ export const TopNavBar = () => {
       </oldTypography.Body>
       <oldTypography.Body
         onClick={() => {
-          history.push("/about");
+          history.push("/input");
         }}
       >
         ABOUT
