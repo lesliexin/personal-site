@@ -9,6 +9,10 @@ const Top24 = styled.div`
   padding-top: 24px;
 `;
 
+const Top20 = styled.div`
+  padding-top: 20px;
+`;
+
 const Top30 = styled.div`
   padding-top: 30px;
 `;
@@ -66,6 +70,11 @@ const Columns = styled.div`
   flex-direction: row;
 `;
 
+const HorizontalLine = styled.div`
+  border-top: 1px solid #dddddd;
+  width: 100%;
+`;
+
 const AboutContainer = styled.div`
   padding-left: 44px;
 `;
@@ -83,6 +92,12 @@ const Overlap = styled.div`
   z-index: -10;
 `;
 
+const FooterColumns = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 export const containers = {
   PageContainer: PageContainer,
   ContentContainer: ContentContainer,
@@ -98,4 +113,7 @@ export const containers = {
   Top30: Top30,
   Top60: Top60,
   Overlap: Overlap,
+  HorizontalLine: HorizontalLine,
+  FooterColumns: FooterColumns,
+  Top20: Top20,
 };

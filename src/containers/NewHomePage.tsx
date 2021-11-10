@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
 import { typography, containers } from "../styles";
-import { useHistory } from "react-router-dom";
-import { SideNav } from "../components";
+import { SideNav, ContactLinksFooter } from "../components";
 
 export const NewHomePage = () => {
   return (
@@ -114,11 +112,14 @@ export const NewHomePage = () => {
             <containers.StyledRow>
               <containers.StyledData></containers.StyledData>
               <containers.StyledData>
-                <typography.Description>
+                <typography.Description margin="8px">
                   As a Frontend Engineer and Product Designer enabling engineers{" "}
-                  {"\n"}
                   to use data science
                 </typography.Description>
+                <typography.DescriptionLink to="/cognite">
+                  Case study here
+                </typography.DescriptionLink>
+                <containers.Top20 />
               </containers.StyledData>
             </containers.StyledRow>
 
@@ -244,24 +245,15 @@ export const NewHomePage = () => {
                   like to work together, say hello at{" "}
                 </typography.CompanyTitles>
                 <typography.NewBodyUnderline
-                  href="mailto:leslie.xin@uwaterloo.ca"
+                  href="mailto:leslie.xin@hotmail.com"
                   target="_blank"
                 >
-                  leslie.xin@uwaterloo.ca
+                  leslie.xin@hotmail.com
                 </typography.NewBodyUnderline>
               </containers.StyledData>
             </containers.StyledRow>
             <containers.Top60 />
-            {/* <containers.StyledRow>
-              <containers.StyledData></containers.StyledData>
-              <containers.StyledData>
-                <containers.Columns>
-                  <typography.NewLinks to="/">github</typography.NewLinks>
-                  <typography.NewLinks to="/">twitter</typography.NewLinks>
-                  <typography.NewLinks to="/">linkedin</typography.NewLinks>
-                </containers.Columns>
-              </containers.StyledData>
-            </containers.StyledRow> */}
+            <ContactLinksFooter />
           </containers.StyledTable>
         </containers.ContentContainer>
       </containers.PageContainer>

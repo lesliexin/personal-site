@@ -29,7 +29,8 @@ const Bio = styled.span<any>`
     `};
 
   @media ${device.mobileM} {
-    font-size: ${largeText};
+    font-size: ${headingText};
+    line-height: 24px;
   }
 `;
 
@@ -60,22 +61,6 @@ const NewLinks = styled(NavLink)`
   font-weight: 400;
   &:hover {
     color: ${colors.accentColour};
-  }
-`;
-
-// Body
-const NewBody = styled.span`
-  font-size: ${bodyText};
-  margin-bottom: 4px;
-  font-family: "Open Sans", sans-serif;
-  word-wrap: normal;
-  color: ${colors.navy};
-  letter-spacing: 0.5px;
-  font-weight: 600;
-  line-height: 30px;
-
-  @media ${device.mobileM} {
-    font-size: ${smallText};
   }
 `;
 
@@ -127,29 +112,23 @@ const ListItems = styled.span`
   }
 `;
 
-// About page
-// "building software for non-profit organizations", etc
-const NewBodyLink = styled.a`
-  font-size: ${bodyText};
-  margin-bottom: 4px;
-  font-family: "Open Sans", sans-serif;
-  word-wrap: normal;
-  color: ${colors.navy};
-  cursor: pointer;
+const ContactLinks = styled.a`
+  font-size: ${smallText};
+  font-family: "Inter", sans-serif;
+  margin-bottom: 6px;
   text-decoration: none;
+  word-wrap: normal;
+  color: ${colors.darkGrey};
   letter-spacing: 0.5px;
-  font-weight: 700;
-  line-height: 30px;
+  font-weight: 400;
+
   &:hover {
-    color: ${colors.accentColour};
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   @media ${device.mobileM} {
-    font-size: ${smallText};
-  }
-
-  @media ${device.laptop} {
-    font-size: ${bodyText};
+    font-size: ${extraSmallText};
   }
 `;
 
@@ -210,6 +189,20 @@ const Description = styled.p<any>`
     css`
       margin-bottom: ${props.margin};
     `};
+}
+`;
+
+const DescriptionLink = styled(NavLink)`
+  font-size: ${smallText};
+  font-family: "Inter", sans-serif;
+  padding: 0 0 20px 0;
+  word-wrap: normal;
+  letter-spacing: 0.5px;
+  display: inline;
+  color: ${colors.black};
+  font-weight: 400;
+  width: 90%;
+  line-height: 20px;
 }
 `;
 
@@ -324,7 +317,6 @@ export const typography = {
   Bio: Bio,
   NewLinks: NewLinks,
   Heading: Heading,
-  NewBody: NewBody,
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
   CaseTitle: CaseTitle,
@@ -334,9 +326,10 @@ export const typography = {
   NewDetailLeft: NewDetailLeft,
   BodyMain: BodyMain,
   GreySubtile: GreySubtile,
-  NewBodyLink: NewBodyLink,
   Description: Description,
   CompanyTitles: CompanyTitles,
   ListItems: ListItems,
   TitleLinks: TitleLinks,
+  ContactLinks: ContactLinks,
+  DescriptionLink: DescriptionLink,
 };

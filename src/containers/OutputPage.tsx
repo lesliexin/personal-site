@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { typography, device, containers } from "../styles";
-import { SideNav } from "../components";
+import { typography, containers } from "../styles";
+import { SideNav, ContactLinksFooter } from "../components";
 
 const StyledList = styled.ul`
   padding-left: 20px;
@@ -189,7 +189,7 @@ export const OutputPage = () => {
                   </typography.Description>
                 </li>
                 <li>
-                  <typography.Description margin="8px">
+                  <typography.Description margin="-10px">
                     Project will be featured in an exhbit at the Oregon Museum
                     of Science and Industry in 2023.
                   </typography.Description>
@@ -304,6 +304,7 @@ export const OutputPage = () => {
             </containers.StyledData>
           </containers.StyledRow>
           <containers.Top60 />
+          <ContactLinksFooter />
         </containers.StyledTable>
         <SideNav />
       </containers.ContentContainer>

@@ -13,6 +13,8 @@ const LinksContainer = styled.nav`
 
   @media ${device.mobileM} {
     padding: 10px 0px 0px 0px;
+    color: red;
+    flex-direction: row;
   }
 `;
 
@@ -46,9 +48,6 @@ export const SideNav = () => {
       >
         output
       </typography.NewLinks>
-      {/* <typography.NewLinks to="/LX2021.pdf" target="_blank">
-        resume
-      </typography.NewLinks> */}
     </LinksContainer>
   );
 };

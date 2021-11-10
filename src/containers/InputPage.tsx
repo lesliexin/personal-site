@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import { typography, device, containers } from "../styles";
+import { typography, containers } from "../styles";
 import { SideNav } from "../components";
 
 export const InputPage = () => {
