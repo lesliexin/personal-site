@@ -179,7 +179,7 @@ export const OutputPage = () => {
               <StyledList>
                 <li>
                   <typography.Description margin="8px">
-                    Won 1st place in the Biomimiicry Global Design Challenge.
+                    Won 1st place in the Biomimicry Global Design Challenge.
                   </typography.Description>
                 </li>
                 <li>
@@ -190,7 +190,7 @@ export const OutputPage = () => {
                 </li>
                 <li>
                   <typography.Description margin="-10px">
-                    Project will be featured in an exhbit at the Oregon Museum
+                    Project will be featured in an exhibit at the Oregon Museum
                     of Science and Industry in 2023.
                   </typography.Description>
                 </li>
@@ -275,7 +275,7 @@ export const OutputPage = () => {
             <containers.StyledData></containers.StyledData>
             <containers.StyledData>
               <typography.Description>
-                Creating an online community to humanize the tech industry
+                Created an online community to humanize the tech industry
               </typography.Description>
             </containers.StyledData>
           </containers.StyledRow>
