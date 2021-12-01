@@ -7,6 +7,7 @@ import {
   NewHomePage,
   InputPage,
   OutputPage,
+  PortfolioPage,
 } from "./containers";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Route exact path="/" component={NewHomePage} />
       <Route path="/cognite" component={ProjectsContainer} />
       <Route path="/input" component={InputPage} />
-      <Route path="/output" component={OutputPage} />
+      <Route path="/output" component={PortfolioPage} />
     </Router>
   );
 }
