@@ -1,4 +1,22 @@
 export const projectContent = {
+  // raytracer: {
+  //   title1: "Building a Real-time",
+  //   title2: "Ray Tracer",
+  //   company: "Personal",
+  //   location: "2021",
+  //   role: ["Designer", "Engineer"],
+  //   team: ["5 Members"],
+  //   duration: "4 Months",
+  // },
+  crescendio: {
+    title1: "Collaborative Music Production",
+    title2: "",
+    company: "Personal",
+    location: "2020",
+    role: ["Designer", "Engineer"],
+    team: ["5 Members"],
+    duration: "4 Months",
+  },
   cognite: {
     title1: "Enabling Engineers to use Data",
     title2: "Science",

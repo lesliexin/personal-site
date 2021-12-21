@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { device } from "./device";
 
+const Top8 = styled.div`
+  padding-top: 8px;
+`;
+
 const Top12 = styled.div`
   padding-top: 12px;
 `;
@@ -108,6 +112,7 @@ export const containers = {
   VerticalList: VerticalList,
   AboutContainer: AboutContainer,
   Columns: Columns,
+  Top8: Top8,
   Top12: Top12,
   Top24: Top24,
   Top30: Top30,

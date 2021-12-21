@@ -31,7 +31,7 @@ export const SideNav = () => {
         me
       </typography.NewLinks>
       <br />
-      <typography.NewLinks
+      {/* <typography.NewLinks
         to="/input"
         activeStyle={{
           color: colors.accentColour,
@@ -39,7 +39,7 @@ export const SideNav = () => {
       >
         input
       </typography.NewLinks>
-      <br />
+      <br /> */}
       <typography.NewLinks
         to="/output"
         activeStyle={{

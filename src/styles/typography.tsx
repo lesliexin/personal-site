@@ -98,6 +98,21 @@ const TitleLinks = styled.a`
   }
 `;
 
+const ProjectTitle = styled.p`
+  font-size: ${bodyText};
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 8px;
+  text-decoration: none;
+  word-wrap: normal;
+  color: ${colors.black};
+  letter-spacing: 0.5px;
+  font-weight: 600;
+
+  @media ${device.mobileM} {
+    font-size: ${smallText};
+  }
+`;
+
 const ListItems = styled.span`
   font-size: ${smallText};
   font-family: "Inter", sans-serif;
@@ -182,6 +197,24 @@ const Description = styled.p<any>`
   color: ${colors.black};
   font-weight: 400;
   width: 90%;
+  line-height: 20px;
+
+  ${(props: any) =>
+    props.margin &&
+    css`
+      margin-bottom: ${props.margin};
+    `};
+}
+`;
+
+const ProjectDescription = styled.p<any>`
+  font-size: ${smallText};
+  font-family: "Inter", sans-serif;
+  margin: 0 0 20px 0;
+  word-wrap: normal;
+  letter-spacing: 0.5px;
+  color: ${colors.black};
+  font-weight: 400;
   line-height: 20px;
 
   ${(props: any) =>
@@ -327,9 +360,11 @@ export const typography = {
   BodyMain: BodyMain,
   GreySubtile: GreySubtile,
   Description: Description,
+  ProjectDescription: ProjectDescription,
   CompanyTitles: CompanyTitles,
   ListItems: ListItems,
   TitleLinks: TitleLinks,
   ContactLinks: ContactLinks,
   DescriptionLink: DescriptionLink,
+  ProjectTitle: ProjectTitle,
 };

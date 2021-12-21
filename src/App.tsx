@@ -15,6 +15,8 @@ function App() {
     <Router history={history}>
       <Route exact path="/" component={NewHomePage} />
       <Route path="/cognite" component={ProjectsContainer} />
+      <Route path="/crescendio" component={ProjectsContainer} />
+      {/* <Route path="/raytracer" component={ProjectsContainer} /> */}
       <Route path="/input" component={InputPage} />
       <Route path="/output" component={PortfolioPage} />
     </Router>

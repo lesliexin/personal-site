@@ -1,31 +1,42 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Cognite, projectContent } from "../projects";
+import { Cognite, Crescendio, RayTracer, projectContent } from "../projects";
 import { Footer, BackButton } from "../components";
 import { typography, device } from "../styles";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import colors from "../styles/colours";
-import titleImage from "../assets/titleImages.svg";
+import CogniteTitle from "../assets/titleImages.png";
+import CrescendioTitle from "../assets/crescendio/crescendioTitle.png";
 
-const TitleContainer = styled.div`
+const TitleContainer = styled.div<any>`
   height: 90vh;
   padding: 0px 0px 60px 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: ${colors.lightBlue};
-  background-image: url(${titleImage});
   background-repeat: no-repeat;
   background-position: right 80%;
   background-size: 75%;
 
+  ${(props: any) =>
+    props.image &&
+    css`
+      background-image: url(${props.image});
+    `};
+
   @media ${device.mobileM} {
     padding: 20px;
-    background-image: url(${titleImage});
     background-repeat: no-repeat;
     background-position: center top 5%;
     background-size: 75%;
     height: 100vh;
+
+    ${(props: any) =>
+      props.image &&
+      css`
+        background-image: url(${props.image});
+      `};
   }
 `;
 
@@ -68,16 +79,20 @@ const Role = styled.p`
   color: ${colors.headingColour};
 `;
 
-interface ProjectsContainerProps {
-  company: string;
-}
-
 export const ProjectsContainer = () => {
   const [currentCompany, setCurrentCompany] = useState(projectContent.cognite);
   const location = useLocation().pathname;
 
   useEffect(() => {
-    switch (location) {
+    switch (location.substring(1, location.length)) {
+      // case "raytracer": {
+      //   setCurrentCompany(projectContent.raytracer);
+      //   break;
+      // }
+      case "crescendio": {
+        setCurrentCompany(projectContent.crescendio);
+        break;
+      }
       case "cognite": {
         setCurrentCompany(projectContent.cognite);
         break;
@@ -101,9 +116,32 @@ export const ProjectsContainer = () => {
     }
   }, [location]);
 
+  let titleImage = CogniteTitle;
+  let bodyContent = <Cognite />;
+  switch (location.substring(1, location.length)) {
+    case "cognite": {
+      titleImage = CogniteTitle;
+      bodyContent = <Cognite />;
+      break;
+    }
+    case "crescendio": {
+      titleImage = CrescendioTitle;
+      bodyContent = <Crescendio />;
+      break;
+    }
+    // case "raytracer": {
+    //   titleImage = RayTracerTitle;
+    //   bodyContent = <RayTracer />;
+    //   break;
+    // }
+    default: {
+      break;
+    }
+  }
+
   return (
     <>
-      <TitleContainer>
+      <TitleContainer image={titleImage}>
         <TitleTextContainer>
           <BackButton />
           <typography.NewDetailLeft>CASE STUDY</typography.NewDetailLeft>
@@ -127,7 +165,7 @@ export const ProjectsContainer = () => {
           <typography.Body2>{currentCompany.duration}</typography.Body2>
         </TitleTextContainer>
       </TitleContainer>
-      <Cognite />
+      {bodyContent}
       <Footer />
     </>
   );

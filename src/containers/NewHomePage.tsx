@@ -112,14 +112,10 @@ export const NewHomePage = () => {
             <containers.StyledRow>
               <containers.StyledData></containers.StyledData>
               <containers.StyledData>
-                <typography.Description margin="8px">
+                <typography.Description>
                   As a Frontend Engineer and Product Designer enabling engineers{" "}
                   to use data science
                 </typography.Description>
-                <typography.DescriptionLink to="/cognite">
-                  Case study here
-                </typography.DescriptionLink>
-                <containers.Top20 />
               </containers.StyledData>
             </containers.StyledRow>
 
