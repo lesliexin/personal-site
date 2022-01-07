@@ -61,6 +61,7 @@ const NewLinks = styled(NavLink)`
   font-weight: 400;
   &:hover {
     color: ${colors.accentColour};
+    font-style: italic;
   }
 `;
 
@@ -207,6 +208,24 @@ const Description = styled.p<any>`
 }
 `;
 
+const StyledBio = styled.mark`
+  font-size: ${mediumText};
+  margin: 0 0 12px 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  word-wrap: normal;
+  text-align: left;
+  line-height: 36px;
+  color: ${colors.black};
+
+  background-color: ${colors.accentYellow};
+
+  @media ${device.mobileM} {
+    font-size: ${headingText};
+    line-height: 24px;
+  }
+`;
+
 const ProjectDescription = styled.p<any>`
   font-size: ${smallText};
   font-family: "Inter", sans-serif;
@@ -347,6 +366,7 @@ const GreySubtile = styled.p`
 `;
 
 export const typography = {
+  StyledBio: StyledBio,
   Bio: Bio,
   NewLinks: NewLinks,
   Heading: Heading,

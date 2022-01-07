@@ -26,9 +26,10 @@ export const SideNav = () => {
         to="/"
         activeStyle={{
           color: colors.accentColour,
+          fontStyle: "italic",
         }}
       >
-        me
+        projects
       </typography.NewLinks>
       <br />
       {/* <typography.NewLinks
@@ -41,12 +42,13 @@ export const SideNav = () => {
       </typography.NewLinks>
       <br /> */}
       <typography.NewLinks
-        to="/output"
+        to="/about"
         activeStyle={{
           color: colors.accentColour,
+          fontStyle: "italic",
         }}
       >
-        output
+        about
       </typography.NewLinks>
     </LinksContainer>
   );

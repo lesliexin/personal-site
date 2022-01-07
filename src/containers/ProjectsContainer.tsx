@@ -7,6 +7,7 @@ import styled, { css } from "styled-components";
 import colors from "../styles/colours";
 import CogniteTitle from "../assets/titleImages.png";
 import CrescendioTitle from "../assets/crescendio/crescendioTitle.png";
+import RaytracerTitle from "../assets/raytracer/raytracerTitle.png";
 
 const TitleContainer = styled.div<any>`
   height: 90vh;
@@ -38,6 +39,10 @@ const TitleContainer = styled.div<any>`
         background-image: url(${props.image});
       `};
   }
+`;
+
+const Container = styled.div`
+  background: #ffffff;
 `;
 
 const TitleTextContainer = styled.div`
@@ -85,10 +90,10 @@ export const ProjectsContainer = () => {
 
   useEffect(() => {
     switch (location.substring(1, location.length)) {
-      // case "raytracer": {
-      //   setCurrentCompany(projectContent.raytracer);
-      //   break;
-      // }
+      case "raytracer": {
+        setCurrentCompany(projectContent.raytracer);
+        break;
+      }
       case "crescendio": {
         setCurrentCompany(projectContent.crescendio);
         break;
@@ -129,18 +134,18 @@ export const ProjectsContainer = () => {
       bodyContent = <Crescendio />;
       break;
     }
-    // case "raytracer": {
-    //   titleImage = RayTracerTitle;
-    //   bodyContent = <RayTracer />;
-    //   break;
-    // }
+    case "raytracer": {
+      titleImage = RaytracerTitle;
+      bodyContent = <RayTracer />;
+      break;
+    }
     default: {
       break;
     }
   }
 
   return (
-    <>
+    <Container>
       <TitleContainer image={titleImage}>
         <TitleTextContainer>
           <BackButton />
@@ -167,6 +172,6 @@ export const ProjectsContainer = () => {
       </TitleContainer>
       {bodyContent}
       <Footer />
-    </>
+    </Container>
   );
 };

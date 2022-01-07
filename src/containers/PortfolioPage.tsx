@@ -41,7 +41,7 @@ export const PortfolioPage = () => {
             name="Real-time Ray Tracer"
             description="Personal, 2021"
             tools="C++"
-            link="/output"
+            link="/raytracer"
           />
           <ProjectCard
             image={Soh}
@@ -77,7 +77,7 @@ export const PortfolioPage = () => {
             image={Crescendio}
             name="Crescend.io"
             description="Personal, 2020"
-            tools="Processing, C"
+            tools="Processing, Java"
             link="/crescendio"
           />
           {/* <ProjectCard
