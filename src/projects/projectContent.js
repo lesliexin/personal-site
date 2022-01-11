@@ -5,6 +5,7 @@ export const projectContent = {
     articleType: "PROJECT SHOWCASE",
     company: "University of Waterloo",
     location: "2021",
+    team: ["Me"],
     role: ["Designer", "Engineer"],
     duration: "16 weeks",
   },
