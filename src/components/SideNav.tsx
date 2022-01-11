@@ -29,18 +29,20 @@ export const SideNav = () => {
           fontStyle: "italic",
         }}
       >
-        projects
+        output
       </typography.NewLinks>
       <br />
-      {/* <typography.NewLinks
-        to="/input"
+      <typography.NewNotLinks
+        onClick={() => {
+          window.open("https://www.learnlist.app/p/etqtJx", "_blank");
+        }}
         activeStyle={{
           color: colors.accentColour,
         }}
       >
-        input
-      </typography.NewLinks>
-      <br /> */}
+        input ↗
+      </typography.NewNotLinks>
+      <br />
       <typography.NewLinks
         to="/about"
         activeStyle={{
@@ -48,7 +50,7 @@ export const SideNav = () => {
           fontStyle: "italic",
         }}
       >
-        about
+        me
       </typography.NewLinks>
     </LinksContainer>
   );

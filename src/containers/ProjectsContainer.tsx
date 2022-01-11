@@ -149,7 +149,9 @@ export const ProjectsContainer = () => {
       <TitleContainer image={titleImage}>
         <TitleTextContainer>
           <BackButton />
-          <typography.NewDetailLeft>CASE STUDY</typography.NewDetailLeft>
+          <typography.NewDetailLeft>
+            {currentCompany.articleType}
+          </typography.NewDetailLeft>
           <typography.CaseTitle>
             {currentCompany.title1}
             <br /> {currentCompany.title2}
@@ -161,10 +163,18 @@ export const ProjectsContainer = () => {
             <typography.Body2>{role}</typography.Body2>
           ))}
 
-          <Role>Team</Role>
+          {currentCompany.team && (
+            <>
+              <Role>Team</Role>
+              {currentCompany.team.map((person) => (
+                <typography.Body2>{person}</typography.Body2>
+              ))}
+            </>
+          )}
+          {/* <Role>Team</Role>
           {currentCompany.team.map((person) => (
             <typography.Body2>{person}</typography.Body2>
-          ))}
+          ))} */}
 
           <Role>Duration</Role>
           <typography.Body2>{currentCompany.duration}</typography.Body2>

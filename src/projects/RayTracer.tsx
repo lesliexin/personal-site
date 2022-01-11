@@ -91,7 +91,9 @@ export const RayTracer = () => {
           </ul>
         </typography.BodyMain>
 
-        <typography.NewDetailLeft>&nbsp;Introduction</typography.NewDetailLeft>
+        <typography.NewDetailLeft>
+          &nbsp;Implementation
+        </typography.NewDetailLeft>
         <typography.LargeSubtitle>Features</typography.LargeSubtitle>
         <typography.Subtitle20>Anti-aliasing</typography.Subtitle20>
         <typography.BodyMain>
@@ -125,8 +127,8 @@ export const RayTracer = () => {
           The third objective is specular refraction. Refraction was calculated
           using the surface normals, Snell’s law, and the respective indices of
           refraction of the two materials. The percentage of reflected light
-          versus refracted light will be calculated using Fresnel’s equation
-          [3]. Shown below is the scene in which the largest sphere has a 0.2
+          versus refracted light will be calculated using Fresnel’s equation.
+          Shown below is the scene in which the largest sphere has a 0.2
           refraction index.
         </typography.BodyMain>
       </BodyContainer>

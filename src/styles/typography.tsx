@@ -65,6 +65,24 @@ const NewLinks = styled(NavLink)`
   }
 `;
 
+const NewNotLinks = styled.span`
+  font-size: ${bodyText};
+  font-family: "Inter", sans-serif;
+  word-wrap: normal;
+  color: ${colors.baseTextColour};
+  text-align: left;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 0 6px 0;
+  line-height: 12px;
+  font-weight: 400;
+  &:hover {
+    color: ${colors.accentColour};
+    font-style: italic;
+  }
+`;
+
 const CompanyTitles = styled.span`
   font-size: ${bodyText};
   font-family: "Open Sans", sans-serif;
@@ -369,6 +387,7 @@ export const typography = {
   StyledBio: StyledBio,
   Bio: Bio,
   NewLinks: NewLinks,
+  NewNotLinks: NewNotLinks,
   Heading: Heading,
   NewDetail: NewDetail,
   NewBodyUnderline: NewBodyUnderline,
