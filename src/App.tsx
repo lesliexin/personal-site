@@ -17,6 +17,7 @@ function App() {
   return (
     <Router history={history}>
       <ScrollToTop /> <Route exact path="/" component={NewHomePage} />
+      <Route path="/output" component={NewHomePage} />
       <Route path="/cognite" component={ProjectsContainer} />
       <Route path="/crescendio" component={ProjectsContainer} />
       <Route path="/raytracer" component={ProjectsContainer} />
