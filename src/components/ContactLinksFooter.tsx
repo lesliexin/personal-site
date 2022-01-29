@@ -14,7 +14,7 @@ export const ContactLinksFooter = () => {
         <containers.StyledData></containers.StyledData>
         <containers.StyledData>
           <containers.FooterColumns>
-            <typography.ContactLinks href="/LX2021.pdf" target="_blank">
+            <typography.ContactLinks href="/LeslieXin.pdf" target="_blank">
               resume
             </typography.ContactLinks>
             <typography.ContactLinks
