@@ -20,17 +20,17 @@ export const AboutPage = () => {
               <containers.StyledData></containers.StyledData>
               <containers.StyledData>
                 <typography.CompanyTitles>
-                  Finishing up my degree in &nbsp;
+                  Building collaborative commerce at &nbsp;
                 </typography.CompanyTitles>
                 <typography.NewBodyUnderline
-                  href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
+                  href="https://blockchain.shopify.dev/"
                   target="_blank"
                 >
-                  Systems Design Engineering
+                  Shopify
                 </typography.NewBodyUnderline>
                 <typography.CompanyTitles>
                   {" "}
-                  at the Unversity of Waterloo
+                  with blockchain
                 </typography.CompanyTitles>
               </containers.StyledData>
             </containers.StyledRow>
